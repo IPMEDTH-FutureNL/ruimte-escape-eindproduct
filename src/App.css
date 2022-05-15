@@ -1,38 +1,193 @@
-.App {
+body{
+  padding: 0;
+  margin: 0;
+  overflow-y: hidden;
+}
+
+.mapPuzzle{
+  background-image: url("./img/planeten/background.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  height: 100vh;
+}
+
+/* Drag and drop board */
+.board{
+  display: flex;
+  flex-direction: row;
+  top: 25vh;
+  position: absolute;
+}
+
+.board__piece{
+  margin-left: 2.5vw;
+  position: absolute;
+}
+
+.board__piece-square{
+  background-color: greenyellow;
+  height: 80px;
+  width: 80px;
+  opacity: .25;
+}
+
+.board__piece-name{
+  margin-top: 5px;
+  margin-left: 35px;
+}
+
+/*position of all board pieces */
+.board__piece:nth-child(1){
+  left: 0vw;
+  top: 25vh;
+}
+
+.board__piece:nth-child(2){
+  left: 10vw;
+  top: 20vh;
+}
+
+.board__piece:nth-child(3){
+  left: 20vw;
+  top: 22vh;
+}
+
+.board__piece:nth-child(4){
+  left: 30vw;
+  top: 18vh;
+}
+
+.board__piece:nth-child(5){
+  left: 40vw;
+  top: 23vh;
+}
+
+.board__piece:nth-child(6){
+  left: 50vw;
+  top: 23vh;
+}
+
+.board__piece:nth-child(7){
+  left: 60vw;
+  top: 15vh;
+}
+
+.board__piece:nth-child(8){
+  left: 70vw;
+  top: 25vh;
+}
+
+/*oplos matrix */
+
+.note{
+  background-image: url("./img/oplosmatrix/background.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  height: 100vh;
+  font-size: xx-large;
+}
+
+.note-center{
+  display: block;
+  margin: auto;
+  padding-top: 7.5%;
+  width: 33rem;
+}
+
+.grid-item-blank{
+  align-self: stretch center;
+
+}
+
+.grid-item-img{
+  align-self:  center;
+}
+
+.icon{
+  height: 6rem;
+}
+
+.icon:nth-child(3){
+  margin-right: 25px;
+}
+
+.grid-item-color-red{
+  align-self: stretch center;
+  background-color: #5AA0CB;
+  
+}
+
+.grid-item-color-blue{
+  align-self: stretch center;
+  background-color: #CB5A5A;
+  
+}
+
+.grid-item-color-yellow{
+  align-self: stretch center;
+  background-color: #CBCB5A;
+  
+}
+
+
+.grid-item-number{
+  align-self:center;
+  margin-left: 4.5vh;
+  color: white;
+  /* background-color: #050530; */
+}
+
+.oplosmatrix-grid{
+  display: grid;
+  background-color: #080742;
+  width: 28rem;
+  padding: 40px;
+  border-radius: 50px;
+  gap: 5px;
+  grid-template-columns: repeat(4, 7rem);
+  grid-template-rows: repeat(4, 7rem);   
+}
+
+.oplosmatrix__lock{
+  display: flex;
+  flex-direction: row;
+  background-color: #080742;
+  width: 33rem;
+  height: 100px;
+  padding: 10px;
+  margin: auto;
+  border-radius: 20px;
+  margin-top: 2rem;
+  justify-content: center;
+}
+
+
+.oplosmatrix__lock-input{
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  font-size: 4rem;
+  background-color: #050530;
+  color: white;
+  border: none;
+  margin-right: 2rem;
+  margin-top: .5rem;
+}
+
+.oplosmatrix__lock-image{
+  height: 80px;
+  margin-right: 2rem;
+  margin-top: .5rem;
+}
+
+::placeholder{
+  color: white;
+  font-size: 2rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
