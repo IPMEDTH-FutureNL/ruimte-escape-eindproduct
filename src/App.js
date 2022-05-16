@@ -1,13 +1,20 @@
 import './App.css';
-// import DragAndDrop from './components/startPuzzle/DragAndDrop';
-import Oplosmatrix from './components/secondPuzzle/Oplosmatrix';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import IntroPuzzle from './components/startPuzzle/IntroPuzzle';
+import DragAndDrop from './components/startPuzzle/DragAndDrop';
+//import Oplosmatrix from './components/secondPuzzle/Oplosmatrix';
 
 function App() {
   return (
-    <div className="App">
-      {/* <DragAndDrop></DragAndDrop> */}
-      <Oplosmatrix></Oplosmatrix>
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+            {/* <Oplosmatrix></Oplosmatrix> */}
+            <Route path="/" element={ <IntroPuzzle /> }></Route>
+            <Route path="/startpuzzel" element={ <DragAndDrop />}></Route>
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

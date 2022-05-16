@@ -101,14 +101,14 @@ drop = (e) =>
           </div>
 
           <div className="puzzelstukjes">
-            <img id="drag3" data-div="div3" src={aarde} draggable="true" onDragStart={(event) => this.drag(event)}/>
-            <img id="drag5" data-div="div5" src={jupiter} draggable="true" onDragStart={(event) => this.drag(event)}/>
-            <img id="drag4"  data-div="div4" src={mars} draggable="true" onDragStart={(event) => this.drag(event)}/>
-            <img id="drag1"  data-div="div1" src={mercurius} draggable="true" onDragStart={(event) => this.drag(event)}/>
-            <img id="drag8"  data-div="div8" src={neptunes} draggable="true" onDragStart={(event) => this.drag(event)}/>
-            <img id="drag6"  data-div="div6" src={saturnus} draggable="true" onDragStart={(event) => this.drag(event)}/>
-            <img id="drag7"  data-div="div7" src={uranus} draggable="true" onDragStart={(event) => this.drag(event)}/>
-            <img id="drag2"  data-div="div2" src={venus} draggable="true" onDragStart={(event) => this.drag(event)}/>
+            <img className="planet" id="drag3" data-div="div3" src={aarde} draggable="true" onDragStart={(event) => this.drag(event)}/>
+            <img className="planet" id="drag5" data-div="div5" src={jupiter} draggable="true" onDragStart={(event) => this.drag(event)}/>
+            <img className="planet" id="drag4"  data-div="div4" src={mars} draggable="true" onDragStart={(event) => this.drag(event)}/>
+            <img className="planet" id="drag1"  data-div="div1" src={mercurius} draggable="true" onDragStart={(event) => this.drag(event)}/>
+            <img className="planet" id="drag8"  data-div="div8" src={neptunes} draggable="true" onDragStart={(event) => this.drag(event)}/>
+            <img className="planet" id="drag6"  data-div="div6" src={saturnus} draggable="true" onDragStart={(event) => this.drag(event)}/>
+            <img className="planet" id="drag7"  data-div="div7" src={uranus} draggable="true" onDragStart={(event) => this.drag(event)}/>
+            <img className="planet" id="drag2"  data-div="div2" src={venus} draggable="true" onDragStart={(event) => this.drag(event)}/>
           </div>
       </section>
      
