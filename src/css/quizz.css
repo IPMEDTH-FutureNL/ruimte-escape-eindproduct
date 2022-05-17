@@ -1,0 +1,56 @@
+body{
+    overflow: hidden;
+}
+.quiz-background{
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: auto;
+    width: 100vw; 
+    position: absolute;
+    left:0;
+}
+
+.quiz-zonnestelsel{
+    width: 19vw;
+    position: relative;
+    top: 43vh;
+    left: 44.5vw;
+    box-sizing: border-box;
+}
+
+.quiz-zonnestelsel:hover{
+    cursor: pointer;
+    border: 1px solid white;
+}
+
+.modal-zonnestelsel{
+    background-color: rgb(41, 41, 41);
+    box-sizing: border-box;
+    box-shadow: 0 10px 10px rgb(0 0 0 / 0.2);
+    padding: 1rem;
+    border-radius: 20px;
+    width: 50vw;
+    height: 60vh;
+    left: 50%;
+    transform: translate(50%, 35%);
+}
+
+.planeten{
+    box-sizing: border-box;
+}
+
+.planeten:hover{
+    /* border: 1px solid white; */
+    cursor: pointer;
+}
+
+.modal-zonnestelsel-container{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 12.5%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    background: rgb(0, 0, 0);
+
+}
