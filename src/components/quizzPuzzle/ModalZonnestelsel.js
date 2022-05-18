@@ -12,14 +12,38 @@ import venus  from "../../img/planeten/venus.png"
 const ModalZonnestelsel = () => {
   return (
     <div className='modal-zonnestelsel-container'>
-        <img src={mercurius} alt="" className="planeten mercurius"/>
-        <img src={venus} alt="" className="planeten venus"/>
-        <img src={aarde} alt="" className="planeten aarde"/>
-        <img src={mars} alt="" className="planeten mars"/>
-        <img src={jupiter} alt="" className="planeten jupiter"/>
-        <img src={saturnus} alt="" className="planeten saturnus"/>
-        <img src={uranus} alt="" className="planeten uranus"/>
-        <img src={neptunus} alt="" className="planeten neptunus"/>
+        <div className="tooltip">
+            <img src={mercurius} alt="" className="planeten mercurius"/>
+            <span className="tooltiptext">Wist je dat tussen alle planeten mercurius het dichts bij de zon is? </span>
+        </div>
+        <div className="tooltip">
+            <img src={venus} alt="" className="planeten venus"/>
+            <span className="tooltiptext">Wist je dat Venus het heetste planeet is in ons zonnestelsel? Het is daar overdag rond de 480 graden celsius!</span>
+        </div>
+        <div className="tooltip">
+            <img src={aarde} alt="" className="planeten aarde"/>
+            <span className="tooltiptext">Dit is ons prachtige planeet waar we met zijn allen op wonen!</span>
+        </div>
+        <div className="tooltip">
+            <img src={mars} alt="" className="planeten mars"/>
+            <span className="tooltiptext">Wist je dat tussen alle planeten Mars het meeste lijkt op de aarde? Zouden mensen hier in de toekomst op kunnen wonen?</span>
+        </div>
+        <div className="tooltip">
+            <img src={jupiter} alt="" className="planeten jupiter"/>
+            <span className="tooltiptext">Wist je dat Jupiter de grootste planeet is in ons zonnestelsel, maar tegelijkertijd ook de lichtste planeet? </span>
+        </div>
+        <div className="tooltip">
+            <img src={saturnus} alt="" className="planeten saturnus"/>
+            <span className="tooltiptext">Wist je dat de ring van Saturnus eigenlijk uit honderdduizend kleinere ringen bestaat? </span>
+        </div>
+        <div className="tooltip">
+            <img src={uranus} alt="" className="planeten uranus"/>
+            <span className="tooltiptext">Wist je dat Uranus ongeveer 65 keer zo groot is als de aarde?</span>
+        </div>
+        <div className="tooltip">
+            <img src={neptunus} alt="" className="planeten neptunus"/>
+            <span className="tooltiptext">Wist je dat Neptunus de verste planeet is die van de zon af staat? Dit betekent dus ook dat het daar ijskoud is met een temperatuur van -218 graden!</span>
+        </div>
     </div>
   )
 }
