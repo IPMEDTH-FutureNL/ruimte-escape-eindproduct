@@ -1,19 +1,25 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
 import { useNavigate } from "react-router-dom";
 
-const IntroPuzzle = () => {
+import PopUp from '../PopUp';
 
+const IntroPuzzle = () => {
+    const [fact, setFact] = useState("");
     const navigate = useNavigate();
 
     const startPuzzel = () => {
-        navigate("/startpuzzel");
+        navigate("/introPuzzelEen");
     }
 
     const feitjes = (feit) => {
         if(feit === 1){
-            alert("Wist je dat Mercurius de kleinste planeet is!");
+            setFact("Wist je dat Mercurius de kleinste planeet is!");
+            let openpopup = document.getElementById("popup");
+            openpopup.style.display = "block";
         }else if(feit === 2){
-            alert("De eerste mens op de maan is Neil Armstrong!");
+            setFact("De eerste mens op de maan is Neil Armstrong!");
+            let openpopup = document.getElementById("popup");
+            openpopup.style.display = "block";
         }else{
 
         }
@@ -24,6 +30,8 @@ const IntroPuzzle = () => {
             <div className="circle" onClick={startPuzzel}></div>
             <div className="circle" onClick={() => feitjes(1)}></div>
             <div className="circle" onClick={() => feitjes(2)}></div>
+
+            <PopUp text={fact}></PopUp>
         </section>
     )
 }

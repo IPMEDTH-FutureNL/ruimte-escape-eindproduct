@@ -12,12 +12,90 @@ body{
   height: 100vh;
 }
 
+.container__intro-puzzelEen{
+  background-image: url("./img/oplosmatrix/background.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  height: 100vh;
+  position: relative;
+}
+
 .container__intro-startpuzzel{
   background-image: url("./img/gameplayImages/backgrounds/besturingskamer.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;
   height: 100vh;
+}
+
+.container__intro-oplosMatrix{
+  background-image: url("./img/gameplayImages/backgrounds/tech-kamer.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  height: 100vh;
+}
+
+/*pop up*/
+.pop-up{
+  width: 40vw;
+  min-height: 17.5vw;
+  background-color: #080742;
+  position: absolute;
+  top: 35%;
+  transform: translateX(30vw);
+  border-radius: 20px;
+  display: none;
+}
+
+.pop-up-text{
+  font-size: 1.5rem;
+  color: white;
+  text-align: center;
+  margin-top: 5vh;
+}
+
+.punten{
+  position: absolute;
+  color: white;
+  font-size: 1.4rem;
+  left: 2.5vw;
+  margin-bottom: 2.5vh;
+}
+
+/* buttons */
+.button{
+  position: absolute;
+  left: 15vw;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 1.8rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.primary{
+  background-color: #4490be;
+  color: white;
+}
+
+.hint{
+  background-color: #4490be;
+  position: absolute;
+  left: 2.5vw;
+  color: white;
+  font-size: 1.4rem;
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
 }
 
 /* intro eerste puzzel */
@@ -51,6 +129,55 @@ body{
   left: 90vw;
 }
 
+.circle-matrix{
+  height: 150px;
+  width: 150px;
+  background-color: #00FF2B;
+  border-radius: 50%;
+  opacity: .58;
+  position: absolute;
+  cursor: pointer;
+  top: 45vh;
+  left: 47.5vw;
+}
+
+.circle-matrix:hover{
+  transform: scale(1.1);
+}
+
+/* instructie */
+.intro__container-text{
+  position: absolute;
+  top: 35vh;
+  left: 30vw;
+  width: 40vw;
+}
+
+.intro__container-videoPlaceholder{
+  height: 45vh;
+  width: 40vw;
+  background-color: grey;
+  margin-bottom: 2rem;
+}
+
+.intro__container-paragraph{
+  color: white;
+  font-size: 2rem;
+}
+
+.intro__container-video{
+  display: none;
+  position: absolute;
+  top: 25vh;
+  left: 30vw;
+  width: 40vw;
+}
+
+.placeHolder{
+  color: black;
+  font-size: 1.5rem;
+}
+
 /* Drag and drop board */
 .board{
   display: flex;
@@ -63,6 +190,9 @@ body{
   position: absolute;
   left: 30vw;
   top: 15vh;
+}
+.planet{
+  z-index: 10;
 }
 
 .board__piece{
@@ -81,6 +211,7 @@ body{
 .board__piece-name{
   margin-top: 5px;
   margin-left: 42.5px;
+  z-index: 1;
 }
 
 /*position of all board pieces */
@@ -127,11 +258,13 @@ body{
 /* planeten gehuseld */
 .planet{
   cursor: pointer;
-  padding: 15px
+  padding: 15px;
+  z-index: 10;
 }
 
 .planet:hover{
   transform: scale(1.1);
+  z-index: 10;
 }
 
 

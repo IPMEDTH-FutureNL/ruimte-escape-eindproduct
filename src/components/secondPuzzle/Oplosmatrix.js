@@ -1,10 +1,13 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import astronaut from'../../img/oplosmatrix/astronaut.png';
 import earth from'../../img/oplosmatrix/earth.png';
 import moon from'../../img/oplosmatrix/moon.png';
 import lock from '../../img/oplosmatrix/lock.png';
+import PopUp from '../PopUp';
 
 const Oplosmatrix = () => {
+    const [fout, setFout] = useState(0);
+    const [text, setText] = useState("");
 
     const solveLock = (e) => {
         e.preventDefault();
@@ -14,9 +17,15 @@ const Oplosmatrix = () => {
         let codeString = checkInput();
 
         if(codeString == lockAnswer){
-            alert("code gekraakt");
+            setText("Je hebt de code gekraakt");
+            let openpopup = document.getElementById("popup");
+            openpopup.style.display = "block";
+            console.log("aantal foute pogingen " + fout);
         }else{
-            alert("dat was niet goed");
+            setText("Dat was helaas niet goed");
+            let openpopup = document.getElementById("popup");
+            openpopup.style.display = "block";
+            setFout(fout + 1);
         }
     }
 
@@ -40,13 +49,13 @@ const Oplosmatrix = () => {
                 <div className='oplosmatrix-grid'>
                     <div className='grid-item-blank'></div>
                     <div className='grid-item-img'>
-                        <img className='icon' src={earth}></img>
+                        <img className='icon' alt="earth" src={earth}></img>
                     </div>
                     <div className='grid-item-img'>
-                        <img className='icon' src={moon}></img>
+                        <img className='icon' alt="moon" src={moon}></img>
                     </div>
                     <div className='grid-item-img'>
-                        <img className='icon' src={astronaut}></img>
+                        <img className='icon' alt="astronaut" src={astronaut}></img>
                     </div>
                     <div className='grid-item-color-red'/>
                     <div className='grid-item-number'>1</div>
@@ -71,6 +80,8 @@ const Oplosmatrix = () => {
                     <input type="submit" hidden />
                 </form>
             </section>
+
+            <PopUp text={text}></PopUp>
         </section>
     )
 }
