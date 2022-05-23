@@ -1,0 +1,45 @@
+body{
+    overflow: hidden;
+}
+.rebus-background{
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: auto;
+    width: 100vw; 
+    position: absolute;
+    left:0;
+}
+
+.block-rebus{
+    position: relative;
+    background-color: rgba(0, 128, 0, 0.425);
+    width: 50px;
+    height: 80px;
+    top: 53vh;
+    left: 45.5vw;
+}
+
+.modal-rebus{
+    background-color: rgb(41, 41, 41);
+    box-sizing: border-box;
+    box-shadow: 0 10px 10px rgb(0 0 0 / 0.2);
+    padding: 1rem;
+    border-radius: 20px;
+    width: 75vw;
+    height: 80vh;
+    left: 50%;
+    transform: translate(15%, 10%);
+}
+
+.rebus-flex{
+    display: flex;
+}
+
+.rebus{
+    width: 60%;
+}
+
+.rebus-code{
+    padding-left: 20px;
+    color: white;
+}
