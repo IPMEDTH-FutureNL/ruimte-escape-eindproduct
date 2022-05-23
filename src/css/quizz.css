@@ -10,9 +10,25 @@ body{
     left:0;
 }
 
+.quiz-computer{
+    position: absolute;
+    width: 10vw;
+    top: 59vh;
+    left: 70vw;
+    cursor: pointer;
+}
+
+.quiz-tablet{
+    position: absolute;
+    width: 8vw;
+    bottom: -10vh;
+    left: 47.5vw;
+    cursor: pointer;
+}
+
 .quiz-zonnestelsel{
     width: 19vw;
-    position: relative;
+    position: absolute;
     top: 43vh;
     left: 44.5vw;
     box-sizing: border-box;
@@ -96,3 +112,41 @@ body{
   .tooltip:hover .tooltiptext {
     visibility: visible;
   }
+
+
+.tablet{
+    left: 31vw;
+    width: 35%;
+    height: 90%;
+    position: absolute;
+}
+
+.tablet-notes-text{
+    position: relative;
+    /* z-index: 3; */
+    left: 33.5vw;
+    top: 12vh;
+    font-size: 1.15rem;
+    font-weight: bold;
+}
+
+.computer{
+    left: 17.5vw;
+    width: 65%;
+    height: 95%;
+    position: absolute;
+}
+
+.computer-notes-text{
+    position: relative;
+    /* z-index: 3; */
+    left: 22vw;
+    top: 8vh;
+    font-size: 1.15rem;
+    font-weight: bold;
+    color: white;
+}
+
+.text-black{
+    color: black;
+}
