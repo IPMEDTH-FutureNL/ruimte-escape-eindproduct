@@ -16,10 +16,15 @@ const RebusPuzzle = () => {
         setModalIsOpen(false)
     }
 
+    const locked = () => {
+        //play locked sound
+    }
+
   return (
     <section className="background">
         <img src={RebusBackground} alt="" className="rebus-background" />
         <section className='block-rebus' onClick={setModalIsOpenToTrue}></section>
+        <section className='handle-rebus' onClick={locked}></section>
         <Modal className="modal-rebus" isOpen={modalIsOpen}>
             <button onClick={setModalIsOpenToFalse}>x</button>
             <ModalRebus/>
