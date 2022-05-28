@@ -13,7 +13,7 @@ const Hint = ({type}) => {
       clickHint1: 'this is the first hint',
       clickHint2: 'this is the second hint',
       clickHint3: 'this is the 3rd hint',
-
+      //crossword hints
       crosswordHint1: 'sussy bussy',
       crosswordHint2: 'bogos binted',
       crosswordHint3: 'pingo pongo',
