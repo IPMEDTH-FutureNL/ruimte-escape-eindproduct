@@ -4,12 +4,19 @@ import PropTypes from 'prop-types';
 const Hint = ({type}) => {
   const [show, setShow] = useState(false);
   const [showButton, setShowButton] = useState(true);
+  const [hint1, setHint1] = useState("");
+  const [hint2, setHint2] = useState("");
+  const [hint3, setHint3] = useState("");
   const [currentHint, setCurrentHint] = useState();
   const hintArray = {
       //click game hints
       clickHint1: 'this is the first hint',
-      clickHunt2: 'this is the second hint',
-      clickHint3: 'this is the third hint',
+      clickHint2: 'this is the second hint',
+      clickHint3: 'this is the 3rd hint',
+
+      crosswordHint1: 'sussy bussy',
+      crosswordHint2: 'bogos binted',
+      crosswordHint3: 'pingo pongo',
 
       // add more hints with appropriate names
   }
@@ -17,16 +24,35 @@ const Hint = ({type}) => {
   const getType = () => {
     switch (type) {
         case 'clickHint':
-                //depends on the tab thats open, show correct hint
-                setCurrentHint(Object.values(hintArray.clickHint1))
+            //depends on the tab thats open, show correct hint
+            setHint1(Object.values(hintArray.clickHint1))
+            setHint2(Object.values(hintArray.clickHint2))
+            setHint3(Object.values(hintArray.clickHint3))
             break;
 
         case 'crosswordHint':
-                setCurrentHint('stephan is mijn vader')
+            setHint1(Object.values(hintArray.crosswordHint1))
+            setHint2(Object.values(hintArray.crosswordHint2))
+            setHint3(Object.values(hintArray.crosswordHint3))
             break;
         default:
             break;
         }   
+    }
+
+    const getTab = (number) =>{
+        switch (number) {
+            case 1:
+                setCurrentHint(hint1)
+                break;
+            case 2:
+                setCurrentHint(hint2)
+                break;
+            case 3:
+                setCurrentHint(hint3)
+            default:
+                break;
+        }
     }
 
     const showHints = () =>{
@@ -44,9 +70,9 @@ const Hint = ({type}) => {
         <section className='hint-container'>
             <section className='hint-container-tabs'>
                 {/* add logic to buttons so it works in switch case */}
-                <button className='hint-container-tabs-1'>1</button>
-                <button className='hint-container-tabs-1'>2</button>
-                <button className='hint-container-tabs-1'>3</button>
+                <button className='hint-container-tabs-1' onClick={ () => getTab(1)}>1</button>
+                <button className='hint-container-tabs-1' onClick={ () => getTab(2)}>2</button>
+                <button className='hint-container-tabs-1' onClick={ () => getTab(3)}>3</button>
             </section>
             <section className='hint-container-content'>
                 {/* this button needs to show on all different tabs */}
