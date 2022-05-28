@@ -150,3 +150,44 @@ body{
 .text-black{
     color: black;
 }
+
+.quizz-input{
+    width: 25%;
+    height: 25px;
+    margin-top: 50px;
+    position: relative;
+    border-radius: 10px;
+    left: 15%;
+}
+
+.quizz-btn{
+    position: relative;
+    left: 15%;
+    margin-top: 20px;
+    width: 25%;
+    height: 25px;
+    color: black;
+    background-color: gold;
+    border-radius: 10px;
+    border: none;
+}
+
+.quizz-btn:hover{
+    background-color: goldenrod;
+}
+
+.quizz-error{
+    color: rgb(255, 45, 45);
+}
+
+#invisible, #invisibleH{
+    display: none;
+}
+
+#visible, #visbleH{
+    display: block;
+}
+
+.text-white{
+    color:white;
+}

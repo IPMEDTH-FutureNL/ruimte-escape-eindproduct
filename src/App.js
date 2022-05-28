@@ -8,8 +8,8 @@ function App() {
   return (
     <div className="App">
       {/* <DragAndDrop></DragAndDrop> */}
-      {/* <QuizzPuzzle></QuizzPuzzle> */}
-      <RebusPuzzle></RebusPuzzle>
+      <QuizzPuzzle></QuizzPuzzle>
+      {/* <RebusPuzzle></RebusPuzzle> */}
       {/* <Oplosmatrix></Oplosmatrix> */}
     </div>
   );

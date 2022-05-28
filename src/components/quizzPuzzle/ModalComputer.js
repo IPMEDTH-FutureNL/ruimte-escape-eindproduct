@@ -9,10 +9,12 @@ const ModalComputer = () => {
 
         } else if(inputValue == "bac") {
             alert('Heb je de code met hoofdletters ingevoerd?');
-            // rode tekst onder de input
+            document.getElementById('invisibleH').id = "visibleH";
+            document.getElementById('visible').id = "invisible";
         } else {
             alert('Jammer dat is niet de code :(');
-            // rode tekst onder de input
+            document.getElementById('invisible').id = "visible";
+            document.getElementById('visibleH').id = "invisibleH";
         }
     }
   return (
@@ -21,10 +23,10 @@ const ModalComputer = () => {
       <img className="computer" src={Computer}/>
       <section class="computer-notes-text">
         <h2 class="">Oei! Er is een driecijferige code nodig om in te loggen. <br></br>De code moet wel ergens in de kamer te vinden zijn, denk je niet?</h2>
-        <input className="modal-lock-section-el input" type="text" id="number" name="number"/> <br/>
-        <button className="modal-lock-section-el btn" onClick={checkValue}> Kraak de code</button>
-       
-
+        <p id="invisible" className="quizz-error">Onjuiste code! Probeer opnieuw of neem een hint</p>
+        <p id="invisibleH" className="quizz-error">Heb je de code met hoofdletters ingevoerd? Probeer opnieuw of neem een hint</p>
+        <input className="quizz-input" type="text" id="number" name="number"/> <br/>
+        <button className="quizz-btn btn" onClick={checkValue}> Kraak de code</button>
       </section>
     </section>
   )
