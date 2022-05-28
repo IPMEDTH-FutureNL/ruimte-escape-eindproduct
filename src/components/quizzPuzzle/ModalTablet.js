@@ -2,34 +2,76 @@ import React from 'react'
 import Tablet from '../../img/quizz/tablet.png'
 
 const ModalTablet = () => {
+
+  const checkValue1 = () => {
+    document.getElementById('one').innerHTML = 'A';
+  }
+
+  const checkValue2 = () => {
+    document.getElementById('one').innerHTML = 'B';
+  }
+
+  const checkValue3 = () => {
+    document.getElementById('one').innerHTML = 'C';
+  }
+
+  const checkValue4 = () => {
+    document.getElementById('two').innerHTML = 'A';
+  }
+
+  const checkValue5 = () => {
+    document.getElementById('two').innerHTML = 'B';
+  }
+
+  const checkValue6 = () => {
+    document.getElementById('two').innerHTML = 'C';
+  }
+
+  const checkValue7 = () => {
+    document.getElementById('three').innerHTML = 'A';
+  }
+
+  const checkValue8 = () => {
+    document.getElementById('three').innerHTML = 'B';
+  }
+
+  const checkValue9 = () => {
+    document.getElementById('three').innerHTML = 'C';
+  }
+
   return (
     <section>
 
       <img className="tablet" src={Tablet}/>
       <section class="tablet-notes-text">
-        <h2 class="text-black">Tip: De antwoorden op deze vragen <br></br>zijn allemaal in deze kamer te vinden!</h2>
+        <h3 class="text-black tablet-title">Tip: De antwoorden op deze vragen <br></br>zijn allemaal in deze kamer te vinden!</h3>
 
-        <p class="text-black">1. Hoeveel planeten heeft ons zonnestelsel?</p>
+        <p class="text-black tablet-question">1. Hoeveel planeten heeft ons zonnestelsel?</p>
         <ul class="text-black list">
-          <li>A. 6 </li>
-          <li>B. 8 </li>
-          <li>C. 10</li>
+          <li onClick={checkValue1}>A. 6 </li>
+          <li onClick={checkValue2}>B. 8 </li>
+          <li onClick={checkValue3}>C. 10</li>
         </ul>
 
-        <p class="text-black">2. Welke planeet is het kleinste in ons zonnestelsel?</p>
+        <p class="text-black tablet-question">2. Welke planeet is het kleinste in ons zonnestelsel?</p>
         <ul class="text-black list">
-          <li>A. Mercurius </li>
-          <li>B. Venus </li>
-          <li>C. Aarde </li>
+          <li onClick={checkValue4}>A. Mercurius </li>
+          <li onClick={checkValue5}>B. Venus </li>
+          <li onClick={checkValue6}>C. Aarde </li>
         </ul>
 
-        <p class="text-black">3. Welke planeet is het verst van de zon?</p>
+        <p class="text-black tablet-question">3. Welke planeet is het verst van de zon?</p>
         <ul class="text-black list">
-          <li>A. Saturnus</li>
-          <li>B. Jupiter</li>
-          <li>C. Neptunus</li>
+          <li onClick={checkValue7}>A. Saturnus</li>
+          <li onClick={checkValue8}>B. Jupiter</li>
+          <li onClick={checkValue9}>C. Neptunus</li>
         </ul>
-
+        <section className="quizz-antwoord">
+          <p>Code: </p>
+          <p id="one">-</p>
+          <p id="two">-</p>
+          <p id="three">-</p>
+        </section>
       </section>
     </section>
   )

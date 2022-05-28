@@ -8,11 +8,9 @@ const ModalComputer = () => {
             console.log('Code gekraakt!!!');
 
         } else if(inputValue == "bac") {
-            alert('Heb je de code met hoofdletters ingevoerd?');
             document.getElementById('invisibleH').id = "visibleH";
             document.getElementById('visible').id = "invisible";
         } else {
-            alert('Jammer dat is niet de code :(');
             document.getElementById('invisible').id = "visible";
             document.getElementById('visibleH').id = "invisibleH";
         }
