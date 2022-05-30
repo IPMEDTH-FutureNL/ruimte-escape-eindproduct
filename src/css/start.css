@@ -1,5 +1,5 @@
 .containter__start{
-    background-image: url("../img/gameplayImages/backgrounds/tech-kamer.png");
+    background-image: url("../img/gameplayImages/backgrounds/besturingskamer.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
@@ -127,5 +127,27 @@ p{
 }
 
 .textcloud__image{
-    
+    width: 350px;
+}
+
+.textcloud__field{
+    position: absolute;
+    top: 1vh;
+    width: 90%;
+    left: .75vw;
+}
+
+.textcloud__text{
+    font-size: 1.23rem;
+}
+
+.continue{
+    position: absolute;
+    left: 14vw;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+.continue:hover{
+    transform: scale(1.1);
 }

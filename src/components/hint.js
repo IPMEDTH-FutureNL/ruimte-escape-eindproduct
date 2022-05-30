@@ -7,6 +7,7 @@ const Hint = ({type}) => {
   const [hint1, setHint1] = useState("");
   const [hint2, setHint2] = useState("");
   const [hint3, setHint3] = useState("");
+  const [punten, setPunten] = useState(30);
   const [currentHint, setCurrentHint] = useState();
   const hintArray = {
       //click game hints
@@ -44,6 +45,7 @@ const Hint = ({type}) => {
         switch (number) {
             case 1:
                 setCurrentHint(hint1)
+                console.log(punten);
                 break;
             case 2:
                 setCurrentHint(hint2)
