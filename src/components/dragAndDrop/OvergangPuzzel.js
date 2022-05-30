@@ -26,13 +26,7 @@ const OvergangPuzzel = () => {
                     Aan jou de taak om ze juist op de kaart
                     te zetten!
                 </p>
-                <button className="button primary" onClick={() => video()}>Toon kaart!</button>
-            </div>
-            <div className="intro__container-video" id="video">
-                <div className="intro__container-videoPlaceholder">
-                    <p className="placeHolder">Placeholder voor video eventueel</p>
-                </div>
-                <button className="button primary" onClick={() => goToPuzzle()}>Naar puzzel!</button>
+                <button className="button primary" onClick={() => goToPuzzle()}>Toon kaart!</button>
             </div>
         </section>
     )

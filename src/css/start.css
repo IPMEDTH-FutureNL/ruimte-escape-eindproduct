@@ -1,0 +1,131 @@
+.containter__start{
+    background-image: url("../img/gameplayImages/backgrounds/tech-kamer.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    height: 100vh;
+}
+
+
+
+.container__introduction{
+    position: absolute;
+    width: 70%;
+}
+
+.container__gameplay{
+    display: none;
+}
+
+.escaperoom__rules{
+    position: absolute;
+    left: 39vw;
+    width: 25vw;
+    top: 15vh;
+}
+
+.rule{
+    display: flex;
+    flex-direction: row;
+    font-size: 17px;
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+
+p{
+    font-size: 17px;
+}
+
+.rule-clickable{
+    height: 25px;
+    width: 35px;
+    background-color: #00FF2B;
+    border-radius: 50%;
+    opacity: .58;
+    margin-right: 10px;
+}
+
+.rule-hint{
+    font-size: 30px;
+    margin-top: -5px;
+    margin-right: 10px;
+}
+
+.rule-text{
+    font-size: 30px;
+    margin-top: -5px;
+    margin-right: 10px;
+}
+
+.player__form{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    left: 39vw;
+    top: 55vh;
+    flex-wrap: wrap;
+}
+
+.player__form-name{
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+    border: 1px solid grey;
+    width: 90%;
+}
+
+.player__form-label{
+    font-size: 1.5rem;
+}
+
+.player__form-submit{
+    margin-top: 20px;
+    padding: 10px;
+    width: 50%;
+    font-size: 1.2rem;
+    margin-left: 80%;
+    background-color: #4490be;
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+}
+
+.inputdiv{
+    margin-right: 20px;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+.escaperoom__rules-note{
+    height: 90vh;
+    width: 35vw;
+    position: absolute;
+    top: 5vh;
+    left: 32.5vw;
+}
+
+.astronaut{
+    position: absolute;
+    left: 30vw;
+    top: 15vh;
+}
+
+.spaceshuttle__image{
+    width: 450px;
+}
+
+.astronaut__image{
+    width: 250px;
+}
+
+.textcloud{
+    position: absolute;
+    left: 40vw;
+    top: 1.5vh;
+}
+
+.textcloud__image{
+    
+}
