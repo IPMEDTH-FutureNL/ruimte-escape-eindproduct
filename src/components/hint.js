@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+// import '../css/hint.css'
 
 const Hint = ({type}) => {
   const [show, setShow] = useState(false);
   const [showButton, setShowButton] = useState(true);
+  const [punten, setPunten] = useState(30);
   const [hint1, setHint1] = useState("");
   const [hint2, setHint2] = useState("");
   const [hint3, setHint3] = useState("");
@@ -40,6 +42,7 @@ const Hint = ({type}) => {
         }   
     }
 
+
     const getTab = (number) =>{
         switch (number) {
             case 1:
@@ -56,8 +59,17 @@ const Hint = ({type}) => {
     }
 
     const showHints = () =>{
-        getType();
-        setShow(prev => !prev)
+            getType();
+            setShow(prev => !prev)   
+    }
+
+    const buyHint = (number) =>{
+        if(punten >= 10){
+            setPunten(punten - 10)
+            localStorage.setItem('punten', punten)
+            getTab(number)
+        }
+        console.log(localStorage.getItem('punten'));
     }
 
   return(
@@ -77,7 +89,8 @@ const Hint = ({type}) => {
             <section className='hint-container-content'>
                 {/* this button needs to show on all different tabs */}
                 <div>{currentHint}</div>
-                {showButton && <button onClick={() => setShowButton(prev => !prev)}> pay me money </button>}
+                {/* {showButton && <button onClick={() => setShowButton(prev => !prev)}> koop hint </button>} */}
+                {showButton && <button onClick={() => buyHint()}> koop hint </button>}
             </section>        
         </section>}
     </>
