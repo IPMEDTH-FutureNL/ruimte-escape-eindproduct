@@ -1,0 +1,12 @@
+.hint-container{
+    position:absolute;
+    width: 20vw;
+    height: 20vw;
+    
+}
+
+.hint-container-content{
+    background-color: black;
+    border: 2px solid aqua;
+    color: white;
+}

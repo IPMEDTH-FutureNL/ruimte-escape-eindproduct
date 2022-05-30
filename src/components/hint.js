@@ -1,13 +1,17 @@
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types'
+import '../css/hint.css'
+import Punten from './Punten';
+import PopUp from './PopUp';
 
 const Hint = ({type}) => {
+  const [punten, setPunten] = useState(localStorage.getItem("punten"));
+  const [text, setText] = useState(""); 
   const [show, setShow] = useState(false);
   const [showButton, setShowButton] = useState(true);
   const [hint1, setHint1] = useState("");
   const [hint2, setHint2] = useState("");
   const [hint3, setHint3] = useState("");
-  const [punten, setPunten] = useState(30);
   const [currentHint, setCurrentHint] = useState();
   const hintArray = {
       //click game hints
@@ -41,11 +45,11 @@ const Hint = ({type}) => {
         }   
     }
 
+
     const getTab = (number) =>{
         switch (number) {
             case 1:
                 setCurrentHint(hint1)
-                console.log(punten);
                 break;
             case 2:
                 setCurrentHint(hint2)
@@ -58,8 +62,28 @@ const Hint = ({type}) => {
     }
 
     const showHints = () =>{
-        getType();
-        setShow(prev => !prev)
+            getType();
+            setShow(prev => !prev)   
+    }
+
+    const buyHint = () =>{
+
+        if(punten >= 10){
+            let newPoints = punten - 10;
+            setPunten(newPoints);
+            localStorage.setItem("punten", newPoints);
+        }else{
+            let newPoints = 0;
+            setPunten(newPoints);
+            localStorage.setItem("punten", newPoints);
+            setCurrentHint("Je hebt niet genoeg punten om hints te kopen!");
+        }
+
+        updatePoints();
+    }
+
+    const updatePoints = () => {
+        return localStorage.getItem("punten");
     }
 
   return(
@@ -79,9 +103,13 @@ const Hint = ({type}) => {
             <section className='hint-container-content'>
                 {/* this button needs to show on all different tabs */}
                 <div>{currentHint}</div>
-                {showButton && <button onClick={() => koopHint()}> pay me money </button>}
-            </section>        
+                {/* {showButton && <button onClick={() => setShowButton(prev => !prev)}> koop hint </button>} */}
+                {showButton && <button onClick={() => buyHint()}> koop hint </button>}
+            </section>     
         </section>}
+        <Punten 
+            punten={updatePoints()}
+        />   
     </>
   );
 }

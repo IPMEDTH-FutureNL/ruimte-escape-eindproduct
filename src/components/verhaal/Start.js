@@ -31,6 +31,7 @@ const Start = () => {
 
         introduction.style.display = "none";
         gameplay.style.display = "block";
+        localStorage.setItem('punten', 30);
         setText("Welkom " + localStorage.getItem("playerOne") + " en " + localStorage.getItem("playerTwo") + " op het ruimteschip! Ik ben Max een van de astronauten op dit schip.")
     }
 
@@ -72,7 +73,6 @@ const Start = () => {
 
     return(
         <section className="container">
-
             <section className="containter__start">
                 <section className="container__introduction" id="container__introduction">
                     <img src={Note} alt="note with rules" className="escaperoom__rules-note"></img>

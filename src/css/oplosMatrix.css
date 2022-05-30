@@ -1,0 +1,45 @@
+.postIt__image{
+    width: 350px;
+}
+
+.postIt__red{
+    color: #CB5A5A;
+    font-weight: 500;
+}
+
+.postIt__yellow{
+    color: #CBCB5A;
+    font-weight: 500;
+}
+
+.postIt__blue{
+    color: #5AA0CB;
+    font-weight: 500;
+}
+
+.postIt__text{
+    position: absolute;
+    width: 280px;
+    top: 5vh;
+    font-size: 1.5rem;
+    left: 1vw;
+}
+
+.container__postit{
+    position: absolute;
+    top: 15vh;
+    left: 70vw;  
+}
+
+.oplosmatrix__lock-button{
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    font-size: 1.2rem;
+    background-color: #4490be;
+    color: white;
+    border: none;
+    position: absolute;
+    margin-top: 10px;
+    cursor: pointer;
+}

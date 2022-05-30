@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
+import Hint from '../hint';
+import "../../css/oplosMatrix.css"
 import astronaut from'../../img/oplosmatrix/astronaut.png';
 import earth from'../../img/oplosmatrix/earth.png';
 import moon from'../../img/oplosmatrix/moon.png';
 import lock from '../../img/oplosmatrix/lock.png';
 import PopUp from '../PopUp';
+import PostIt from '../../img/oplosmatrix/post-it.png';
 
 const Oplosmatrix = () => {
     const [fout, setFout] = useState(0);
@@ -13,13 +16,13 @@ const Oplosmatrix = () => {
     const navigate = useNavigate();
 
     const navigation = () => {
-
+        navigate("/puzzelDrie");
     }
 
     const solveLock = (e) => {
         e.preventDefault();
 
-        const lockAnswer = 123;
+        const lockAnswer = 674;
 
         let codeString = checkInput();
 
@@ -53,6 +56,7 @@ const Oplosmatrix = () => {
 
     return(
         <section className='note'>
+            <Hint type='clickHint'/>
             <section className='note-center'>
                 <div className='oplosmatrix-grid'>
                     <div className='grid-item-blank'></div>
@@ -85,8 +89,19 @@ const Oplosmatrix = () => {
                     <input className="oplosmatrix__lock-input" placeholder='*'></input>
                     <input className="oplosmatrix__lock-input" placeholder='*'></input>
                     <input className="oplosmatrix__lock-input" placeholder='*'></input>
-                    <input type="submit" hidden />
+                    <input className="oplosmatrix__lock-button" type="submit" value="Open" />
                 </form>
+            </section>
+            <section className="container__postit">
+                <img src={PostIt} alt="postIt" className="postIt__image"></img>
+                <p className="postIt__text">
+                        We hebben <span className="postIt__red">8 planeten </span>
+                        in ons zonnestelsel, 
+                        op aarde zien wij bijna
+                        iedere avond <span className="postIt__blue">1 maan</span>. 
+                        Daarbij zijn wij met
+                        <span className="postIt__yellow"> 4 astronauten </span> op het schip
+                </p>
             </section>
 
             <PopUp text={text} onClick={() => navigation()}></PopUp>

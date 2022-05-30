@@ -1,0 +1,45 @@
+.clickingGame__container{
+    background-image: url('../img/clickingGame/ruimte-background.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    height: 100vh;
+}
+.clickingGame__garbage__container{
+    top: 10vh;
+    position: absolute;
+    display:flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    width: 100vw;
+    height: 80vh;
+
+}
+
+.rotating_right{
+    width:60px;
+    height: 60px;
+    animation: rotationRight 15s infinite linear;
+}
+
+.rotating_left{
+    animation: rotationLeft 15s infinite linear;
+}
+
+@keyframes rotationRight{
+    from{
+        transform:rotate(0deg);
+    }
+    to{
+        transform:rotate(359deg);
+    }
+}
+
+@keyframes rotationLeft{
+    from{
+        transform:rotate(0deg);
+    }
+    to{
+        transform:rotate(-359deg);
+    }
+}
