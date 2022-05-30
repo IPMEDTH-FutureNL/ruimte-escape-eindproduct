@@ -79,7 +79,7 @@ const Hint = ({type}) => {
             <section className='hint-container-content'>
                 {/* this button needs to show on all different tabs */}
                 <div>{currentHint}</div>
-                {showButton && <button onClick={() => setShowButton(prev => !prev)}> pay me money </button>}
+                {showButton && <button onClick={() => koopHint()}> pay me money </button>}
             </section>        
         </section>}
     </>
