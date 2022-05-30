@@ -8,6 +8,8 @@ import IntroMatrix from './components/secondPuzzle/IntroMatrix';
 import Oplosmatrix from './components/secondPuzzle/Oplosmatrix';
 import QuizzPuzzle from './components/quizzPuzzle/QuizzPuzzle';
 import RebusPuzzle from './components/rebus/RebusPuzzle';
+import ClickingGame from './components/clickingGame/ClickingGame'
+import Crosswords from './components/crossword/Crosswords';
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
             <Route path="/puzzelTwee" element={ <Oplosmatrix/>}></Route>
             <Route path="/puzzelDrie" element={ <QuizzPuzzle/>}></Route>
             <Route path="/puzzelVier" element={ <RebusPuzzle/>}></Route>
+            <Route path="/puzzelVijf" element={ <Crosswords/>}></Route>
+            <Route path="/puzzelZes" element={ <ClickingGame/>}></Route>
         </Routes>
       </div>
     </Router>

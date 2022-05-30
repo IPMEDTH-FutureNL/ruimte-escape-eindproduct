@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
-import Garbage from './components/garbage';
-import Hint from './components/hint';
+import Garbage from './garbage';
+import Hint from '../hint';
 
 export class ClickingGame extends Component{
     constructor(props){
