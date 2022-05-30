@@ -1,12 +1,15 @@
 import React from 'react';
+import { useNavigate } from "react-router-dom";
 import Rebus from '../../img/rebus/rebus-zwart.png';
 
 const ModalRebus = () => {
+    const navigate = useNavigate();
 
     const checkValue = () => {
         const inputValue = document.getElementById("text").value;
         if(inputValue == "we zijn onderweg naar mars"){
             console.log('Code gekraakt!!!');
+            navigate('/puzzelVijf');
         } else {
             // alert('Jammer dat is niet het antwoord :(');
             document.getElementById('invisible').id = "visible";

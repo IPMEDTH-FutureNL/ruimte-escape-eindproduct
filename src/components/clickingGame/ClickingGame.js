@@ -20,7 +20,7 @@ export class ClickingGame extends Component{
     
     componentDidUpdate(){
         if(this.state.count >= 6){
-            console.log('Daan is gestorven aan ligma')
+            window.location.href = '/puzzelZes';
         }
     }
 

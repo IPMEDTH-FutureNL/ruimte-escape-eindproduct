@@ -23,8 +23,8 @@ function App() {
             <Route path="/puzzelTwee" element={ <Oplosmatrix/>}></Route>
             <Route path="/puzzelDrie" element={ <QuizzPuzzle/>}></Route>
             <Route path="/puzzelVier" element={ <RebusPuzzle/>}></Route>
-            <Route path="/puzzelVijf" element={ <Crosswords/>}></Route>
-            <Route path="/puzzelZes" element={ <ClickingGame/>}></Route>
+            <Route path="/puzzelVijf" element={ <ClickingGame/>}></Route>
+            <Route path="/puzzelZes" element={ <Crosswords/>}></Route>
         </Routes>
       </div>
     </Router>

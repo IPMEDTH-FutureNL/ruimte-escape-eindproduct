@@ -1,12 +1,15 @@
 import React from 'react'
+import { useNavigate } from "react-router-dom";
 import Computer from '../../img/quizz/computer.png';
 
 const ModalComputer = () => {
+    const navigate = useNavigate();
+
     const checkValue = () => {
         const inputValue = document.getElementById("number").value;
         if(inputValue == "BAC"){
             console.log('Code gekraakt!!!');
-
+            navigate('/puzzelVier');
         } else if(inputValue == "bac") {
             document.getElementById('invisibleH').id = "visibleH";
             document.getElementById('visible').id = "invisible";

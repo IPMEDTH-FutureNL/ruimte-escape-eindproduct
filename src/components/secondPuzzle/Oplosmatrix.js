@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from "react-router-dom";
 import astronaut from'../../img/oplosmatrix/astronaut.png';
 import earth from'../../img/oplosmatrix/earth.png';
 import moon from'../../img/oplosmatrix/moon.png';
@@ -8,6 +9,12 @@ import PopUp from '../PopUp';
 const Oplosmatrix = () => {
     const [fout, setFout] = useState(0);
     const [text, setText] = useState("");
+
+    const navigate = useNavigate();
+
+    const navigation = () => {
+
+    }
 
     const solveLock = (e) => {
         e.preventDefault();
@@ -20,6 +27,7 @@ const Oplosmatrix = () => {
             setText("Je hebt de code gekraakt");
             let openpopup = document.getElementById("popup");
             openpopup.style.display = "block";
+            navigate('/puzzelDrie');
             console.log("aantal foute pogingen " + fout);
         }else{
             setText("Dat was helaas niet goed");
@@ -81,7 +89,7 @@ const Oplosmatrix = () => {
                 </form>
             </section>
 
-            <PopUp text={text}></PopUp>
+            <PopUp text={text} onClick={() => navigation()}></PopUp>
         </section>
     )
 }
