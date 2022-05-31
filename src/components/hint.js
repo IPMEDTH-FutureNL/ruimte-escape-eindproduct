@@ -81,7 +81,7 @@ const Hint = ({type}) => {
   return(
     <>
         <Popup trigger={<button> hints</button>} position="right center" nested>
-            <div>Popup content here !!
+            <div>
                 <Popup trigger ={<button className='hint-button-tab'> 1 </button>} position='bottom left' nested>
                     <section className='popup-content-container'>
                         <Popup trigger={<button className='hint-button-buyhint'> koop hint</button>} position='bottom center' nested>
