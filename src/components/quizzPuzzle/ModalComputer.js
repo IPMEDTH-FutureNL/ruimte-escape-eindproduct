@@ -12,10 +12,10 @@ const ModalComputer = () => {
             navigate('/puzzelVier');
         } else if(inputValue == "bac") {
             document.getElementById('invisibleH').id = "visibleH";
-            document.getElementById('visible').id = "invisible";
+            // document.getElementById('visible').id = "invisible"; DEZE ZIJN NOG BUGGY
         } else {
             document.getElementById('invisible').id = "visible";
-            document.getElementById('visibleH').id = "invisibleH";
+            // document.getElementById('visibleH').id = "invisibleH"; DEZE ZIJN NOG BUGGY
         }
     }
   return (

@@ -43,6 +43,10 @@ const QuizzPuzzle = () => {
         setTModalIsOpen(false)
     }
 
+    const exit = () => {
+        document.getElementById('open').id = "exit";
+    }
+
   return (
     <section>
         <div className="background">
@@ -50,6 +54,10 @@ const QuizzPuzzle = () => {
             <img src={Tablet} alt="" onClick={setTModalIsOpenToTrue} className="quiz-tablet"  />
             <img src={Zonnestelsel} alt="" onClick={setZModalIsOpenToTrue} className="quiz-zonnestelsel"/>
             <img src={Computer} alt="" onClick={setCModalIsOpenToTrue} className="quiz-computer" />
+            <div className="quiz-intro" id="open">
+                <p className="text-white">Je bent in de computerkamer! Ons taak is om straks de vuilnis in de ruimte op te ruimen. Het is niet alleens ons taak om naar mars te gaan, maar ook om de ruimte schoon te houden! Om straks de vuilnis op te kunnen ruimen heb je een code nodig die ergens op de computer te vinden is in de kamer. Kunnen jullie op zoek gaan naar deze code?</p>
+                <button className="quizz-btn exit-btn btn" onClick={exit}> Ga verder</button>
+            </div>
             
 
             <Modal className="modal-zonnestelsel" isOpen={ZmodalIsOpen}>
