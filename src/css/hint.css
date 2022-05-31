@@ -1,3 +1,8 @@
+.hint-button{
+    position: absolute;
+    z-index: 99;
+}
+
 .hint-container{
     position:absolute;
     width: 20vw;
@@ -6,6 +11,8 @@
 }
 
 .hint-container-content{
+    width:10vw;
+    height:10vw;
     background-color: black;
     border: 2px solid aqua;
     color: white;
