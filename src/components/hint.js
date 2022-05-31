@@ -1,16 +1,13 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Popup from 'reactjs-popup';
-// import '../css/hint.css'
+import '../css/hint.css'
 
 const Hint = ({type}) => {
-//   const [show, setShow] = useState(false);
-//   const [showButton, setShowButton] = useState(true);
   const [punten, setPunten] = useState(30);
   const [hint1, setHint1] = useState("");
   const [hint2, setHint2] = useState("");
   const [hint3, setHint3] = useState("");
-//   const [currentHint, setCurrentHint] = useState();
   const hintArray = {
       //click game hints
       clickHint1: 'this is the first hint',
@@ -44,67 +41,41 @@ const Hint = ({type}) => {
         }   
     }
 
-
-    // const getTab = (number) =>{
-    //     switch (number) {
-    //         case 1:
-    //             setCurrentHint(hint1)
-    //             break;
-    //         case 2:
-    //             setCurrentHint(hint2)
-    //             break;
-    //         case 3:
-    //             setCurrentHint(hint3)
-    //         default:
-    //             break;
-    //     }
-    // }
-
     React.useEffect( () =>{
         getType();
     }, [])
     
-    // const showHints = () =>{
-    //         getType();
-    //         setShow(prev => !prev)   
-    // }
-
-    // const buyHint = (number) =>{
-    //     if(punten >= 10){
-    //         setPunten(punten - 10)
-    //         localStorage.setItem('punten', punten)
-    //         getTab(number)
-    //     }
-    //     console.log(localStorage.getItem('punten'));
-    // }
 
   return(
     <>
-        <Popup trigger={<button> hints</button>} position="right center" nested>
-            <div>
+        <Popup trigger={<button className='hint-button'> hints</button>} position="right center" nested>
+            <section>
+                
                 <Popup trigger ={<button className='hint-button-tab'> 1 </button>} position='bottom left' nested>
-                    <section className='popup-content-container'>
+                    <section className='hint-container'>
                         <Popup trigger={<button className='hint-button-buyhint'> koop hint</button>} position='bottom center' nested>
                             <p>{hint1}</p>
                         </Popup>
                     </section>
                     
                 </Popup>
-                <Popup trigger ={<button className='hint-button-tab'> 2 </button>} position='bottom center' nested>
-                    <section className='popup-content-container'>
+                <Popup trigger ={<button className='hint-button-tab'> 2 </button>} position='bottom left' nested>
+                    <section className='hint-container'>
                     <Popup trigger={<button className='hint-button-buyhint'> koop hint</button>} position='bottom center' nested>
                             <p>{hint2}</p>
                         </Popup>
                     </section>
                 </Popup>
-                <Popup trigger ={<button className='hint-button-tab'> 3 </button>} position='bottom right' nested>
-                    <section className='popup-content-container'>
+                <Popup trigger ={<button className='hint-button-tab'> 3 </button>} position='bottom left' nested>
+                    <section className='hint-container'>
                         <Popup trigger={<button className='hint-button-buyhint'> koop hint</button>} position='bottom center' nested>
-                            <p>{hint3}</p>
+                            <section className='hint-container-content'>
+                                <p>{hint3}</p>
+                            </section>
                         </Popup>
                     </section>
                 </Popup>
-            </div>
+            </section>
         </Popup>
       
       
