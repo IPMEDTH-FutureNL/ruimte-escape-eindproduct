@@ -176,3 +176,19 @@ p{
 .continue:hover{
     transform: scale(1.1);
 }
+
+@media screen and (min-width: 1900px) {
+    
+    .player__form{
+      position: absolute;
+      display: flex;
+      flex-direction: row;
+      left: 39vw;
+      top: 55vh;
+      flex-wrap: wrap;
+    }
+
+    .textcloud__image{
+        width: 18vw;
+    }
+  }

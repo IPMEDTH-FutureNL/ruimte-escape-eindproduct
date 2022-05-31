@@ -397,5 +397,12 @@ body{
 }
 
 
+@media screen and (min-width: 1900px) {
+  .note-center{
+    padding-top: 10vh;
+  }
+  
+}
+
 
 
