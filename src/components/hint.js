@@ -67,7 +67,7 @@ const Hint = ({type}) => {
         if(punten >= 10){
             setPunten(punten - 10)
             localStorage.setItem('punten', punten)
-            getTab(number)
+            getTab(number) 
         }
         console.log(localStorage.getItem('punten'));
     }
