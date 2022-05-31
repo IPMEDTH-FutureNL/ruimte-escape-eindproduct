@@ -79,7 +79,7 @@ const DragAndDrop = () => {
 
     return (
       <section className="mapPuzzle">
-        <Hint type='clickHint'/>
+        <Hint type='dragAndDropHints'/>
           <div className="board">
             <div className="board__piece">
                 <div className="board__piece-square" id="div1" onDrop={(event) => drop(event)} onDragOver={(event) => allowDrop(event)} ></div>

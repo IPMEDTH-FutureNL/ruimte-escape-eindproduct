@@ -56,7 +56,7 @@ const Oplosmatrix = () => {
 
     return(
         <section className='note'>
-            <Hint type='clickHint'/>
+            <Hint type='oplosmatrixHints'/>
             <section className='note-center'>
                 <div className='oplosmatrix-grid'>
                     <div className='grid-item-blank'></div>

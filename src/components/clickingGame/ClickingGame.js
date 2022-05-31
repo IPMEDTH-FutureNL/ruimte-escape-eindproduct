@@ -24,7 +24,7 @@ const ClickingGame = () =>{
 
         return(
             <section className='clickingGame__container'>
-                <Hint type='clickHint'/>
+                <Hint type='clickHints'/>
                 <section className='clickingGame__garbage__container'>
                     <figure className='rotating_left'>
                         <div onClick={() => countItems()}><Garbage /></div>
