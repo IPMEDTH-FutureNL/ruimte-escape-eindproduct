@@ -28,18 +28,18 @@
 .container__postit{
     position: absolute;
     top: 15vh;
-    left: 70vw;  
+    left: 65vw;  
 }
 
 .oplosmatrix__lock-button{
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     text-align: center;
     font-size: 1.2rem;
     background-color: #4490be;
     color: white;
     border: none;
     position: absolute;
-    margin-top: 10px;
+    margin-top: 1.5rem;
     cursor: pointer;
 }

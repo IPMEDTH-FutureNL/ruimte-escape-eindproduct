@@ -204,8 +204,9 @@ body{
 
 .puzzelstukjes{
   position: absolute;
-  left: 30vw;
+  left: 20vw;
   top: 15vh;
+  width: 90vw;
 }
 .planet{
   z-index: 10;
@@ -298,8 +299,8 @@ body{
 .note-center{
   display: block;
   margin: auto;
-  padding-top: 4.5%;
-  width: 33rem;
+  padding-top: 1vh;
+  width: 30rem;
 }
 
 .grid-item-blank{
@@ -312,11 +313,11 @@ body{
 }
 
 .icon{
-  height: 6rem;
+  height: 4rem;
 }
 
 .icon:nth-child(3){
-  margin-right: 25px;
+  padding-left: 2vw;
 }
 
 .grid-item-color-red{
@@ -348,19 +349,19 @@ body{
 .oplosmatrix-grid{
   display: grid;
   background-color: #080742;
-  width: 28rem;
-  padding: 40px;
+  width: 25rem;
+  padding: 30px;
   border-radius: 50px;
   gap: 5px;
-  grid-template-columns: repeat(4, 7rem);
-  grid-template-rows: repeat(4, 7rem);   
+  grid-template-columns: repeat(4, 6rem);
+  grid-template-rows: repeat(4, 6rem);   
 }
 
 .oplosmatrix__lock{
   display: flex;
   flex-direction: row;
   background-color: #080742;
-  width: 34rem;
+  width: 28rem;
   height: 100px;
   padding: 10px;
   margin: auto;
@@ -371,15 +372,15 @@ body{
 
 
 .oplosmatrix__lock-input{
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   text-align: center;
   font-size: 4rem;
   background-color: #050530;
   color: white;
   border: none;
   margin-right: 1rem;
-  margin-top: .5rem;
+  margin-top: 1.5rem;
 }
 
 .oplosmatrix__lock-image{
