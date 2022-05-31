@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import Popup from 'reactjs-popup';
 // import '../css/hint.css'
 
 const Hint = ({type}) => {
-  const [show, setShow] = useState(false);
-  const [showButton, setShowButton] = useState(true);
+//   const [show, setShow] = useState(false);
+//   const [showButton, setShowButton] = useState(true);
   const [punten, setPunten] = useState(30);
   const [hint1, setHint1] = useState("");
   const [hint2, setHint2] = useState("");
   const [hint3, setHint3] = useState("");
-  const [currentHint, setCurrentHint] = useState();
+//   const [currentHint, setCurrentHint] = useState();
   const hintArray = {
       //click game hints
       clickHint1: 'this is the first hint',
@@ -22,6 +23,7 @@ const Hint = ({type}) => {
 
       // add more hints with appropriate names
   }
+
 
   const getType = () => {
     switch (type) {
@@ -43,56 +45,90 @@ const Hint = ({type}) => {
     }
 
 
-    const getTab = (number) =>{
-        switch (number) {
-            case 1:
-                setCurrentHint(hint1)
-                break;
-            case 2:
-                setCurrentHint(hint2)
-                break;
-            case 3:
-                setCurrentHint(hint3)
-            default:
-                break;
-        }
-    }
+    // const getTab = (number) =>{
+    //     switch (number) {
+    //         case 1:
+    //             setCurrentHint(hint1)
+    //             break;
+    //         case 2:
+    //             setCurrentHint(hint2)
+    //             break;
+    //         case 3:
+    //             setCurrentHint(hint3)
+    //         default:
+    //             break;
+    //     }
+    // }
 
-    const showHints = () =>{
-            getType();
-            setShow(prev => !prev)   
-    }
+    React.useEffect( () =>{
+        getType();
+    }, [])
+    
+    // const showHints = () =>{
+    //         getType();
+    //         setShow(prev => !prev)   
+    // }
 
-    const buyHint = (number) =>{
-        if(punten >= 10){
-            setPunten(punten - 10)
-            localStorage.setItem('punten', punten)
-            getTab(number) 
-        }
-        console.log(localStorage.getItem('punten'));
-    }
+    // const buyHint = (number) =>{
+    //     if(punten >= 10){
+    //         setPunten(punten - 10)
+    //         localStorage.setItem('punten', punten)
+    //         getTab(number)
+    //     }
+    //     console.log(localStorage.getItem('punten'));
+    // }
 
   return(
     <>
-      <button onClick={ () => showHints()}>Click</button>
+        <Popup trigger={<button> hints</button>} position="right center" nested>
+            <div>Popup content here !!
+                <Popup trigger ={<button className='hint-button-tab'> 1 </button>} position='bottom left' nested>
+                    <section className='popup-content-container'>
+                        <Popup trigger={<button className='hint-button-buyhint'> koop hint</button>} position='bottom center' nested>
+                            <p>{hint1}</p>
+                        </Popup>
+                    </section>
+                    
+                </Popup>
+                <Popup trigger ={<button className='hint-button-tab'> 2 </button>} position='bottom center' nested>
+                    <section className='popup-content-container'>
+                    <Popup trigger={<button className='hint-button-buyhint'> koop hint</button>} position='bottom center' nested>
+                            <p>{hint2}</p>
+                        </Popup>
+                    </section>
+                </Popup>
+                <Popup trigger ={<button className='hint-button-tab'> 3 </button>} position='bottom right' nested>
+                    <section className='popup-content-container'>
+                        <Popup trigger={<button className='hint-button-buyhint'> koop hint</button>} position='bottom center' nested>
+                            <p>{hint3}</p>
+                        </Popup>
+                    </section>
+                </Popup>
+            </div>
+        </Popup>
+      
+      
+      
+      {/* <button onClick={ () => showHints()}>Click</button>
 
-      {/* <button classeName={hintOpen ? 'hintOpenStyle' : 'hintClosedStyle'} />  */}
-
+      <button classeName={hintOpen ? 'hintOpenStyle' : 'hintClosedStyle'} /> 
       {show && 
         <section className='hint-container'>
+            
+
             <section className='hint-container-tabs'>
-                {/* add logic to buttons so it works in switch case */}
+                {/* add logic to buttons so it works in switch case }
                 <button className='hint-container-tabs-1' onClick={ () => getTab(1)}>1</button>
                 <button className='hint-container-tabs-1' onClick={ () => getTab(2)}>2</button>
                 <button className='hint-container-tabs-1' onClick={ () => getTab(3)}>3</button>
             </section>
             <section className='hint-container-content'>
-                {/* this button needs to show on all different tabs */}
+                {/* this button needs to show on all different tabs }
                 <div>{currentHint}</div>
-                {/* {showButton && <button onClick={() => setShowButton(prev => !prev)}> koop hint </button>} */}
+                {/* {showButton && <button onClick={() => setShowButton(prev => !prev)}> koop hint </button>} }
                 {showButton && <button onClick={() => buyHint()}> koop hint </button>}
             </section>        
-        </section>}
+        </section>} */}
     </>
   );
 }
