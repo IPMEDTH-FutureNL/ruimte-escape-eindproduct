@@ -1,3 +1,4 @@
+import React from "react";
 import './App.css';
 // import DragAndDrop from './components/startPuzzle/DragAndDrop';
 import Oplosmatrix from './components/secondPuzzle/Oplosmatrix';
