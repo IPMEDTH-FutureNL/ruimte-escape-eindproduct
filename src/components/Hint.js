@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+import React, { useState } from 'react'
 
 const Hint = ({type}) => {
   const [show, setShow] = useState(false);
@@ -25,7 +24,14 @@ const Hint = ({type}) => {
       oplosMatrixHint1: 'De kleuren op de post it komen wel heel erg bekend voor.',
       oplosMatrixHint2: 'zouden de afbeeldingen op de post it iets betekenen?',
       oplosMatrixHint3: 'de oplossing',
-      // add more hints with appropriate names
+      // Quizz hints
+      quizzHint1: 'Heb je de vragen kunnen beantwoorden met de weetjes op de kaart? De antwoorden op de drie vragen vormen een lettercode!',
+      quizzHint2: 'Er zijn 8 planeten in ons zonnestelsel. De antwoord op vraag 1 is dus B. Kun jij de andere twee nog beantwoorden?',
+      quizzHint3: 'De antwoorden op vraag 1 is B, vraag 2 is A en vraag 3 is C. De lettercode is dus: BAC.',
+      // Rebus hints
+      rebusHint1: 'Heb je op de blauwe computer op de deur geklikt? Daar kun je een code invullen en de deur openen!',
+      rebusHint2: 'De eerste twee blokjes vormen de zin: we zijn..... Wat zouden de drie woorden erna vormen?',
+      rebusHint3: 'Het antwoord is: we zijn onderweg naar mars',
   }
 
   const getType = () => {
@@ -47,12 +53,22 @@ const Hint = ({type}) => {
             setHint1(Object.values(hintArray.dragAndDropHint1))
             setHint2(Object.values(hintArray.dragAndDropHint2))
             setHint3(Object.values(hintArray.dragAndDropHint3))
-        
+            break;
 
         case 'oplosmatrixHints':
             setHint1(Object.values(hintArray.oplosMatrixHint1))
             setHint2(Object.values(hintArray.oplosMatrixHint2))
             setHint3(Object.values(hintArray.oplosMatrixHint3))
+            break;
+        case 'quizzHints':
+            setHint1(Object.values(hintArray.quizzHint1))
+            setHint2(Object.values(hintArray.quizzHint2))
+            setHint3(Object.values(hintArray.quizzHint3))
+            break;
+        case 'rebusHints':
+            setHint1(Object.values(hintArray.rebusHint1))
+            setHint2(Object.values(hintArray.rebusHint2))
+            setHint3(Object.values(hintArray.rebusHint3))
             break;
 
         default:
@@ -106,7 +122,3 @@ const Hint = ({type}) => {
 }
 
 export default Hint
-
-Hint.propTypes = {
-    type: PropTypes.string.isRequired,
-};
