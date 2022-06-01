@@ -55,7 +55,7 @@ const Hint = ({type}) => {
             setHint1(Object.values(hintArray.dragAndDropHint1))
             setHint2(Object.values(hintArray.dragAndDropHint2))
             setHint3(Object.values(hintArray.dragAndDropHint3))
-        
+            break;
 
         case 'oplosmatrixHints':
             setHint1(Object.values(hintArray.oplosMatrixHint1))
