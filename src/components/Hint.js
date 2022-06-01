@@ -14,28 +14,49 @@ const Hint = ({type}) => {
       clickHint2: 'this is the second hint',
       clickHint3: 'this is the 3rd hint',
       //crossword hints
-      crosswordHint1: 'sussy bussy',
-      crosswordHint2: 'bogos binted',
-      crosswordHint3: 'pingo pongo',
-
+      crosswordHint1: 'kruisword puzzel',
+      crosswordHint2: 'hint 2',
+      crosswordHint3: 'antwoord puzzel',
+      //drag and drop hints
+      dragAndDropHint1: 'De planeten Saturnus en Uranus kan je herkennen aan hun ringen. De ringen om deze planeten bestaan uit meteorietstofdeeltjes en ijs.',
+      dragAndDropHint2: 'De planeet die het dichts bij de zon staat is Mercurius.',
+      dragAndDropHint3: 'De oplossing voor de puzzel is: zie afbeelding.',
+      //oplosmatrix hints
+      oplosMatrixHint1: 'De kleuren op de post it komen wel heel erg bekend voor.',
+      oplosMatrixHint2: 'zouden de afbeeldingen op de post it iets betekenen?',
+      oplosMatrixHint3: 'de oplossing',
       // add more hints with appropriate names
   }
 
   const getType = () => {
     switch (type) {
-        case 'clickHint':
+        case 'clickHints':
             //depends on the tab thats open, show correct hint
             setHint1(Object.values(hintArray.clickHint1))
             setHint2(Object.values(hintArray.clickHint2))
             setHint3(Object.values(hintArray.clickHint3))
             break;
 
-        case 'crosswordHint':
+        case 'crosswordHints':
             setHint1(Object.values(hintArray.crosswordHint1))
             setHint2(Object.values(hintArray.crosswordHint2))
             setHint3(Object.values(hintArray.crosswordHint3))
             break;
+
+        case 'dragAndDropHints':
+            setHint1(Object.values(hintArray.dragAndDropHint1))
+            setHint2(Object.values(hintArray.dragAndDropHint2))
+            setHint3(Object.values(hintArray.dragAndDropHint3))
+        
+
+        case 'oplosmatrixHints':
+            setHint1(Object.values(hintArray.oplosMatrixHint1))
+            setHint2(Object.values(hintArray.oplosMatrixHint2))
+            setHint3(Object.values(hintArray.oplosMatrixHint3))
+            break;
+
         default:
+
             break;
         }   
     }
