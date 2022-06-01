@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useNavigate } from "react-router-dom";
 import PopUp from '../PopUp';
 import Punten from '../Punten';
-import Hint from '../hint';
+import Hint from '../Hint';
 
 
 //planeten
