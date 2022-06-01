@@ -215,3 +215,28 @@ li:hover{
 #two, #three{
     padding-left: 2px;
 }
+
+.quiz-intro{
+    width: 50vw;
+    height: 50vh;
+    background-color: rgb(41, 41, 41);
+    box-sizing: border-box;
+    box-shadow: 0 10px 10px rgb(0 0 0 / 0.2);
+    padding: 2rem;
+    border-radius: 20px;
+    position: absolute;
+    transform:translate(50%,50%);
+    z-index: 100;
+}
+
+#open{
+    display: block;
+}
+
+#exit{
+    display: none;
+}
+
+.exit-btn{
+    left: 37.5%;
+}

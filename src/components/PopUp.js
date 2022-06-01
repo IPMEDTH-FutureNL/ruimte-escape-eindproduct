@@ -9,6 +9,10 @@ export class PopUp extends Component {
     e.preventDefault();
     let closepopup = document.getElementById("popup");
     closepopup.style.display = "none";
+
+    if(this.props.navigate === "true"){
+      window.location.href = "/";
+    }
   }
 
   render() {

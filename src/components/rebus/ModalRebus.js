@@ -21,7 +21,7 @@ const ModalRebus = () => {
     <section className="rebus-flex">
         <img src={Rebus} alt="" className='rebus'/>
         <section className="rebus-code">
-            <h2 class="">De deur heeft een aparte slot! Kun jij de rebus oplossen en invoeren?</h2>
+            <h2>O! We hebben weer een code nodig, maar dit keer om in de cockpit te komen. Kun jij de rebus oplossen?</h2>
             <p><em>Let op spaties en spelfouten!</em></p>
             <input className="rebus-input input" type="text" id="text" name="text"/> <br/>          
             <button className="rebus-btn btn" onClick={checkValue}> Kraak de code</button>
