@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
-import Hint from '../hint';
+import Hint from '../Hint';
 import "../../css/oplosMatrix.css"
 import astronaut from'../../img/oplosmatrix/astronaut.png';
 import earth from'../../img/oplosmatrix/earth.png';

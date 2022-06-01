@@ -1,7 +1,7 @@
 import React from "react";
 import { Component } from "react";
-import Crossword from "@jaredreisinger/react-crossword";
-// import "";
+import Crossword from "@jaredreisinger/react-crossword"; //npm install --save @jaredreisinger/react-crossword
+import "./styles.css";
 
   const data = {
     across: {
