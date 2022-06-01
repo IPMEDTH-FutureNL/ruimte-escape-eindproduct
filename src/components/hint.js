@@ -10,9 +10,9 @@ const Hint = ({type}) => {
   const [hint3, setHint3] = useState("");
   const hintArray = {
       //click game hints
-      clickHint1: 'this is the first hint',
-      clickHint2: 'this is the second hint',
-      clickHint3: 'this is the 3rd hint',
+      clickHint1: 'Ruim het afval op met de muis',
+      clickHint2: 'Gebruik de linker muisknop om te klikken',
+      clickHint3: 'Er zijn 6 stukken afval in totaal, heb je ze allemaal?',
       //crossword hints
       crosswordHint1: 'sussy bussy',
       crosswordHint2: 'bogos binted',
@@ -49,31 +49,35 @@ const Hint = ({type}) => {
   return(
     <>
         <Popup trigger={<button className='hint-button'> hints</button>} position=" center" modal nested>
-            <section className='hint-container-content'>
-                <Popup trigger ={<button className='hint-button-tab'> 1 </button>} position='bottom left' nested>
-                    <section className='hint-container'>
+            
+            <section className='hint-container'>
+                <h1 className='hint-header'>hints</h1>
+                <section className='hint-container-content'>
+                    <Popup trigger ={<button className='hint-button-tab'> 1 </button>} position='bottom left' nested>
+                        <section >
+                            <Popup trigger={<button className='hint-button-buyhint'> koop hint</button>} position='bottom center' nested>
+                                <p className='hint-container-content-hint'>{hint1}</p>
+                            </Popup>
+                        </section>
+                        
+                    </Popup>
+                    <Popup trigger ={<button className='hint-button-tab'> 2 </button>} position='bottom center' nested>
+                        <section>
                         <Popup trigger={<button className='hint-button-buyhint'> koop hint</button>} position='bottom center' nested>
-                            <p>{hint1}</p>
-                        </Popup>
-                    </section>
-                    
-                </Popup>
-                <Popup trigger ={<button className='hint-button-tab'> 2 </button>} position='bottom left' nested>
-                    <section className='hint-container'>
-                    <Popup trigger={<button className='hint-button-buyhint'> koop hint</button>} position='bottom center' nested>
-                            <p>{hint2}</p>
-                        </Popup>
-                    </section>
-                </Popup>
-                <Popup trigger ={<button className='hint-button-tab'> 3 </button>} position='bottom left' nested>
-                    <section className='hint-container'>
-                        <Popup trigger={<button className='hint-button-buyhint'> koop hint</button>} position='bottom center' nested>
-                            <section className='hint-container-content'>
-                                <p>{hint3}</p>
-                            </section>
-                        </Popup>
-                    </section>
-                </Popup>
+                                <p className='hint-container-content-hint'>{hint2}</p>
+                            </Popup>
+                        </section>
+                    </Popup>
+                    <Popup trigger ={<button className='hint-button-tab'> 3 </button>} position='bottom right' nested>
+                        <section>
+                            <Popup trigger={<button className='hint-button-buyhint'> koop hint</button>} position='bottom center' nested>
+                                <section className='hint-container-content'>
+                                    <p className='hint-container-content-hint'>{hint3}</p>
+                                </section>
+                            </Popup>
+                        </section>
+                    </Popup>
+                </section>
             </section>
         </Popup>
     </>

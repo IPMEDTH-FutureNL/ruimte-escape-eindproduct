@@ -1,19 +1,29 @@
 .hint-button{
     position: absolute;
     z-index: 99;
+    right:3vw;
+    top: 3vh;
 }
 
 .hint-container{
-    position:absolute;
-    width: 20vw;
-    height: 20vw;
-    
+  width: 50vw;
+  height: 50vh;
+  border: 2px solid cyan;
+  background-color: black;
+  opacity: .8;
+  font-size: 18px;
+  text-align: center;
+  padding: 5px;
 }
 
-.hint-container-content{
-    width:30vw;
-    height:30vw;
-    background-color: black;
-    border: 2px solid aqua;
-    color: white;
+.hint-header{
+    font-size: 20px;
+    color: #fff;
+    margin:0;
+}
+
+.hint-container-content-hint{
+    width: 48vw;
+    color:white;
+    text-align: center;
 }

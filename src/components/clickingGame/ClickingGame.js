@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../../css/clickingGame.css';
 import Garbage from './garbage'
-import Hint from '../../components/hint';
+import Hint from '../../components/Hint';
 
 const ClickingGame = () =>{
 
