@@ -1,4 +1,7 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import PropTypes from 'prop-types'; 
+import Popup from 'reactjs-popup'; //npm install reactjs-popup --save
+import '../css/hint.css'
 
 const Hint = ({type}) => {
   const [show, setShow] = useState(false);
@@ -9,9 +12,9 @@ const Hint = ({type}) => {
   const [currentHint, setCurrentHint] = useState();
   const hintArray = {
       //click game hints
-      clickHint1: 'this is the first hint',
-      clickHint2: 'this is the second hint',
-      clickHint3: 'this is the 3rd hint',
+      clickHint1: 'Ruim het afval op met de muis',
+      clickHint2: 'Gebruik de linker muisknop om te klikken',
+      clickHint3: 'Er zijn 6 stukken afval in totaal, heb je ze allemaal?',
       //crossword hints
       crosswordHint1: 'kruisword puzzel',
       crosswordHint2: 'hint 2',
@@ -99,24 +102,38 @@ const Hint = ({type}) => {
 
   return(
     <>
-      <button onClick={ () => showHints()}>Click</button>
-
-      {/* <button classeName={hintOpen ? 'hintOpenStyle' : 'hintClosedStyle'} />  */}
-
-      {show && 
-        <section className='hint-container'>
-            <section className='hint-container-tabs'>
-                {/* add logic to buttons so it works in switch case */}
-                <button className='hint-container-tabs-1' onClick={ () => getTab(1)}>1</button>
-                <button className='hint-container-tabs-1' onClick={ () => getTab(2)}>2</button>
-                <button className='hint-container-tabs-1' onClick={ () => getTab(3)}>3</button>
+        <Popup trigger={<button className='hint-button'> hints</button>} position=" center" modal nested>
+            
+            <section className='hint-container'>
+                <h1 className='hint-header'>hints</h1>
+                <section className='hint-container-content'>
+                    <Popup trigger ={<button className='hint-button-tab'> 1 </button>} position='bottom left' nested>
+                        <section >
+                            <Popup trigger={<button className='hint-button-buyhint'> koop hint</button>} position='bottom center' nested>
+                                <p className='hint-container-content-hint'>{hint1}</p>
+                            </Popup>
+                        </section>
+                        
+                    </Popup>
+                    <Popup trigger ={<button className='hint-button-tab'> 2 </button>} position='bottom center' nested>
+                        <section>
+                        <Popup trigger={<button className='hint-button-buyhint'> koop hint</button>} position='bottom center' nested>
+                                <p className='hint-container-content-hint'>{hint2}</p>
+                            </Popup>
+                        </section>
+                    </Popup>
+                    <Popup trigger ={<button className='hint-button-tab'> 3 </button>} position='bottom right' nested>
+                        <section>
+                            <Popup trigger={<button className='hint-button-buyhint'> koop hint</button>} position='bottom center' nested>
+                                <section className='hint-container-content'>
+                                    <p className='hint-container-content-hint'>{hint3}</p>
+                                </section>
+                            </Popup>
+                        </section>
+                    </Popup>
+                </section>
             </section>
-            <section className='hint-container-content'>
-                {/* this button needs to show on all different tabs */}
-                <div>{currentHint}</div>
-                {showButton && <button onClick={() => setShowButton(prev => !prev)}> pay me money </button>}
-            </section>        
-        </section>}
+        </Popup>
     </>
   );
 }
