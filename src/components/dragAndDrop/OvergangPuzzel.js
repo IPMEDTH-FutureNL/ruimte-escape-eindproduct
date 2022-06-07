@@ -1,11 +1,14 @@
 import React from 'react'
 import { useNavigate } from "react-router-dom";
+import IntroSound from '../../sound/Intro.mp3';
 
 const OvergangPuzzel = () => {
 
     const navigate = useNavigate();
+    const audio = new Audio(IntroSound);
     
     const goToPuzzle = () => {
+        audio.pause()
         navigate("/puzzelEen");
     }
 

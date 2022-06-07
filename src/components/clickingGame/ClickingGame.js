@@ -1,63 +1,62 @@
-import React,{Component} from 'react';
-import Garbage from './garbage';
-import Hint from '../hint';
+import React, { useState } from 'react';
+import '../../css/clickingGame.css';
+import Garbage from './garbage'
+import Hint from '../../components/Hint';
+import LaserGun from '../../sound/LaserGun.mp3';
 
-export class ClickingGame extends Component{
-    constructor(props){
-        super(props);
-        this.state = {
-            count:0,
+const ClickingGame = () =>{
+    const audio = new Audio(LaserGun);
+
+    const [count, setCount] = useState(0);
+
+    const countItems = () =>{
+        audio.play();
+        setCount(count + 1);
+        console.log(count)
+
+    }
+
+    React.useEffect(()=>{
+        if(count === 6){
+            console.log('picked up all the garbage')
         }
-    }
-
-    countItems = () =>{
-        
-        this.setState(prevState => {
-            return {count : prevState.count + 1}
-        }); 
-        console.log(this.state.count)
-    }
+    });
     
-    componentDidUpdate(){
-        if(this.state.count >= 6){
-            window.location.href = '/puzzelZes';
-        }
-    }
 
-    render(){
 
         return(
-            <section className='container'>
-                <Hint type='clickHint'/>
-                <figure>
-                    <div onClick={this.countItems}><Garbage /></div>
-                </figure>
+            <section className='clickingGame__container'>
+                <Hint type='clickHints'/>
+                <section className='clickingGame__garbage__container'>
+                    <figure className='rotating_left'>
+                        <div onClick={() => countItems()}><Garbage /></div>
+                    </figure>
 
-                <figure>
-                    <div onClick={this.countItems}><Garbage /></div>
-                </figure>
+                    <figure className='rotating_right'>
+                        <div onClick={() => countItems()}><Garbage /></div>
+                    </figure>
 
-                <figure>
-                    <div onClick={this.countItems}><Garbage /></div>
-                </figure>
+                    <figure>
+                        <div onClick={() => countItems()}><Garbage /></div>
+                    </figure>
 
-                <figure>
-                    <div onClick={this.countItems}><Garbage /></div>
-                </figure>
+                    <figure>
+                        <div onClick={ () => countItems()}><Garbage /></div>
+                    </figure>
 
-                <figure>
-                    <div onClick={this.countItems}><Garbage /></div>
-                </figure>
+                    <figure>
+                        <div onClick={() => countItems()}><Garbage /></div>
+                    </figure>
 
-                <figure>
-                    <div onClick={this.countItems}><Garbage /></div>
-                </figure>  
-                
+                    <figure>
+                        <div onClick={() => countItems()}><Garbage /></div>
+                    </figure>  
+                </section>
                 
             </section>
+
         )
 
     }
-}
 
 export default ClickingGame

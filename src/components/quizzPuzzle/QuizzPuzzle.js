@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import Modal from 'react-modal';
 import '../../css/quizz.css';
+import Hint from '../Hint';
 import ModalZonnestelsel from './ModalZonnestelsel';
 import ModalComputer from './ModalComputer';
 import ModalTablet from './ModalTablet.js';
@@ -49,13 +50,14 @@ const QuizzPuzzle = () => {
 
   return (
     <section>
+        <Hint type="quizzHints" />
         <div className="background">
-            <img src={QuizzBackground} alt="" className="quiz-background" />
-            <img src={Tablet} alt="" onClick={setTModalIsOpenToTrue} className="quiz-tablet"  />
-            <img src={Zonnestelsel} alt="" onClick={setZModalIsOpenToTrue} className="quiz-zonnestelsel"/>
-            <img src={Computer} alt="" onClick={setCModalIsOpenToTrue} className="quiz-computer" />
+            <img src={QuizzBackground} alt="" draggable="false" className="quiz-background" />
+            <img src={Tablet} alt="" draggable="false" onClick={setTModalIsOpenToTrue} className="quiz-tablet"  />
+            <img src={Zonnestelsel} alt="" draggable="false" onClick={setZModalIsOpenToTrue} className="quiz-zonnestelsel"/>
+            <img src={Computer} alt="" draggable="false" onClick={setCModalIsOpenToTrue} className="quiz-computer" />
             <div className="quiz-intro" id="open">
-                <p className="text-white">Je bent in de computerkamer! Onze taak is om straks het vuilnis in de ruimte op te ruimen. Het is niet alleens onze taak om naar mars te gaan, maar ook om de ruimte schoon te houden! Om straks het vuilnis op te kunnen ruimen heb je een code nodig die ergens op de computer te vinden is in de kamer. Kunnen jullie op zoek gaan naar deze code?</p>
+                <p className="text-white">Je bent in de computerkamer! Onze taak is om straks het vuilnis in de ruimte op te ruimen. Het is niet alleen onze taak om naar mars te gaan, maar ook om de ruimte schoon te houden! Om straks het vuilnis op te kunnen ruimen heb je een code nodig die ergens op de computer te vinden is in de kamer. Kunnen jullie op zoek gaan naar deze code?</p>
                 <button className="quizz-btn exit-btn btn" onClick={exit}> Ga verder</button>
             </div>
             
