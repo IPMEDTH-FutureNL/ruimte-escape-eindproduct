@@ -4,10 +4,12 @@ import Popup from 'reactjs-popup'; //npm install reactjs-popup --save
 import '../css/hint.css'
 
 const Hint = ({type}) => {
-  const [punten, setPunten] = useState(30);
+  const [show, setShow] = useState(false);
+  const [showButton, setShowButton] = useState(true);
   const [hint1, setHint1] = useState("");
   const [hint2, setHint2] = useState("");
   const [hint3, setHint3] = useState("");
+  const [currentHint, setCurrentHint] = useState();
   const hintArray = {
       //click game hints
       clickHint1: 'Ruim het afval op met de muis',
@@ -33,7 +35,6 @@ const Hint = ({type}) => {
       rebusHint1: 'Heb je op de blauwe computer op de deur geklikt? Daar kun je een code invullen en de deur openen!',
       rebusHint2: 'De eerste twee blokjes vormen de zin: we zijn..... Wat zouden de drie woorden erna vormen?',
       rebusHint3: 'Het antwoord is: we zijn onderweg naar mars',
-
   }
 
   const getType = () => {
@@ -72,7 +73,6 @@ const Hint = ({type}) => {
             setHint2(Object.values(hintArray.rebusHint2))
             setHint3(Object.values(hintArray.rebusHint3))
             break;
-    
 
         default:
 
@@ -80,9 +80,25 @@ const Hint = ({type}) => {
         }   
     }
 
-    React.useEffect( () => {
+    const getTab = (number) =>{
+        switch (number) {
+            case 1:
+                setCurrentHint(hint1)
+                break;
+            case 2:
+                setCurrentHint(hint2)
+                break;
+            case 3:
+                setCurrentHint(hint3)
+            default:
+                break;
+        }
+    }
+
+    const showHints = () =>{
         getType();
-    }, [])
+        setShow(prev => !prev)
+    }
 
   return(
     <>
@@ -123,7 +139,3 @@ const Hint = ({type}) => {
 }
 
 export default Hint
-
-Hint.propTypes = {
-    type: PropTypes.string.isRequired,
-};
