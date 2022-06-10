@@ -1,0 +1,183 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test if start component is rendered 1`] = `
+Array [
+  <section
+    className="container"
+  >
+    <section
+      className="containter__start"
+    >
+      <section
+        className="container__introduction"
+        id="container__introduction"
+      >
+        <img
+          alt="note with rules"
+          className="escaperoom__rules-note"
+          src="note.png"
+        />
+        <div
+          className="escaperoom__rules"
+        >
+          <h2>
+            Welkom bij de ruimte-escape
+          </h2>
+          <p>
+            Voordat we beginnen nog een paar korte tips!
+          </p>
+          <div
+            className="rule"
+          >
+            <svg
+              className="rule-hint"
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              strokeWidth="0"
+              style={
+                Object {
+                  "color": undefined,
+                }
+              }
+              viewBox="0 0 512 512"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"
+              />
+            </svg>
+            De hint icoon, hier kan je hints krijgen over de puzzels!
+          </div>
+          <div
+            className="rule"
+          >
+            <svg
+              className="rule-text"
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              strokeWidth="0"
+              style={
+                Object {
+                  "color": undefined,
+                }
+              }
+              viewBox="0 0 256 512"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"
+              />
+            </svg>
+            Wanneer de pijl in een tekst balloon is geplaatst kan je hiermee verder in het verhaal!
+          </div>
+          <div
+            className="rule"
+          >
+            <div
+              className="rule-clickable"
+            />
+            De groene rondjes in binnen de escaperoom, betekenen dat je erop kan klikken!
+          </div>
+        </div>
+        <form
+          className="player__form"
+          onSubmit={[Function]}
+        >
+          <div
+            className="inputdiv"
+          >
+            <label
+              className="player__form-label"
+            >
+              Speler 1
+            </label>
+            <input
+              className="player__form-name"
+            />
+          </div>
+          <div
+            className="inputdiv"
+          >
+            <label
+              className="player__form-label"
+            >
+              Speler 2
+            </label>
+            <input
+              className="player__form-name"
+            />
+          </div>
+          <div
+            className="inputdiv"
+          >
+            <input
+              className="player__form-submit"
+              type="submit"
+              value="Verder"
+            />
+          </div>
+        </form>
+      </section>
+      <section
+        className="container__gameplay"
+        id="container__gameplay"
+      >
+        <div
+          className="container__astronaut"
+        >
+          <div
+            className="astronaut"
+          >
+            <img
+              alt="astronaut"
+              className="astronaut__image"
+              src="character2_standard_schuin_mouthopen.svg"
+            />
+          </div>
+          <div
+            className="textcloud"
+          >
+            <img
+              alt="tekst balloon"
+              className="textcloud__image"
+              src="textcloud.png"
+            />
+            <div
+              className="textcloud__field"
+            >
+              <p
+                className="textcloud__text"
+              />
+              <svg
+                className="continue"
+                fill="currentColor"
+                height="1em"
+                onClick={[Function]}
+                stroke="currentColor"
+                strokeWidth="0"
+                style={
+                  Object {
+                    "color": undefined,
+                  }
+                }
+                viewBox="0 0 256 512"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+  </section>,
+  ",",
+]
+`;

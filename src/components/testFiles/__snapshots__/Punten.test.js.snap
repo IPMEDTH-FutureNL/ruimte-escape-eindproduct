@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test if point are changed when necessary 1`] = `
+<div
+  className="punten"
+>
+  Punten: 
+  50
+</div>
+`;

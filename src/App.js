@@ -1,6 +1,6 @@
 import React from 'react'
-import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import './App.css';
 import Start from './components/verhaal/Start';
 import IntroPuzzle from './components/dragAndDrop/IntroPuzzle';
 import OvergangPuzzel from './components/dragAndDrop/OvergangPuzzel';
@@ -16,7 +16,7 @@ import Outro from './components/verhaal/Outro.js';
 
 function App() {
   return (
-    <Router>
+
       <div className="App">
         <Routes>
             <Route path="/" element={ <Start /> }></Route>
@@ -33,7 +33,7 @@ function App() {
             <Route path="/outro" element={<Outro />}></Route>
         </Routes>
       </div>
-    </Router>
+
   );
 }
 

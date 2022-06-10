@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`changes the pop-up text when needed 1`] = `
+<div
+  className="pop-up"
+  id="popup"
+>
+  <p
+    className="pop-up-text"
+  >
+     
+    Test of input text wordt veranderd
+     
+  </p>
+  <button
+    className="button primary"
+    onClick={[Function]}
+  >
+    Verder!
+  </button>
+</div>
+`;

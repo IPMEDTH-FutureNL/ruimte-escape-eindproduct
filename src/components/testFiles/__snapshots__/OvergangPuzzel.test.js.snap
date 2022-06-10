@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test if Overgang Puzzel component is rendered 1`] = `
+Array [
+  <section
+    className="container__intro-puzzelEen"
+  >
+    <div
+      className="intro__container-text"
+      id="text"
+    >
+      <p
+        className="intro__container-paragraph"
+      >
+        We willen gaan opstijgen, maar de planeten op de kaart staan niet in de goede volgorde. Aan jou de taak om ze juist op de kaart te zetten!
+      </p>
+      <button
+        className="button primary"
+        onClick={[Function]}
+      >
+        Toon kaart!
+      </button>
+    </div>
+  </section>,
+  ",",
+]
+`;

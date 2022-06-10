@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Check if hint is rendered with the right type 1`] = `
+Array [
+  <button
+    aria-describedby="popup-1"
+    className="hint-button"
+    onClick={[Function]}
+  >
+     hints
+  </button>,
+  <div
+    className="punten"
+  >
+    Punten: 
+  </div>,
+]
+`;

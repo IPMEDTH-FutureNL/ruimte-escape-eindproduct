@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test if Drag and drop succes component is rendered 1`] = `
+Array [
+  <section
+    className="container__draganddropsucces"
+  >
+    <section
+      className="container__gameplay-succes"
+      id="container__gameplay"
+    >
+      <div
+        className="container__astronaut"
+      >
+        <div
+          className="astronaut"
+        >
+          <img
+            alt="astronaut"
+            className="astronaut__image"
+            src="character2_standard_schuin_mouthopen.svg"
+          />
+        </div>
+        <div
+          className="textcloud"
+        >
+          <img
+            alt="tekst balloon"
+            className="textcloud__image"
+            src="textcloud.png"
+          />
+          <div
+            className="textcloud__field"
+          >
+            <p
+              className="textcloud__text"
+            >
+              Dankje null en null nu zijn we helemaal klaar om naar Mars te vertrekken.
+            </p>
+            <svg
+              className="continue"
+              fill="currentColor"
+              height="1em"
+              onClick={[Function]}
+              stroke="currentColor"
+              strokeWidth="0"
+              style={
+                Object {
+                  "color": undefined,
+                }
+              }
+              viewBox="0 0 256 512"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"
+              />
+            </svg>
+          </div>
+        </div>
+        <div
+          className="astronaut__twee"
+        >
+          <div
+            className="astronaut"
+          >
+            <img
+              alt="astronaut"
+              className="astronaut__image"
+              src="character4_standard_schuin_mouthclosed.svg"
+            />
+          </div>
+        </div>
+        <div
+          className="astronaut__drie"
+        >
+          <div
+            className="astronaut"
+          >
+            <img
+              alt="astronaut"
+              className="astronaut__image"
+              src="character1_standard_mouthclosed.svg"
+            />
+          </div>
+        </div>
+        <div
+          className="astronaut__vier"
+        >
+          <div
+            className="astronaut"
+          >
+            <img
+              alt="astronaut"
+              className="astronaut__image"
+              src="character3_standard_mouthopen.svg"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>,
+  ",",
+]
+`;

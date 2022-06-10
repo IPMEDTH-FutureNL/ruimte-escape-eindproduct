@@ -1,0 +1,240 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test if Drag and drop game component is rendered 1`] = `
+Array [
+  <section
+    className="mapPuzzle"
+  >
+    <button
+      aria-describedby="popup-1"
+      className="hint-button"
+      onClick={[Function]}
+    >
+       hints
+    </button>
+    <div
+      className="punten"
+    >
+      Punten: 
+    </div>
+    <div
+      className="board"
+    >
+      <div
+        className="board__piece"
+      >
+        <div
+          className="board__piece-square"
+          id="div1"
+          onDragOver={[Function]}
+          onDrop={[Function]}
+        />
+        <img
+          alt="planeten naam drag and drop"
+          className="board__piece-name"
+          src="mercurius__line.png"
+        />
+      </div>
+      <div
+        className="board__piece"
+      >
+        <div
+          className="board__piece-square"
+          id="div2"
+          onDragOver={[Function]}
+          onDrop={[Function]}
+        />
+        <img
+          alt="planeten naam drag and drop"
+          className="board__piece-name"
+          src="venus__line.png"
+        />
+      </div>
+      <div
+        className="board__piece"
+      >
+        <div
+          className="board__piece-square"
+          id="div3"
+          onDragOver={[Function]}
+          onDrop={[Function]}
+        />
+        <img
+          alt="planeten naam drag and drop"
+          className="board__piece-name"
+          src="aarde__line.png"
+        />
+      </div>
+      <div
+        className="board__piece"
+      >
+        <div
+          className="board__piece-square"
+          id="div4"
+          onDragOver={[Function]}
+          onDrop={[Function]}
+        />
+        <img
+          alt="planeten naam drag and drop"
+          className="board__piece-name"
+          src="mars__line.png"
+        />
+      </div>
+      <div
+        className="board__piece"
+      >
+        <div
+          className="board__piece-square"
+          id="div5"
+          onDragOver={[Function]}
+          onDrop={[Function]}
+        />
+        <img
+          alt="planeten naam drag and drop"
+          className="board__piece-name"
+          src="jupiter__line.png"
+        />
+      </div>
+      <div
+        className="board__piece"
+      >
+        <div
+          className="board__piece-square"
+          id="div6"
+          onDragOver={[Function]}
+          onDrop={[Function]}
+        />
+        <img
+          alt="planeten naam drag and drop"
+          className="board__piece-name"
+          src="saturnus__line.png"
+        />
+      </div>
+      <div
+        className="board__piece"
+      >
+        <div
+          className="board__piece-square"
+          id="div7"
+          onDragOver={[Function]}
+          onDrop={[Function]}
+        />
+        <img
+          alt="planeten naam drag and drop"
+          className="board__piece-name"
+          src="uranus__line.png"
+        />
+      </div>
+      <div
+        className="board__piece"
+      >
+        <div
+          className="board__piece-square"
+          id="div8"
+          onDragOver={[Function]}
+          onDrop={[Function]}
+        />
+        <img
+          alt="planeten naam drag and drop"
+          className="board__piece-name"
+          src="neptunes__line.png"
+        />
+      </div>
+    </div>
+    <div
+      className="puzzelstukjes"
+    >
+      <img
+        alt="planeten drag and drop"
+        className="planet"
+        data-div="div3"
+        draggable="true"
+        id="drag3"
+        onDragStart={[Function]}
+        src="aarde.png"
+      />
+      <img
+        alt="planeten drag and drop"
+        className="planet"
+        data-div="div5"
+        draggable="true"
+        id="drag5"
+        onDragStart={[Function]}
+        src="jupiter.png"
+      />
+      <img
+        alt="planeten drag and drop"
+        className="planet"
+        data-div="div4"
+        draggable="true"
+        id="drag4"
+        onDragStart={[Function]}
+        src="mars.png"
+      />
+      <img
+        alt="planeten drag and drop"
+        className="planet"
+        data-div="div1"
+        draggable="true"
+        id="drag1"
+        onDragStart={[Function]}
+        src="mercurius.png"
+      />
+      <img
+        alt="planeten drag and drop"
+        className="planet"
+        data-div="div8"
+        draggable="true"
+        id="drag8"
+        onDragStart={[Function]}
+        src="neptunes.png"
+      />
+      <img
+        alt="planeten drag and drop"
+        className="planet"
+        data-div="div6"
+        draggable="true"
+        id="drag6"
+        onDragStart={[Function]}
+        src="saturnus.png"
+      />
+      <img
+        alt="planeten drag and drop"
+        className="planet"
+        data-div="div7"
+        draggable="true"
+        id="drag7"
+        onDragStart={[Function]}
+        src="uranus.png"
+      />
+      <img
+        alt="planeten drag and drop"
+        className="planet"
+        data-div="div2"
+        draggable="true"
+        id="drag2"
+        onDragStart={[Function]}
+        src="venus.png"
+      />
+    </div>
+    <div
+      className="pop-up"
+      id="popup"
+    >
+      <p
+        className="pop-up-text"
+      >
+         
+         
+      </p>
+      <button
+        className="button primary"
+        onClick={[Function]}
+      >
+        Verder!
+      </button>
+    </div>
+  </section>,
+  ",",
+]
+`;

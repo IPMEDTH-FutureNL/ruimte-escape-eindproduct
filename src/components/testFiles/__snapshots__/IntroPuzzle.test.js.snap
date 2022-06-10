@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test if IntroPuzzle component is rendered 1`] = `
+Array [
+  <section
+    className="container__intro-startpuzzel"
+  >
+    <div
+      className="circle"
+      onClick={[Function]}
+    />
+    <div
+      className="circle"
+      onClick={[Function]}
+    />
+    <div
+      className="circle"
+      onClick={[Function]}
+    />
+    <div
+      className="pop-up"
+      id="popup"
+    >
+      <p
+        className="pop-up-text"
+      >
+         
+         
+      </p>
+      <button
+        className="button primary"
+        onClick={[Function]}
+      >
+        Verder!
+      </button>
+    </div>
+  </section>,
+  ",",
+]
+`;
