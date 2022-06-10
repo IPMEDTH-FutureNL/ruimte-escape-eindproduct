@@ -30,6 +30,10 @@ const Oplosmatrix = () => {
             setText("Je hebt de code gekraakt");
             let openpopup = document.getElementById("popup");
             openpopup.style.display = "block";
+            let currentPoints = localStorage.getItem("punten");
+            let pointsToInt = parseInt(currentPoints);
+            pointsToInt = pointsToInt + 30;
+            localStorage.setItem("punten", pointsToInt);
             navigate('/puzzelDrie');
             console.log("aantal foute pogingen " + fout);
         }else{

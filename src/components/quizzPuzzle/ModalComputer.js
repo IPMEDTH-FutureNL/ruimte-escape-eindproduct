@@ -9,6 +9,10 @@ const ModalComputer = () => {
         const inputValue = document.getElementById("number").value;
         if(inputValue == "BAC"){
             console.log('Code gekraakt!!!');
+            let currentPoints = localStorage.getItem("punten");
+            let pointsToInt = parseInt(currentPoints);
+            pointsToInt = pointsToInt + 30;
+            localStorage.setItem("punten", pointsToInt);
             navigate('/puzzelVier');
         } else if(inputValue == "bac") {
             document.getElementById('invisibleH').id = "visibleH";

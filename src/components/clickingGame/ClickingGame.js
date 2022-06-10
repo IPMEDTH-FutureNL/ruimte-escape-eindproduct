@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import '../../css/clickingGame.css';
+import { useNavigate } from "react-router-dom";
 import Garbage from './garbage'
 import Hint from '../../components/Hint';
 
 const ClickingGame = () =>{
 
     const [count, setCount] = useState(0);
+    const navigate = useNavigate();
 
     const countItems = () =>{
         
@@ -17,6 +19,7 @@ const ClickingGame = () =>{
     React.useEffect(()=>{
         if(count === 6){
             console.log('picked up all the garbage')
+            navigate("/outro");
         }
     });
     

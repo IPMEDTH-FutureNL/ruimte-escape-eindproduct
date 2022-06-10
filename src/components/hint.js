@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types'; 
 import Popup from 'reactjs-popup'; //npm install reactjs-popup --save
+import Punten from './Punten';
+import SolutionDragAndDrop from '../img/planeten/hintFoto.png'
 import '../css/hint.css'
 
 const Hint = ({type}) => {
-  const [punten, setPunten] = useState(30);
+  const [punten, setPunten] = useState(localStorage.getItem("punten"));
+  const [dragDrop, setDragDrop] = useState(false);
   const [hint1, setHint1] = useState("");
   const [hint2, setHint2] = useState("");
   const [hint3, setHint3] = useState("");
@@ -24,7 +27,7 @@ const Hint = ({type}) => {
       //oplosmatrix hints
       oplosMatrixHint1: 'De kleuren op de post it komen wel heel erg bekend voor.',
       oplosMatrixHint2: 'zouden de afbeeldingen op de post it iets betekenen?',
-      oplosMatrixHint3: 'de oplossing',
+      oplosMatrixHint3: 'de oplossing is 674',
       // Quizz hints
       quizzHint1: 'Heb je de vragen kunnen beantwoorden met de weetjes op de kaart? De antwoorden op de drie vragen vormen een lettercode!',
       quizzHint2: 'Er zijn 8 planeten in ons zonnestelsel. De antwoord op vraag 1 is dus B. Kun jij de andere twee nog beantwoorden?',
@@ -52,6 +55,7 @@ const Hint = ({type}) => {
             break;
 
         case 'dragAndDropHints':
+            setDragDrop(true);
             setHint1(Object.values(hintArray.dragAndDropHint1))
             setHint2(Object.values(hintArray.dragAndDropHint2))
             setHint3(Object.values(hintArray.dragAndDropHint3))
@@ -80,6 +84,26 @@ const Hint = ({type}) => {
         }   
     }
 
+    const buyHint = () =>{
+        console.log("buyHint");
+        if(punten >= 10){
+            let newPoints = punten - 10;
+            setPunten(newPoints);
+            localStorage.setItem("punten", newPoints);
+        }else{
+            let newPoints = 0;
+            setPunten(newPoints);
+            localStorage.setItem("punten", newPoints);
+            // setCurrentHint("Je hebt niet genoeg punten om hints te kopen!");
+        }
+
+        updatePoints();
+    }
+
+    const updatePoints = () => {
+        return localStorage.getItem("punten");
+    }
+
     React.useEffect( () => {
         getType();
     }, [])
@@ -93,7 +117,7 @@ const Hint = ({type}) => {
                 <section className='hint-container-content'>
                     <Popup trigger ={<button className='hint-button-tab'> 1 </button>} position='bottom left' nested>
                         <section >
-                            <Popup trigger={<button className='hint-button-buyhint'> koop hint</button>} position='bottom center' nested>
+                            <Popup trigger={<button className='hint-button-buyhint' onMouseDown={() => buyHint()}> koop hint</button>} position='bottom center' nested>
                                 <p className='hint-container-content-hint'>{hint1}</p>
                             </Popup>
                         </section>
@@ -101,16 +125,17 @@ const Hint = ({type}) => {
                     </Popup>
                     <Popup trigger ={<button className='hint-button-tab'> 2 </button>} position='bottom center' nested>
                         <section>
-                        <Popup trigger={<button className='hint-button-buyhint'> koop hint</button>} position='bottom center' nested>
+                        <Popup trigger={<button className='hint-button-buyhint' onMouseDown={() => buyHint()}> koop hint</button>} position='bottom center' nested>
                                 <p className='hint-container-content-hint'>{hint2}</p>
                             </Popup>
                         </section>
                     </Popup>
                     <Popup trigger ={<button className='hint-button-tab'> 3 </button>} position='bottom right' nested>
                         <section>
-                            <Popup trigger={<button className='hint-button-buyhint'> koop hint</button>} position='bottom center' nested>
+                            <Popup trigger={<button className='hint-button-buyhint' onMouseDown={() => buyHint()}> koop hint</button>} position='bottom center' nested>
                                 <section className='hint-container-content'>
                                     <p className='hint-container-content-hint'>{hint3}</p>
+                                    {!dragDrop ?  '' : <img className="testImageDragDrop" src={SolutionDragAndDrop} alt="solution drag and drop"></img>}
                                 </section>
                             </Popup>
                         </section>
@@ -118,6 +143,9 @@ const Hint = ({type}) => {
                 </section>
             </section>
         </Popup>
+        <Punten 
+            punten={updatePoints()}
+        />  
     </>
   );
 }
