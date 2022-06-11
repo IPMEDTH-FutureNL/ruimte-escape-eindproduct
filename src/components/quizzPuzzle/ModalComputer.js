@@ -10,7 +10,7 @@ const ModalComputer = () => {
         if(inputValue == "BAC"){
             console.log('Code gekraakt!!!');
 
-            navigate('/puzzelVier');
+            navigate('/quizzSucces');
         } else if(inputValue == "bac") {
             document.getElementById('invisibleH').id = "visibleH";
             // document.getElementById('visible').id = "invisible"; DEZE ZIJN NOG BUGGY

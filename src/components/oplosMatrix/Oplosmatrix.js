@@ -16,7 +16,7 @@ const Oplosmatrix = () => {
     const navigate = useNavigate();
 
     const navigation = () => {
-        navigate("/puzzelDrie");
+        navigate("/oplosmatrixSucces");
     }
 
     const solveLock = (e) => {
@@ -30,7 +30,7 @@ const Oplosmatrix = () => {
             setText("Je hebt de code gekraakt");
             let openpopup = document.getElementById("popup");
             openpopup.style.display = "block";
-            navigate('/puzzelDrie');
+            navigate('/oplosmatrixSucces');
             console.log("aantal foute pogingen " + fout);
         }else{
             setText("Dat was helaas niet goed");
