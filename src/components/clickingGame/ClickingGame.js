@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
-import '../../css/clickingGame.css';
 import { useNavigate } from "react-router-dom";
+import '../../css/clickingGame.css';
 import Garbage from './garbage'
-import Hint from '../Hint';
+import HintEscape from '../HintsEscape';
+import LaserGun from '../../sound/LaserGun.mp3';
 
 const ClickingGame = () =>{
-
-    const [count, setCount] = useState(0);
+    const audio = new Audio(LaserGun);
     const navigate = useNavigate();
+    const [count, setCount] = useState(0);
 
     const countItems = () =>{
-        
+        audio.play();
         setCount(count + 1);
         console.log(count)
 
@@ -19,7 +20,7 @@ const ClickingGame = () =>{
     React.useEffect(()=>{
         if(count === 6){
             console.log('picked up all the garbage')
-            navigate("/outro");
+            navigate('/outro');
         }
     });
     
@@ -27,7 +28,7 @@ const ClickingGame = () =>{
 
         return(
             <section className='clickingGame__container'>
-                <Hint type='clickHints'/>
+                <HintEscape type='clickHints'/>
                 <section className='clickingGame__garbage__container'>
                     <figure className='rotating_left'>
                         <div onClick={() => countItems()}><Garbage /></div>
