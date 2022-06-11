@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import Modal from 'react-modal';
-import Hint from '../Hint';
+import Hint from '../../components/hint';
 import '../../css/rebus.css';
 import ModalRebus from './ModalRebus';
 import RebusBackground  from '../../img/rebus/rebus-background.jpg';

@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import Modal from 'react-modal';
 import '../../css/quizz.css';
-import Hint from '../Hint';
+import Hint from '../../components/hint';
 import ModalZonnestelsel from './ModalZonnestelsel';
 import ModalComputer from './ModalComputer';
 import ModalTablet from './ModalTablet.js';

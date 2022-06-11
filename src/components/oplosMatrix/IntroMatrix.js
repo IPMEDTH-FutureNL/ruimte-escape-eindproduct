@@ -8,7 +8,7 @@ import { FaAngleRight } from "react-icons/fa";
 import TextCloud from '../../img/gameplayImages/snippets/textcloud.png'
 
 const IntroMatrix = () => {
-    const [text, setText] = useState("Ahh " + localStorage.getItem("playerOne") +  " en " + localStorage.getItem("playerTwo") + " wat goed dat ik jullie hier tegen kom!");
+    const [text, setText] = useState("We zijn opgestegen " + localStorage.getItem("playerOne") +  " en " + localStorage.getItem("playerTwo") + "! Wat goed dat ik jullie hier tegen kom!");
     const [count, setCount] = useState(0);
     const navigate = useNavigate();
 
@@ -25,7 +25,7 @@ const IntroMatrix = () => {
                 setText("Ik krijg de code niet opgelost om de deur te openen naar de controle kamer!")
                 break;
             case 2:
-                setText("Het briefje met de code is te vinden op het paneel naast mij alleen is de code in de vorm van een raadsel.");
+                setText("De code staat als een raadsel op een blaadje");
                 break;
             case 3:
                 let matrixSection = document.getElementById('container__gameplay-matrix');
@@ -43,10 +43,10 @@ const IntroMatrix = () => {
             <section className="container__gameplay-matrix" id="container__gameplay-matrix">
                     <div className="container__astronaut">
                         <div className="astronaut">
-                            <img src={Astronaut} alt="astronaut" className="astronaut__image"></img>
+                            <img src={Astronaut} alt="astronaut" className="astronaut__image" draggable="false"></img>
                         </div>
                         <div className="textcloud">
-                            <img src={TextCloud} alt="tekst balloon" className="textcloud__image"></img>
+                            <img src={TextCloud} alt="tekst balloon" className="textcloud__image" draggable="false"></img>
                             <div className="textcloud__field">
                                 <p className="textcloud__text">{text}</p>
                                 <FaAngleRight className="continue" onClick={() => story(1)}/>

@@ -25,7 +25,7 @@ const DragAndDropSucces = () => {
                 setText("Het is nu tijd om te vertrekken naar Mars!");
                 break;
             case 3:
-                navigate('/introMatrix');
+                navigate('/launch');
                 break;
         }
     }
@@ -35,10 +35,10 @@ const DragAndDropSucces = () => {
                 <section className="container__gameplay-succes" id="container__gameplay">
                     <div className="container__astronaut">
                         <div className="astronaut">
-                            <img src={Astronaut} alt="astronaut" className="astronaut__image"></img>
+                            <img src={Astronaut} alt="astronaut" className="astronaut__image" draggable="false"></img>
                         </div>
                         <div className="textcloud">
-                            <img src={TextCloud} alt="tekst balloon" className="textcloud__image"></img>
+                            <img src={TextCloud} alt="tekst balloon" className="textcloud__image" draggable="false"></img>
                             <div className="textcloud__field">
                                 <p className="textcloud__text">{text}</p>
                                 <FaAngleRight className="continue" onClick={() => story(1)}/>
@@ -46,17 +46,17 @@ const DragAndDropSucces = () => {
                         </div>
                         <div className="astronaut__twee">
                         <div className="astronaut">
-                            <img src={AstronautTwee} alt="astronaut" className="astronaut__image"></img>
+                            <img src={AstronautTwee} alt="astronaut" className="astronaut__image" draggable="false"></img>
                         </div>
                         </div>
                         <div className="astronaut__drie">
                             <div className="astronaut">
-                                <img src={AstronautDrie} alt="astronaut" className="astronaut__image"></img>
+                                <img src={AstronautDrie} alt="astronaut" className="astronaut__image" draggable="false"></img>
                             </div>
                         </div>
                         <div className="astronaut__vier">
                             <div className="astronaut">
-                                <img src={AstronautVier} alt="astronaut" className="astronaut__image"></img>
+                                <img src={AstronautVier} alt="astronaut" className="astronaut__image" draggable="false"></img>
                             </div>  
                         </div>
                     </div>

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useNavigate } from "react-router-dom";
 import PopUp from '../PopUp';
-import Hint from '../Hint';
+import Hint from '../../components/hint';
 
 
 //planeten
@@ -85,35 +85,35 @@ const DragAndDrop = () => {
           <div className="board">
             <div className="board__piece">
                 <div className="board__piece-square" id="div1" onDrop={(event) => drop(event)} onDragOver={(event) => allowDrop(event)} ></div>
-                <img alt="planeten naam drag and drop" className="board__piece-name" src={mercurius__line} />
+                <img alt="planeten naam drag and drop" className="board__piece-name" src={mercurius__line}  draggable="false"/>
             </div>
             <div className="board__piece">
                 <div className="board__piece-square" id="div2" onDrop={(event) => drop(event)} onDragOver={(event) => allowDrop(event)} ></div>
-                <img alt="planeten naam drag and drop" className="board__piece-name" src={venus__line} />
+                <img alt="planeten naam drag and drop" className="board__piece-name" src={venus__line}  draggable="false"/>
             </div>
             <div className="board__piece">
                 <div className="board__piece-square" id="div3" onDrop={(event) => drop(event)} onDragOver={(event) => allowDrop(event)} ></div>
-                <img alt="planeten naam drag and drop" className="board__piece-name" src={aarde__line} />
+                <img alt="planeten naam drag and drop" className="board__piece-name" src={aarde__line}  draggable="false"/>
             </div>
             <div className="board__piece">
                 <div className="board__piece-square" id="div4" onDrop={(event) => drop(event)} onDragOver={(event) => allowDrop(event)} ></div>
-                <img alt="planeten naam drag and drop" className="board__piece-name" src={mars__line}/>
+                <img alt="planeten naam drag and drop" className="board__piece-name" src={mars__line}  draggable="false"/>
             </div>
             <div className="board__piece">
                 <div className="board__piece-square" id="div5" onDrop={(event) => drop(event)} onDragOver={(event) => allowDrop(event)} ></div>
-                <img alt="planeten naam drag and drop" className="board__piece-name" src={jupiter__line} />
+                <img alt="planeten naam drag and drop" className="board__piece-name" src={jupiter__line}  draggable="false"/>
             </div>
             <div className="board__piece">
                 <div className="board__piece-square" id="div6" onDrop={(event) => drop(event)} onDragOver={(event) => allowDrop(event)} ></div>
-                <img alt="planeten naam drag and drop" className="board__piece-name" src={saturnus__line} />
+                <img alt="planeten naam drag and drop" className="board__piece-name" src={saturnus__line}  draggable="false"/>
             </div>
             <div className="board__piece">
                 <div className="board__piece-square" id="div7" onDrop={(event) => drop(event)} onDragOver={(event) => allowDrop(event)} ></div>
-                <img alt="planeten naam drag and drop" className="board__piece-name" src={uranus__line} /> 
+                <img alt="planeten naam drag and drop" className="board__piece-name" src={uranus__line}   draggable="false"/> 
             </div>
             <div className="board__piece">
                 <div className="board__piece-square" id="div8" onDrop={(event) => drop(event)} onDragOver={(event) => allowDrop(event)} ></div>
-                <img alt="planeten naam drag and drop" className="board__piece-name" src={neptunes__line} />
+                <img alt="planeten naam drag and drop" className="board__piece-name" src={neptunes__line} draggable="false" />
             </div>
           </div>
 

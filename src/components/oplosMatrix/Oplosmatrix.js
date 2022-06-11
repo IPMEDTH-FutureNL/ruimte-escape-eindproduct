@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
-import Hint from '../Hint';
+import Hint from '../../components/hint';
 import "../../css/oplosMatrix.css"
 import astronaut from'../../img/oplosmatrix/astronaut.png';
 import earth from'../../img/oplosmatrix/earth.png';
@@ -65,13 +65,13 @@ const Oplosmatrix = () => {
                 <div className='oplosmatrix-grid'>
                     <div className='grid-item-blank'></div>
                     <div className='grid-item-img'>
-                        <img className='icon' alt="earth" src={earth}></img>
+                        <img className='icon' alt="earth" src={earth} draggable="false"></img>
                     </div>
                     <div className='grid-item-img'>
-                        <img className='icon' alt="moon" src={moon}></img>
+                        <img className='icon' alt="moon" src={moon} draggable="false"></img>
                     </div>
                     <div className='grid-item-img'>
-                        <img className='icon' alt="astronaut" src={astronaut}></img>
+                        <img className='icon' alt="astronaut" src={astronaut} draggable="false"></img>
                     </div>
                     <div className='grid-item-color-red'/>
                     <div className='grid-item-number'>1</div>
@@ -88,7 +88,7 @@ const Oplosmatrix = () => {
                 </div>
             </section>
             <section className="oplosmatrix__lock">
-            <img className="oplosmatrix__lock-image" src={lock} alt="oplosmatrix slot" />
+            <img className="oplosmatrix__lock-image" src={lock} alt="oplosmatrix slot" draggable="false"/>
                 <form className="oplosmatrix__form" onSubmit={(e) => solveLock(e)}>
                     <input className="oplosmatrix__lock-input" placeholder='*'></input>
                     <input className="oplosmatrix__lock-input" placeholder='*'></input>
@@ -97,14 +97,14 @@ const Oplosmatrix = () => {
                 </form>
             </section>
             <section className="container__postit">
-                <img src={PostIt} alt="postIt" className="postIt__image"></img>
+                <img src={PostIt} alt="postIt" className="postIt__image" draggable="false"></img>
                 <p className="postIt__text">
-                        We hebben <span className="postIt__red">8 planeten </span>
+                        We hebben verschillende<span className="postIt__red"> planeten </span>
                         in ons zonnestelsel, 
                         op aarde zien wij bijna
-                        iedere avond <span className="postIt__blue">1 maan</span>. 
-                        Daarbij zijn wij met
-                        <span className="postIt__yellow"> 4 astronauten </span> op het schip
+                        iedere avond de <span className="postIt__blue">maan</span>. 
+                        Daarbij zijn wij met een aantal
+                        <span className="postIt__yellow"> astronauten </span> op het schip
                 </p>
             </section>
 

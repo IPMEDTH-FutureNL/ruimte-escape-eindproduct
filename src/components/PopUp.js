@@ -13,6 +13,10 @@ export class PopUp extends Component {
     if(this.props.navigate === "true"){
       window.location.href = "/";
     }
+
+    if(this.props.print === "true"){
+      this.printCertificate("elem");
+    }
   }
 
   render() {
@@ -20,6 +24,9 @@ export class PopUp extends Component {
         <div className="pop-up" id="popup">
             <p className="pop-up-text"> {this.props.text} </p>
             <button className="button primary" onClick={(e) => this.closePopUp(e)}>Verder!</button>
+            <div id="elem">
+              <p>hallo dit is een test voor het certificaat</p>
+            </div>
         </div>
     )
   }
