@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import '../../css/clickingGame.css';
 import { useNavigate } from "react-router-dom";
 import Garbage from './garbage'
-import Hint from '../../components/Hint';
+import Hint from '../Hint';
 
 const ClickingGame = () =>{
 
