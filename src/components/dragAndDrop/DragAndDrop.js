@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { useNavigate } from "react-router-dom";
 import PopUp from '../PopUp';
-import Punten from '../Punten';
 import Hint from '../Hint';
 
 
@@ -61,6 +60,10 @@ const DragAndDrop = () => {
 
         if(count === 7){
           setTimeout(() => {
+            let currentPoints = localStorage.getItem("punten");
+            let pointsToInt = parseInt(currentPoints);
+            pointsToInt = pointsToInt + 30;
+            localStorage.setItem("punten", pointsToInt);
             goToPuzzle();
             console.log("how many wrong " + wrong );
           }, 200)
@@ -74,7 +77,6 @@ const DragAndDrop = () => {
        console.log("bad tries " + wrong);
     }
   }
-
 
 
     return (

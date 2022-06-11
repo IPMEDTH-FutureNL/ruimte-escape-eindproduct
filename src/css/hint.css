@@ -27,3 +27,9 @@
     color:white;
     text-align: center;
 }
+
+.testImageDragDrop{
+    width: 35vw;
+    position: absolute;
+    left: 6.5vw;
+}

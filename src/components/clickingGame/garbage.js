@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import garbage from '../../img/oplosmatrix/astronaut.png';
+import garbage from '../../img/clickingGame/garbage.png';
 import '../../css/garbage.css'
 
 const Garbage = () => {

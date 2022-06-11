@@ -8,7 +8,11 @@ const ModalRebus = () => {
     const checkValue = () => {
         const inputValue = document.getElementById("text").value;
         if(inputValue == "we zijn onderweg naar mars"){
-            console.log('Code gekraakt!!!');
+            console.log('Code gekraakt!!!')
+            let currentPoints = localStorage.getItem("punten");
+            let pointsToInt = parseInt(currentPoints);
+            pointsToInt = pointsToInt + 30;
+            localStorage.setItem("punten", pointsToInt);
             navigate('/puzzelVijf');
         } else {
             // alert('Jammer dat is niet het antwoord :(');
