@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
-import Hint from '../Hint';
+import HintEscape from '../HintsEscape';
 import "../../css/oplosMatrix.css"
 import astronaut from'../../img/oplosmatrix/astronaut.png';
 import earth from'../../img/oplosmatrix/earth.png';
@@ -16,7 +16,7 @@ const Oplosmatrix = () => {
     const navigate = useNavigate();
 
     const navigation = () => {
-        navigate("/puzzelDrie");
+        navigate("/oplosmatrixSucces");
     }
 
     const solveLock = (e) => {
@@ -34,7 +34,7 @@ const Oplosmatrix = () => {
             let pointsToInt = parseInt(currentPoints);
             pointsToInt = pointsToInt + 30;
             localStorage.setItem("punten", pointsToInt);
-            navigate('/puzzelDrie');
+            navigate('/oplosmatrixSucces');
             console.log("aantal foute pogingen " + fout);
         }else{
             setText("Dat was helaas niet goed");
@@ -60,7 +60,7 @@ const Oplosmatrix = () => {
 
     return(
         <section className='note'>
-            <Hint type='oplosmatrixHints'/>
+            <HintEscape type='oplosmatrixHints'/>
             <section className='note-center'>
                 <div className='oplosmatrix-grid'>
                     <div className='grid-item-blank'></div>
