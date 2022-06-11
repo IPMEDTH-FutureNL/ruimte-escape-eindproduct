@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import '../../css/clickingGame.css';
 import { useNavigate } from "react-router-dom";
 import Garbage from './garbage'
-import Hint from '../../components/Hint';
+import HintEscape from '../../components/HintsEscape';
 
 const ClickingGame = () =>{
 
@@ -27,7 +27,7 @@ const ClickingGame = () =>{
 
         return(
             <section className='clickingGame__container'>
-                <Hint type='clickHints'/>
+                <HintEscape type='clickHints'/>
                 <section className='clickingGame__garbage__container'>
                     <figure className='rotating_left'>
                         <div onClick={() => countItems()}><Garbage /></div>

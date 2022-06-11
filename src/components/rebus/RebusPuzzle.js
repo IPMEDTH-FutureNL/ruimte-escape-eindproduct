@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import Modal from 'react-modal';
-import Hint from '../Hint';
+import HintEscape from '../HintsEscape';
 import '../../css/rebus.css';
 import ModalRebus from './ModalRebus';
 import RebusBackground  from '../../img/rebus/rebus-background.jpg';
@@ -27,7 +27,7 @@ const RebusPuzzle = () => {
 
   return (
     <section className="background">
-        <Hint type="rebusHints" />
+        <HintEscape type="rebusHints" />
         <img src={RebusBackground} alt="" className="rebus-background" />
         <section className='block-rebus' onClick={setModalIsOpenToTrue}></section>
         <section className='handle-rebus' onClick={locked}></section>

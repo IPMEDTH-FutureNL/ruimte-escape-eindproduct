@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Popup from 'reactjs-popup'; //npm install reactjs-popup --save
 import '../css/hint.css'
 
-const Hint = ({type}) => {
+const HintEscape = ({type}) => {
   const [show, setShow] = useState(false);
   const [showButton, setShowButton] = useState(true);
   const [hint1, setHint1] = useState("");
@@ -138,4 +138,4 @@ const Hint = ({type}) => {
   );
 }
 
-export default Hint
+export default HintEscape

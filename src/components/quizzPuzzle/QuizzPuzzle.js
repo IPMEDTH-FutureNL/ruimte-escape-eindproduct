@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import Modal from 'react-modal';
 import '../../css/quizz.css';
-import Hint from '../Hint';
+import HintEscape from '../HintsEscape';
 import ModalZonnestelsel from './ModalZonnestelsel';
 import ModalComputer from './ModalComputer';
 import ModalTablet from './ModalTablet.js';
@@ -50,7 +50,7 @@ const QuizzPuzzle = () => {
 
   return (
     <section>
-        <Hint type="quizzHints" />
+        <HintEscape type="quizzHints" />
         <div className="background">
             <img src={QuizzBackground} alt="" className="quiz-background" />
             <img src={Tablet} alt="" onClick={setTModalIsOpenToTrue} className="quiz-tablet"  />
