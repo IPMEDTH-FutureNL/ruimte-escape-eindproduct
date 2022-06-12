@@ -56,12 +56,7 @@ const QuizzPuzzle = () => {
             <img src={Tablet} alt="" draggable="false" onClick={setTModalIsOpenToTrue} className="quiz-tablet"  />
             <img src={Zonnestelsel} alt="" draggable="false" onClick={setZModalIsOpenToTrue} className="quiz-zonnestelsel"/>
             <img src={Computer} alt="" draggable="false" onClick={setCModalIsOpenToTrue} className="quiz-computer" />
-            {/* <div className="quiz-intro" id="open">
-                <p className="text-white">Je bent in de computerkamer! Onze taak is om straks het vuilnis in de ruimte op te ruimen. Het is niet alleen onze taak om naar mars te gaan, maar ook om de ruimte schoon te houden! Om straks het vuilnis op te kunnen ruimen heb je een code nodig die ergens op de computer te vinden is in de kamer. Kunnen jullie op zoek gaan naar deze code?</p>
-                <button className="quizz-btn exit-btn btn" onClick={exit}> Ga verder</button>
-            </div> */}
             
-
             <Modal className="modal-zonnestelsel" isOpen={ZmodalIsOpen}>
                 <button onClick={setZModalIsOpenToFalse}>x</button>
                 <ModalZonnestelsel/>

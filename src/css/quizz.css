@@ -56,7 +56,6 @@ body{
 }
 
 .planeten:hover{
-    /* border: 1px solid white; */
     cursor: pointer;
 }
 
@@ -74,11 +73,10 @@ body{
 .tooltip {
     position: relative;
     display: inline-block;
-    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
-  }
+    
+}
   
-  /* Tooltip text */
-  .tooltip .tooltiptext {
+.tooltip .tooltiptext {
     visibility: hidden;
     width: 200px;
     background-color: white;
@@ -89,52 +87,76 @@ body{
     top:-40px;
     left:-30px;
     transform:translate(-30%,-100%);
-    
-   
-    /* Position the tooltip text - see examples below! */
     position: absolute;
     z-index: 1;
-  }
+}
 
-  
-  /* Show the tooltip text when you mouse over the tooltip container */
-  .tooltip:hover .tooltiptext {
+.tooltip:hover .tooltiptext {
     visibility: visible;
-  }
+}
 
-  .tooltip img{
-      /* background-color: red; */
+.tooltip img{
       padding: 0 15px;
-  }
+}
 
-
-.tablet{
+.modal-tablet{
+    /* background-color: rgb(41, 41, 41); */
+    box-sizing: border-box;
+    box-shadow: 0 10px 10px rgb(0 0 0 / 0.2);
+    /* padding: 1rem; */
+    border-radius: 20px;
     left: 31vw;
     width: 35%;
     height: 90%;
     position: absolute;
+    /* transform: translate(27.5%, 35%); */
+}
+
+
+.tablet{
+    /* left: 31vw;
+    width: 35%;
+    height: 90%; */
+    width: 100%;
+    height: 100%;
+    position: absolute;
 }
 
 .tablet-notes-text{
-    position: relative;
-    /* z-index: 3; */
-    left: 33.5vw;
+    position: absolute;
+    /* left: 33.5vw;
+    top: 12vh; */
+    left: 3vw;
     top: 12vh;
     font-size: 1.15rem;
     font-weight: bold;
 }
 
-.computer{
+.modal-computer{
+    /* background-color: rgb(41, 41, 41); */
+    box-sizing: border-box;
+    /* box-shadow: 0 10px 10px rgb(0 0 0 / 0.2); */
+    /* padding: 1rem; */
+    border-radius: 20px;
     left: 17.5vw;
     width: 65%;
     height: 95%;
     position: absolute;
+    /* transform: translate(27.5%, 35%); */
+}
+
+.computer{
+    /* left: 17.5vw;
+    width: 65%;
+    height: 95%; */
+    width: 100%;
+    height: 100%;
+    position: absolute;
 }
 
 .computer-notes-text{
-    position: relative;
-    /* z-index: 3; */
-    left: 22vw;
+    position: absolute;
+    left: 5vw;
     top: 8vh;
     font-size: 1.15rem;
     font-weight: bold;
@@ -146,17 +168,17 @@ body{
 }
 
 .quizz-input{
-    width: 25%;
+    width: 50%;
     height: 25px;
     margin-top: 50px;
     position: relative;
     border-radius: 10px;
-    left: 15%;
+    left: 25%;
 }
 
 .quizz-btn{
     position: relative;
-    left: 15%;
+    left: 37.5%;
     margin-top: 20px;
     width: 25%;
     height: 25px;
@@ -195,10 +217,6 @@ body{
 .tablet-question{
     font-size: 16px;
 }
-
-/* li:active{
-    color: rgb(66, 0, 0);
-} */
 
 li:hover{
     color: red;

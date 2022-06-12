@@ -6,6 +6,7 @@ import Astronaut from "../../img/gameplayImages/characters/character2_standard_s
 import { FaInfoCircle } from "react-icons/fa";
 import { FaAngleRight } from "react-icons/fa";
 import TextCloud from '../../img/gameplayImages/snippets/textcloud.png'
+import Timer from '../../components/Timer.js'
 // import IntroSound from '../../sound/Intro.mp3';
 
 

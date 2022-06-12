@@ -40,7 +40,7 @@ const ModalTablet = () => {
   }
 
   return (
-    <section>
+    <section className="tablet-section">
 
       <img className="tablet" src={Tablet}/>
       <section class="tablet-notes-text">

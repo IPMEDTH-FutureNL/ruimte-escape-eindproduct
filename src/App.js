@@ -14,11 +14,13 @@ import QuizzSucces from './components/verhaal/QuizzSucces';
 import RebusPuzzle from './components/rebus/RebusPuzzle';
 import ClickingGame from './components/clickingGame/ClickingGame'
 import Outro from './components/verhaal/Outro.js';
+import Timer from './components/Timer.js'
 
 function App() {
   return (
     <Router>
       <div className="App">
+        <Timer/>
         <Routes>
             <Route path="/" element={ <Start /> }></Route>
             <Route path="/introPuzzle" element={ <IntroPuzzle /> }></Route>
