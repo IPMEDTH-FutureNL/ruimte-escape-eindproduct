@@ -30,11 +30,11 @@ const ClickingGame = () =>{
                 <Hint type='clickHints'/>
                 <section className='clickingGame__garbage__container'>
                     <figure className='rotating_left'>
-                        <div onClick={() => countItems()}><Garbage /></div>
+                        <div onClick={() => countItems()}><Garbage className="garbage" /></div>
                     </figure>
 
                     <figure className='rotating_right'>
-                        <div onClick={() => countItems()}><Garbage /></div>
+                        <div onClick={() => countItems()} className="garbage"><Garbage /></div>
                     </figure>
 
                     <figure>
