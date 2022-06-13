@@ -28,8 +28,6 @@ function App(expiryTimestamp) {
     <Router>
       <div className="App">
         <Timer second={seconds} minute={minutes}/>
-        {/* <button onClick={start}>Start</button> */}
-        {/* <span>{minutes < '10' ? '0' + minutes : minutes}</span>:<span>{seconds < '10' ? '0' + seconds : seconds}</span> */}
         <Routes>
             <Route path="/" element={ <Start start={start} /> }></Route>
             <Route path="/introPuzzle" element={ <IntroPuzzle /> }></Route>
