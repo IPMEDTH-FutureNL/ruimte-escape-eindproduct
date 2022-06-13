@@ -11,7 +11,7 @@ import TextCloud from '../../img/gameplayImages/snippets/textcloud.png'
 
 import PopUp from '../PopUp';
 
-const Outro = () => {
+const Outro = ({pause}) => {
     const [text, setText] = useState("Welkom op Mars " + localStorage.getItem("playerOne") +  " en " + localStorage.getItem("playerTwo") + " we zijn veilig aangekomen dankzij jullie hulp!");
     const [count, setCount] = useState(0);
 
@@ -43,7 +43,7 @@ const Outro = () => {
                             <img src={TextCloud} alt="tekst balloon" className="textcloud__image"></img>
                             <div className="textcloud__field" id="textcloud__field">
                                 <p className="textcloud__text">{text}</p>
-                                <FaAngleRight className="continue" onClick={() => story(1)}/>
+                                <FaAngleRight className="continue" onClick={() => {story(1); pause();}}/>
                             </div>
                         </div>
                         <div className="astronaut__twee">

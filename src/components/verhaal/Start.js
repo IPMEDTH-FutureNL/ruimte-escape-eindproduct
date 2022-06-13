@@ -6,11 +6,10 @@ import Astronaut from "../../img/gameplayImages/characters/character2_standard_s
 import { FaInfoCircle } from "react-icons/fa";
 import { FaAngleRight } from "react-icons/fa";
 import TextCloud from '../../img/gameplayImages/snippets/textcloud.png'
-import Timer from '../../components/Timer.js'
 // import IntroSound from '../../sound/Intro.mp3';
 
 
-const Start = () => {
+const Start = ({start}) => {
     // const audio = new Audio(IntroSound);
     const [text, setText] = useState("");
     const [count, setCount] = useState(0);
@@ -107,7 +106,7 @@ const Start = () => {
                             <input className="player__form-name"></input>
                         </div>
                         <div className="inputdiv">
-                            <input type="submit" value="Verder" className='player__form-submit'/>
+                            <input type="submit" value="Verder" className='player__form-submit' onClick={start}/>
                         </div>
                     </form>
                 </section>

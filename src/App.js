@@ -15,14 +15,23 @@ import RebusPuzzle from './components/rebus/RebusPuzzle';
 import ClickingGame from './components/clickingGame/ClickingGame'
 import Outro from './components/verhaal/Outro.js';
 import Timer from './components/Timer.js'
+import { useStopwatch } from 'react-timer-hook';
 
-function App() {
+function App(expiryTimestamp) {
+  const {
+    seconds,
+    minutes,
+    start,
+    pause,
+  } = useStopwatch({ expiryTimestamp, onExpire: () => console.warn('onExpire called') });
   return (
     <Router>
       <div className="App">
-        <Timer/>
+        <Timer second={seconds} minute={minutes}/>
+        {/* <button onClick={start}>Start</button> */}
+        {/* <span>{minutes < '10' ? '0' + minutes : minutes}</span>:<span>{seconds < '10' ? '0' + seconds : seconds}</span> */}
         <Routes>
-            <Route path="/" element={ <Start /> }></Route>
+            <Route path="/" element={ <Start start={start} /> }></Route>
             <Route path="/introPuzzle" element={ <IntroPuzzle /> }></Route>
             <Route path="/introPuzzelEen" element={<OvergangPuzzel/>}></Route>
             <Route path="/puzzelEen" element={ <DragAndDrop />}></Route>
@@ -34,7 +43,7 @@ function App() {
             <Route path="/quizzSucces" element={<QuizzSucces/>}></Route>
             <Route path="/puzzelVier" element={ <RebusPuzzle/>}></Route>
             <Route path="/puzzelVijf" element={ <ClickingGame/>}></Route>
-            <Route path="/outro" element={<Outro />}></Route>
+            <Route path="/outro" element={<Outro pause={pause}/>}></Route>
         </Routes>
       </div>
     </Router>
