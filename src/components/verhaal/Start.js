@@ -6,16 +6,19 @@ import Astronaut from "../../img/gameplayImages/characters/character2_standard_s
 import { FaInfoCircle } from "react-icons/fa";
 import { FaAngleRight } from "react-icons/fa";
 import TextCloud from '../../img/gameplayImages/snippets/textcloud.png'
+// import IntroSound from '../../sound/Intro.mp3';
 
 
 const Start = () => {
+    // const audio = new Audio(IntroSound);
     const [text, setText] = useState("");
     const [count, setCount] = useState(0);
     const navigate = useNavigate();
-
+    
+    
     const players = (e) => {
         e.preventDefault();
-        
+        // audio.play();
         let players = getPlayerNames();
         let introduction = document.getElementById("container__introduction");
         let gameplay = document.getElementById("container__gameplay");

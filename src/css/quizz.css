@@ -216,6 +216,11 @@ li:hover{
     padding-left: 2px;
 }
 
+#four{
+    padding-left: 30px;
+    font-size: 14px;
+}
+
 .quiz-intro{
     width: 50vw;
     height: 50vh;

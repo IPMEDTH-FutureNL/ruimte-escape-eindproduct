@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useNavigate } from "react-router-dom";
 import PopUp from '../PopUp';
-import Hint from '../../components/hint';
+import HintEscape from '../HintsEscape';
 
 
 //planeten
@@ -81,7 +81,7 @@ const DragAndDrop = () => {
 
     return (
       <section className="mapPuzzle">
-        <Hint type='dragAndDropHints'/>
+        <HintEscape type='dragAndDropHints'/>
           <div className="board">
             <div className="board__piece">
                 <div className="board__piece-square" id="div1" onDrop={(event) => drop(event)} onDragOver={(event) => allowDrop(event)} ></div>
