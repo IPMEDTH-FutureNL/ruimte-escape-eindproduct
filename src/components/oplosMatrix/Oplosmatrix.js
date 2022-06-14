@@ -10,8 +10,8 @@ import PopUp from '../PopUp';
 import PostIt from '../../img/oplosmatrix/post-it.png';
 
 const Oplosmatrix = () => {
-    const [fout, setFout] = useState(0);
     const [text, setText] = useState("");
+    const [wrong, setWrong] = useState(0);
 
     const navigate = useNavigate();
 
@@ -30,18 +30,51 @@ const Oplosmatrix = () => {
             setText("Je hebt de code gekraakt");
             let openpopup = document.getElementById("popup");
             openpopup.style.display = "block";
-            let currentPoints = localStorage.getItem("punten");
-            let pointsToInt = parseInt(currentPoints);
-            pointsToInt = pointsToInt + 30;
-            localStorage.setItem("punten", pointsToInt);
-            navigate('/oplosmatrixSucces');
-            console.log("aantal foute pogingen " + fout);
+            setPoints();
         }else{
             setText("Dat was helaas niet goed");
             let openpopup = document.getElementById("popup");
             openpopup.style.display = "block";
-            setFout(fout + 1);
+            setWrong(wrong + 1);
         }
+    }
+
+    const setPoints = () => {
+        let currentPoints = localStorage.getItem("punten");
+        let pointsToInt = parseInt(currentPoints);
+        switch(wrong){
+            case 0:
+              pointsToInt = pointsToInt + 30;
+              localStorage.setItem("punten", pointsToInt);
+              break;
+            case 1:
+              pointsToInt = pointsToInt + 25;
+              localStorage.setItem("punten", pointsToInt);
+              break;
+            case 2:
+              pointsToInt = pointsToInt + 20;
+              localStorage.setItem("punten", pointsToInt);
+              break;
+            case 3:
+              pointsToInt = pointsToInt + 15;
+              localStorage.setItem("punten", pointsToInt);
+              break;
+            case 4:
+              pointsToInt = pointsToInt + 10;
+              localStorage.setItem("punten", pointsToInt);
+              break;
+            case 5:
+              pointsToInt = pointsToInt + 5;
+              localStorage.setItem("punten", pointsToInt);
+              break;
+            case 6:
+              pointsToInt = pointsToInt + 0;
+              localStorage.setItem("punten", pointsToInt);
+              break;
+          }
+
+        navigate('/oplosmatrixSucces');
+        console.log("aantal foute pogingen " + wrong);
     }
 
     const checkInput = () => {
@@ -71,7 +104,7 @@ const Oplosmatrix = () => {
                         <img className='icon' alt="moon" src={moon} draggable="false"></img>
                     </div>
                     <div className='grid-item-img'>
-                        <img className='icon' alt="astronaut" src={astronaut} draggable="false"></img>
+                        <img className='icon astronautMatrix' alt="astronaut" src={astronaut} draggable="false"></img>
                     </div>
                     <div className='grid-item-color-red'/>
                     <div className='grid-item-number'>1</div>

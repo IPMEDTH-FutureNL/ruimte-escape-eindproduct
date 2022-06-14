@@ -323,7 +323,7 @@ body{
 }
 
 .icon:nth-child(3){
-  padding-left: 2vw;
+  margin-left: 2vw;
 }
 
 .grid-item-color-red{
@@ -347,7 +347,7 @@ body{
 
 .grid-item-number{
   align-self:center;
-  margin-left: 4.5vh;
+  margin-left: 2.5vh;
   color: white;
   /* background-color: #050530; */
 }

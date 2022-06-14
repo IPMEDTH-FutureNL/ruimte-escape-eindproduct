@@ -20,7 +20,7 @@ const ClickingGame = () =>{
     React.useEffect(()=>{
         if(count === 6){
             console.log('picked up all the garbage')
-            navigate('/outro');
+            navigate('/landing');
         }
     });
     

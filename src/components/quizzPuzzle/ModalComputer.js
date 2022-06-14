@@ -1,27 +1,64 @@
-import React from 'react'
+import React, {useState} from 'react';
 import { useNavigate } from "react-router-dom";
 import Computer from '../../img/quizz/computer.png';
 
 const ModalComputer = () => {
     const navigate = useNavigate();
+    const [wrong, setWrong] = useState(0);
 
     const checkValue = () => {
         const inputValue = document.getElementById("number").value;
         if(inputValue == "BAC"){
             console.log('Code gekraakt!!!');
-            let currentPoints = localStorage.getItem("punten");
-            let pointsToInt = parseInt(currentPoints);
-            pointsToInt = pointsToInt + 30;
-            localStorage.setItem("punten", pointsToInt);
-            navigate('/quizzSucces');
+            setPoints();
         } else if(inputValue == "bac") {
             document.getElementById('invisibleH').id = "visibleH";
             // document.getElementById('visible').id = "invisible"; DEZE ZIJN NOG BUGGY
+            setWrong(wrong + 1);
         } else {
             document.getElementById('invisible').id = "visible";
             // document.getElementById('visibleH').id = "invisibleH"; DEZE ZIJN NOG BUGGY
+            setWrong(wrong + 1);
         }
     }
+
+    const setPoints = () => {
+      let currentPoints = localStorage.getItem("punten");
+      let pointsToInt = parseInt(currentPoints);
+      switch(wrong){
+          case 0:
+            pointsToInt = pointsToInt + 30;
+            localStorage.setItem("punten", pointsToInt);
+            break;
+          case 1:
+            pointsToInt = pointsToInt + 25;
+            localStorage.setItem("punten", pointsToInt);
+            break;
+          case 2:
+            pointsToInt = pointsToInt + 20;
+            localStorage.setItem("punten", pointsToInt);
+            break;
+          case 3:
+            pointsToInt = pointsToInt + 15;
+            localStorage.setItem("punten", pointsToInt);
+            break;
+          case 4:
+            pointsToInt = pointsToInt + 10;
+            localStorage.setItem("punten", pointsToInt);
+            break;
+          case 5:
+            pointsToInt = pointsToInt + 5;
+            localStorage.setItem("punten", pointsToInt);
+            break;
+          case 6:
+            pointsToInt = pointsToInt + 0;
+            localStorage.setItem("punten", pointsToInt);
+            break;
+        }
+
+        navigate('/quizzSucces');
+        console.log("aantal foute pogingen " + wrong);
+      }
   return (
     <section>
 

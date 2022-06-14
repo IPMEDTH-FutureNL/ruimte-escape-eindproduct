@@ -117,14 +117,14 @@ const HintEscape = ({type}) => {
 
   return(
     <>
-        <Popup trigger={<button className='hint-button'> Hints</button>} position=" center" modal nested>
+        <Popup trigger={<button className='hint-button'> Tips</button>} position=" center" modal nested>
             
             <section className='hint-container'>
-                <h1 className='hint-header'>Hints</h1>
+                <h1 className='hint-header'>Tips</h1>
                 <section className='hint-container-content'>
                     <Popup trigger ={<button className='hint-button-tab'> 1 </button>} position='bottom left' nested>
                         <section >
-                            <Popup trigger={<button className='hint-button-buyhint' onMouseDown={() => buyHint()}> koop hint</button>} position='bottom center' nested>
+                            <Popup trigger={<button className='hint-button-buyhint' onMouseDown={() => buyHint()}> koop tip</button>} position='bottom center' nested>
                                 <p className='hint-container-content-hint' id="hint-container-content-hint">{hint1}</p>
                             </Popup>
                         </section>
@@ -132,14 +132,14 @@ const HintEscape = ({type}) => {
                     </Popup>
                     <Popup trigger ={<button className='hint-button-tab' > 2 </button>} position='bottom center' nested>
                         <section>
-                        <Popup trigger={<button className='hint-button-buyhint' onMouseDown={() => buyHint()}> koop hint</button>} position='bottom center' nested>
+                        <Popup trigger={<button className='hint-button-buyhint' onMouseDown={() => buyHint()}> koop tip</button>} position='bottom center' nested>
                                 <p className='hint-container-content-hint' id="hint-container-content-hint">{hint2}</p>
                             </Popup>
                         </section>
                     </Popup>
                     <Popup trigger ={<button className='hint-button-tab' > 3 </button>} position='bottom right' nested>
                         <section>
-                            <Popup trigger={<button className='hint-button-buyhint' onMouseDown={() => buyHint()}> koop hint</button>} position='bottom center' nested>
+                            <Popup trigger={<button className='hint-button-buyhint' onMouseDown={() => buyHint()}> koop tip</button>} position='bottom center' nested>
                                 <section className='hint-container-content'>
                                     <p className='hint-container-content-hint' id="hint-container-content-hint">{hint3}</p>
                                     {!dragDrop ? '' : <img className="testImageDragDrop" src={SolutionDragAndDrop} alt="solution drag and drop"></img>}

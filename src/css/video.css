@@ -6,6 +6,14 @@
     min-height: 100%;
 }
 
+#landingVideo{
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
 .content {
     position: fixed;
     bottom: 0;
@@ -47,4 +55,59 @@
   #myBtn:hover {
     background: #ddd;
     color: black;
+  }
+
+  .landing_ended{
+    position: absolute;
+    top: 45vh;
+    left: 35vw;
+    display: none;
+  }
+
+  .button_landing{
+    padding: 20px 15px 20px 15px;
+    background-color: #03afef;
+    color: white;
+    font-size: 1.2rem;
+    letter-spacing: .1rem;
+    border: none;
+    font-weight: 600;
+    border-radius: 25px;
+    cursor: pointer;
+    width: 25vw;
+    text-transform: uppercase;
+  }
+  
+  .button_landing:hover{
+    background-color: #338dcf;
+  }
+
+  .welcome{
+    position: absolute;
+    color: white;
+    font-size: 3.7rem;
+    top: 40vh;
+    left: 2.5vw;
+    font-family: 'Andika', sans-serif;
+  }
+
+  .button_welcome{
+    padding: 20px 15px 20px 15px;
+    background-color: #03afef;
+    color: white;
+    font-size: 1.2rem;
+    letter-spacing: .1rem;
+    border: none;
+    font-weight: 600;
+    border-radius: 25px;
+    cursor: pointer;
+    width: 20vw;
+    text-transform: uppercase;
+    position: absolute;
+    top: 55vh;
+    left: 37.5vw;
+  }
+
+  .button_welcome:hover{
+    background-color: #338dcf;
   }

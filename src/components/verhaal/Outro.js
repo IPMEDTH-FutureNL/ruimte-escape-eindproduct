@@ -7,10 +7,8 @@ import AstronautTwee from "../../img/gameplayImages/characters/character4_standa
 import AstronautDrie from "../../img/gameplayImages/characters/character1_standard_mouthclosed.svg"
 import AstronautVier from "../../img/gameplayImages/characters/character3_standard_mouthopen.svg"
 
-import { FaAngleRight } from "react-icons/fa";
 import TextCloud from '../../img/gameplayImages/snippets/textcloud.png'
 
-import PopUp from '../PopUp';
 
 const Outro = () => {
     const [text, setText] = useState("Welkom op Mars " + localStorage.getItem("playerOne") +  " en " + localStorage.getItem("playerTwo") + " we zijn veilig aangekomen dankzij jullie hulp!");
@@ -45,7 +43,7 @@ const Outro = () => {
                             <img src={TextCloud} alt="tekst balloon" className="textcloud__image" draggable="false"></img>
                             <div className="textcloud__field" id="textcloud__field">
                                 <p className="textcloud__text">{text}</p>
-                                <FaAngleRight className="continue" onClick={() => story(1)}/>
+                                <button className="continue" onClick={() => story(1)}>Verder</button>
                             </div>
                         </div>
                         <div className="astronaut__twee">
@@ -65,8 +63,6 @@ const Outro = () => {
                         </div>
                     </div>
                 </section>
-
-                <PopUp text="Jullie hebben de escaperoom met succes gespeeld! Bedankt voor jullie inzet!" navigate="false" print="true"></PopUp>
         </section>
     )
 

@@ -34,13 +34,15 @@
 .rule{
     display: flex;
     flex-direction: row;
-    font-size: 17px;
+    font-size: 20px;
     margin-bottom: 15px;
     margin-top: 30px;
+    line-height: 1.4;
 }
 
 p{
-    font-size: 17px;
+    font-size: 20px;
+    line-height: 1.5;
 }
 
 .rule-clickable{
@@ -53,9 +55,14 @@ p{
 }
 
 .rule-hint{
-    font-size: 30px;
+    font-size: 20px;
     margin-top: -5px;
     margin-right: 10px;
+    background-color: #edc305;
+    border: none;
+    border: none;
+    padding: 10px 25px 10px 25px;
+    border-radius: 10px;
 }
 
 .rule-text{
@@ -78,7 +85,8 @@ p{
     border-radius: 10px;
     margin-top: 10px;
     border: 1px solid grey;
-    width: 90%;
+    width: 80%;
+    font-size: 20px;
 }
 
 .player__form-label{
@@ -89,13 +97,17 @@ p{
     margin-top: 20px;
     padding: 10px;
     width: 50%;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     margin-left: 80%;
-    background-color: #4490be;
+    background-color: #03afef;
     color: white;
     cursor: pointer;
     border: none;
     border-radius: 10px;
+}
+
+.player__form-submit:hover{
+    background-color: #338dcf;
 }
 
 .inputdiv{

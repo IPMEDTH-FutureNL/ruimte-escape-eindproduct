@@ -22,7 +22,7 @@ const DragAndDropSucces = () => {
                 setText("De bemanning is compleet! Dit zijn Tim, Kasper en Lotte.")
                 break;
             case 2:
-                setText("Het is nu tijd om te vertrekken naar Mars!");
+                setText("Laten we naar Mars gaan!");
                 break;
             case 3:
                 navigate('/launch');
@@ -41,7 +41,7 @@ const DragAndDropSucces = () => {
                             <img src={TextCloud} alt="tekst balloon" className="textcloud__image" draggable="false"></img>
                             <div className="textcloud__field">
                                 <p className="textcloud__text">{text}</p>
-                                <FaAngleRight className="continue" onClick={() => story(1)}/>
+                                <button className="continue" onClick={() => story(1)}>Verder</button>
                             </div>
                         </div>
                         <div className="astronaut__twee">

@@ -1,6 +1,7 @@
 import React from 'react'
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import WelcomeVideo from './components/verhaal/video/WelcomeVideo';
 import Start from './components/verhaal/Start';
 import IntroPuzzle from './components/dragAndDrop/IntroPuzzle';
 import OvergangPuzzel from './components/dragAndDrop/OvergangPuzzel';
@@ -14,6 +15,7 @@ import QuizzPuzzle from './components/quizzPuzzle/QuizzPuzzle';
 import QuizzSucces from './components/verhaal/QuizzSucces';
 import RebusPuzzle from './components/rebus/RebusPuzzle';
 import ClickingGame from './components/clickingGame/ClickingGame'
+import LandingOnMars from './components/verhaal/video/LandingOnMars';
 import Outro from './components/verhaal/Outro.js';
 import Certificaat from './components/Certificaat';
 
@@ -22,7 +24,8 @@ function App() {
     <Router>
       <div className="App">
         <Routes>
-            <Route path="/" element={ <Start /> }></Route>
+            <Route path="/" element={ <WelcomeVideo /> }></Route>
+            <Route path="/start" element={ <Start/>}></Route>
             <Route path="/introPuzzle" element={ <IntroPuzzle /> }></Route>
             <Route path="/introPuzzelEen" element={<OvergangPuzzel/>}></Route>
             <Route path="/puzzelEen" element={ <DragAndDrop />}></Route>
@@ -35,6 +38,7 @@ function App() {
             <Route path="/quizzSucces" element={<QuizzSucces/>}></Route>
             <Route path="/puzzelVier" element={ <RebusPuzzle/>}></Route>
             <Route path="/puzzelVijf" element={ <ClickingGame/>}></Route>
+            <Route path="/landing" element={< LandingOnMars /> }></Route>
             <Route path="/outro" element={<Outro />}></Route>
             <Route path="/certificaat" element={ <Certificaat /> }></Route>
         </Routes>

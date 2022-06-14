@@ -22,10 +22,10 @@ const IntroMatrix = () => {
 
         switch(count){
             case 1:
-                setText("Ik krijg de code niet opgelost om de deur te openen naar de controle kamer!")
+                setText("Ik krijg de code niet opgelost om de deur te openen!")
                 break;
             case 2:
-                setText("De code staat als een raadsel op een blaadje");
+                setText("De code staat op een blaadje");
                 break;
             case 3:
                 let matrixSection = document.getElementById('container__gameplay-matrix');
@@ -49,7 +49,7 @@ const IntroMatrix = () => {
                             <img src={TextCloud} alt="tekst balloon" className="textcloud__image" draggable="false"></img>
                             <div className="textcloud__field">
                                 <p className="textcloud__text">{text}</p>
-                                <FaAngleRight className="continue" onClick={() => story(1)}/>
+                                <button className="continue" onClick={() => story(1)}>Verder</button>
                             </div>
                         </div>
                     </div>
