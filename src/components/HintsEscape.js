@@ -4,6 +4,7 @@ import Popup from 'reactjs-popup'; //npm install reactjs-popup --save
 import Punten from './Punten';
 import SolutionDragAndDrop from '../img/planeten/hintFoto.png'
 import '../css/hint.css'
+import Pop from '../sound/pop.wav';
 
 const HintEscape = ({type}) => {
   const [show, setShow] = useState(false);
@@ -88,6 +89,8 @@ const HintEscape = ({type}) => {
     const buyHint = () =>{
         console.log("buyHint");
         if(punten >= 10){
+            const audio = new Audio(Pop);
+            audio.play();
             let newPoints = punten - 10;
             setPunten(newPoints);
             localStorage.setItem("punten", newPoints);

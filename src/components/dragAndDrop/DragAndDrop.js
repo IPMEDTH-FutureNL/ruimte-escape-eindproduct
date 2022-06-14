@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useNavigate } from "react-router-dom";
 import PopUp from '../PopUp';
 import HintEscape from '../HintsEscape';
+import Bubble from '../../sound/Bubble.wav';
 
 
 //planeten
@@ -50,6 +51,8 @@ const DragAndDrop = () => {
     e.preventDefault();
         let image =e.dataTransfer.getData("content");
     if (e.target.id === document.getElementById(image).getAttribute('data-div')){ 
+        const audio = new Audio(Bubble);
+        audio.play();
         //alert("ok");          
         e.target.appendChild(document.getElementById(image));
         let changeOpacity = document.getElementById(e.target.id);

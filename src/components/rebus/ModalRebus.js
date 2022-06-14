@@ -1,11 +1,10 @@
 import React from 'react';
 import { useNavigate } from "react-router-dom";
 import Rebus from '../../img/rebus/rebus-zwart.png';
-import LockSound from '../../sound/Lock.mp3';
 import DoorOpen from '../../sound/DoorOpen.mp3';
+import Error from '../../sound/Error.mp3';
 
 const ModalRebus = () => {
-    const audio = new Audio(LockSound);
     const DoorAudio = new Audio(DoorOpen);
 
     const navigate = useNavigate();
@@ -22,8 +21,9 @@ const ModalRebus = () => {
             DoorAudio.play();
             navigate('/puzzelVijf');
         } else {
+            const error = new Audio(Error);
+            error.play();
             document.getElementById('invisible').id = "visible";
-            audio.play()
         }
     }
 

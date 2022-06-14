@@ -4,10 +4,14 @@ import '../../css/clickingGame.css';
 import Garbage from './garbage'
 import HintEscape from '../HintsEscape';
 import LaserGun from '../../sound/LaserGun.mp3';
+import OutroSound from '../../sound/Outro.mp3';
 
 const ClickingGame = () =>{
     const audio = new Audio(LaserGun);
     audio.volume = 0.5;
+    const outro = new Audio(OutroSound);
+    outro.volume = 0.1;
+    
     const navigate = useNavigate();
     const [count, setCount] = useState(0);
 
@@ -20,6 +24,7 @@ const ClickingGame = () =>{
 
     React.useEffect(()=>{
         if(count === 6){
+            outro.play();
             console.log('picked up all the garbage')
             navigate('/outro');
         }

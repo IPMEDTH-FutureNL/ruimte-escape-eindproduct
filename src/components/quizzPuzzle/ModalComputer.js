@@ -1,6 +1,8 @@
 import React from 'react'
 import { useNavigate } from "react-router-dom";
 import Computer from '../../img/quizz/computer.png';
+import Unlock from '../../sound/unlock.wav';
+import Lock from '../../sound/Error.mp3';
 
 const ModalComputer = () => {
     const navigate = useNavigate();
@@ -8,6 +10,8 @@ const ModalComputer = () => {
     const checkValue = () => {
         const inputValue = document.getElementById("number").value;
         if(inputValue == "BAC"){
+            const audio = new Audio(Unlock);
+            audio.play();
             console.log('Code gekraakt!!!');
             let currentPoints = localStorage.getItem("punten");
             let pointsToInt = parseInt(currentPoints);
@@ -15,9 +19,13 @@ const ModalComputer = () => {
             localStorage.setItem("punten", pointsToInt);
             navigate('/quizzSucces');
         } else if(inputValue == "bac") {
+            const audio = new Audio(Lock);
+            audio.play();
             document.getElementById('invisibleH').id = "visibleH";
             // document.getElementById('visible').id = "invisible"; DEZE ZIJN NOG BUGGY
         } else {
+            const audio = new Audio(Lock);
+            audio.play();
             document.getElementById('invisible').id = "visible";
             // document.getElementById('visibleH').id = "invisibleH"; DEZE ZIJN NOG BUGGY
         }

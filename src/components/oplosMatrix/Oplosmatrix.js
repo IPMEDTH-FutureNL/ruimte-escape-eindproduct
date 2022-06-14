@@ -8,6 +8,8 @@ import moon from'../../img/oplosmatrix/moon.png';
 import lock from '../../img/oplosmatrix/lock.png';
 import PopUp from '../PopUp';
 import PostIt from '../../img/oplosmatrix/post-it.png';
+import Unlock from '../../sound/unlock.wav';
+import Lock from '../../sound/Lock.mp3';
 
 const Oplosmatrix = () => {
     const [fout, setFout] = useState(0);
@@ -27,6 +29,8 @@ const Oplosmatrix = () => {
         let codeString = checkInput();
 
         if(codeString == lockAnswer){
+            const audio = new Audio(Unlock);
+            audio.play();
             setText("Je hebt de code gekraakt");
             let openpopup = document.getElementById("popup");
             openpopup.style.display = "block";
@@ -37,6 +41,8 @@ const Oplosmatrix = () => {
             navigate('/oplosmatrixSucces');
             console.log("aantal foute pogingen " + fout);
         }else{
+            const audio = new Audio(Lock);
+            audio.play();
             setText("Dat was helaas niet goed");
             let openpopup = document.getElementById("popup");
             openpopup.style.display = "block";
