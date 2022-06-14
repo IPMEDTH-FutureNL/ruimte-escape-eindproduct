@@ -35,7 +35,7 @@
     grid-row: 1;
     width: 10px;
     height: 10px;
-    animation: leftToRightDiagonal 3s infinite linear;
+    animation: leftToRightDiagonal 4s infinite linear;
 }
 
 .garbage_4{
@@ -50,6 +50,13 @@
     grid-row: 1;
     height: 10rem;
     animation: upToDown 3s infinite linear;
+}
+
+.garbage_6{
+    grid-column: 1;
+    grid-row: 4;
+    height: 10rem;
+    animation: leftToRight 3s infinite linear;
 }
 
 @keyframes rotationRight{
@@ -78,7 +85,7 @@
         transform: translate(0);
     }
     50%{
-        transform:translate(10rem, 10rem)
+        transform:translate(5rem, 10rem)
     }
 }
 
@@ -88,6 +95,15 @@
     }
     50%{
         transform: translate(0,50vh);
+    }
+}
+
+@keyframes leftToRight{
+    0%{
+        transform: translate(0);
+    }
+    50%{
+        transform: translate(30vw,0);
     }
 }
 

@@ -30,20 +30,16 @@ const ClickingGame = () =>{
             <section className='clickingGame__container'>
                 <HintEscape type='clickHints'/>
                 <section className='clickingGame__garbage__container'>
-                    <figure className='garbage_1'>
-                        <div onClick={() => countItems()}><Garbage /></div>
-                    </figure>
-
                     <figure className='garbage_1' onClick={() => countItems()}>
-                        <Garbage/>
+                        <Garbage />
                     </figure>
 
                     <figure className='garbage_2' onClick={() => countItems()}>
-                        <Garbage/>                    
+                        <Garbage/>
                     </figure>
 
                     <figure className='garbage_3' onClick={() => countItems()}>
-                        <Garbage/>
+                        <Garbage/>                    
                     </figure>
 
                     <figure className='garbage_4' onClick={() => countItems()}>
@@ -51,6 +47,10 @@ const ClickingGame = () =>{
                     </figure>
 
                     <figure className='garbage_5' onClick={() => countItems()}>
+                        <Garbage/>
+                    </figure>
+
+                    <figure className='garbage_6' onClick={() => countItems()}>
                         <Garbage/>
                     </figure>  
                 </section>
