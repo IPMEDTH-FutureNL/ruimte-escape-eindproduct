@@ -16,47 +16,56 @@
     padding-top: 12.5vh;
 }
 
-.garbage_1{
+.garbage:nth-of-type(1){
     grid-column: 4;
     grid-row: 3;
-    height: 10rem;
+    width: 4rem;
+    height: 4rem;
     animation: rotationRight 6s infinite linear;
 }
 
-.garbage_2{
+.garbage:nth-of-type(2){
     grid-column: 1;
     grid-row: 1;
+    width:10rem;
     height: 10rem;
     animation: rotationLeft 15s infinite linear;
 }
 
-.garbage_3{
+.garbage:nth-of-type(3){
     grid-column: 3;
     grid-row: 1;
-    width: 10px;
-    height: 10px;
+    width: 2rem;
+    height: 2rem;
     animation: leftToRightDiagonal 4s infinite linear;
 }
 
-.garbage_4{
+.garbage:nth-of-type(4){
     grid-column: 2;
     grid-row: 2;
-    height: 10rem;
+    width:3;
+    height: 3rem;
     animation: orbit 4s infinite linear;
 }
 
-.garbage_5{
+.garbage:nth-of-type(5){
     grid-column: 5;
     grid-row: 1;
-    height: 10rem;
+    width: 5rem;
+    height: 5rem;
     animation: upToDown 3s infinite linear;
 }
 
-.garbage_6{
+.garbage:nth-of-type(6){
     grid-column: 1;
     grid-row: 4;
-    height: 10rem;
+    width:8rem;
+    height: 8rem;
     animation: leftToRight 3s infinite linear;
+}
+
+.garbage-collected{
+    display:none;
 }
 
 @keyframes rotationRight{

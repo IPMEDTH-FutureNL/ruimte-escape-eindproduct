@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import '../../css/clickingGame.css';
-import Garbage from './garbage'
+import Garbage from './garbage';
 import HintEscape from '../HintsEscape';
 import LaserGun from '../../sound/LaserGun.mp3';
 
@@ -14,7 +14,6 @@ const ClickingGame = () =>{
         audio.play();
         setCount(count + 1);
         console.log(count)
-
     }
 
     React.useEffect(()=>{
@@ -30,29 +29,30 @@ const ClickingGame = () =>{
             <section className='clickingGame__container'>
                 <HintEscape type='clickHints'/>
                 <section className='clickingGame__garbage__container'>
-                    <figure className='garbage_1' onClick={() => countItems()}>
-                        <Garbage />
-                    </figure>
 
-                    <figure className='garbage_2' onClick={() => countItems()}>
-                        <Garbage/>
-                    </figure>
+                        <figure className='garbage' onClick={() =>countItems()}>
+                                <Garbage />
+                        </figure>
 
-                    <figure className='garbage_3' onClick={() => countItems()}>
-                        <Garbage/>                    
-                    </figure>
+                        <figure className='garbage' onClick={() =>countItems()}>
+                                <Garbage />
+                        </figure>
 
-                    <figure className='garbage_4' onClick={() => countItems()}>
-                        <Garbage/>
-                    </figure>
+                        <figure className='garbage' onClick={() =>countItems()}>
+                                <Garbage />
+                        </figure>
 
-                    <figure className='garbage_5' onClick={() => countItems()}>
-                        <Garbage/>
-                    </figure>
+                        <figure className='garbage' onClick={() =>countItems()}>
+                                <Garbage />
+                        </figure>
 
-                    <figure className='garbage_6' onClick={() => countItems()}>
-                        <Garbage/>
-                    </figure>  
+                        <figure className='garbage' onClick={() =>countItems()}>
+                                <Garbage />
+                        </figure>
+
+                        <figure className='garbage' onClick={() =>countItems()}>
+                                <Garbage />
+                        </figure> 
                 </section>
                 
             </section>

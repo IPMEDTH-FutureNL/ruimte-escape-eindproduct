@@ -84,10 +84,10 @@ const HintEscape = ({type}) => {
     }
 
     const showHint = (number) =>{
-        console.log('showhints')
+        // console.log('showhints')
         switch (number){
             case 0:
-                console.log('bimpsert 1') 
+                // console.log('bimpsert 1') 
                 return <Popup trigger ={<button className='hint-button-tab'> 1 </button>} position='bottom' nested>
                 <section >
                     <Popup trigger={<button className='hint-button-buyhint' onMouseDown={() => buyHint()}>koop hint</button>} position='bottom center' nested>
@@ -96,7 +96,7 @@ const HintEscape = ({type}) => {
                 </section>
             </Popup>
             case 1:
-                console.log('bimpsert 2') 
+                // console.log('bimpsert 2') 
                 
                 return  <section>
                         <Popup trigger ={<button className='hint-button-tab'> 1 </button>}position='bottom' open='true' nested>
@@ -114,7 +114,7 @@ const HintEscape = ({type}) => {
                         </Popup>
                     </section>
             case 2:
-                console.log('bimpsert 3')
+                // console.log('bimpsert 3')
                 return <section>
                         <Popup trigger ={<button className='hint-button-tab'> 1 </button>} position='bottom' nested>
                             <section >
