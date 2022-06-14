@@ -10,11 +10,14 @@ import { FaAngleRight } from "react-icons/fa";
 import TextCloud from '../../img/gameplayImages/snippets/textcloud.png'
 
 import PopUp from '../PopUp';
+import OutroSound from '../../sound/Outro.mp3';
 
 const Outro = ({pause}) => {
     const [text, setText] = useState("Welkom op Mars " + localStorage.getItem("playerOne") +  " en " + localStorage.getItem("playerTwo") + " we zijn veilig aangekomen dankzij jullie hulp!");
     const [count, setCount] = useState(0);
-
+    const audio = new Audio(OutroSound);
+    audio.volume = 0.1;
+    audio.play()
 
     const story = (newText) => {
         setCount(count + newText);

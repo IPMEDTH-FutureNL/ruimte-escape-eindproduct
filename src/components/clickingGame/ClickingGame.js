@@ -7,6 +7,7 @@ import LaserGun from '../../sound/LaserGun.mp3';
 
 const ClickingGame = () =>{
     const audio = new Audio(LaserGun);
+    audio.volume = 0.5;
     const navigate = useNavigate();
     const [count, setCount] = useState(0);
 
