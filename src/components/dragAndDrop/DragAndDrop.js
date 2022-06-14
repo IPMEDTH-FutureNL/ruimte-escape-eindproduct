@@ -62,8 +62,46 @@ const DragAndDrop = () => {
           setTimeout(() => {
             let currentPoints = localStorage.getItem("punten");
             let pointsToInt = parseInt(currentPoints);
-            pointsToInt = pointsToInt + 30;
-            localStorage.setItem("punten", pointsToInt);
+
+            switch(wrong){
+              case 0:
+                pointsToInt = pointsToInt + 40;
+                localStorage.setItem("punten", pointsToInt);
+                break;
+              case 1:
+                pointsToInt = pointsToInt + 35;
+                localStorage.setItem("punten", pointsToInt);
+                break;
+              case 2:
+                pointsToInt = pointsToInt + 30;
+                localStorage.setItem("punten", pointsToInt);
+                break;
+              case 3:
+                pointsToInt = pointsToInt + 25;
+                localStorage.setItem("punten", pointsToInt);
+                break;
+              case 4:
+                pointsToInt = pointsToInt + 20;
+                localStorage.setItem("punten", pointsToInt);
+                break;
+              case 5:
+                pointsToInt = pointsToInt + 15;
+                localStorage.setItem("punten", pointsToInt);
+                break;
+              case 6:
+                pointsToInt = pointsToInt + 10;
+                localStorage.setItem("punten", pointsToInt);
+                break;
+              case 7:
+                pointsToInt = pointsToInt + 5;
+                localStorage.setItem("punten", pointsToInt);
+                break;
+              case 8:
+                pointsToInt = pointsToInt + 0;
+                localStorage.setItem("punten", pointsToInt);
+                break;
+            }
+          
             goToPuzzle();
             console.log("how many wrong " + wrong );
           }, 200)
@@ -72,8 +110,11 @@ const DragAndDrop = () => {
     else{
        setWrong(wrong + 1);
        setText("Dat was helaas niet goed");
-       let openpopup = document.getElementById("popup");
-       openpopup.style.display = "block";
+       let changeColor = document.getElementById(e.target.id);
+       changeColor.style.backgroundColor = "red";
+       changeColor.style.opacity = "1";
+      //  let openpopup = document.getElementById("popup");
+      //  openpopup.style.display = "block";
        console.log("bad tries " + wrong);
     }
   }

@@ -95,7 +95,11 @@ const HintEscape = ({type}) => {
             let newPoints = 0;
             setPunten(newPoints);
             localStorage.setItem("punten", newPoints);
-            // setCurrentHint("Je hebt niet genoeg punten om hints te kopen!");
+            setHint1("Je hebt niet genoeg punten om hints te kopen!");
+            setHint2("Je hebt niet genoeg punten om hints te kopen!");
+            setHint3("Je hebt niet genoeg punten om hints te kopen!");
+            let hintColor = document.getElementById('hint-container-content-hint');
+            hintColor.style.color = "red";
         }
 
         updatePoints();
@@ -121,7 +125,7 @@ const HintEscape = ({type}) => {
                     <Popup trigger ={<button className='hint-button-tab'> 1 </button>} position='bottom left' nested>
                         <section >
                             <Popup trigger={<button className='hint-button-buyhint' onMouseDown={() => buyHint()}> koop hint</button>} position='bottom center' nested>
-                                <p className='hint-container-content-hint'>{hint1}</p>
+                                <p className='hint-container-content-hint' id="hint-container-content-hint">{hint1}</p>
                             </Popup>
                         </section>
                         
@@ -129,7 +133,7 @@ const HintEscape = ({type}) => {
                     <Popup trigger ={<button className='hint-button-tab' > 2 </button>} position='bottom center' nested>
                         <section>
                         <Popup trigger={<button className='hint-button-buyhint' onMouseDown={() => buyHint()}> koop hint</button>} position='bottom center' nested>
-                                <p className='hint-container-content-hint'>{hint2}</p>
+                                <p className='hint-container-content-hint' id="hint-container-content-hint">{hint2}</p>
                             </Popup>
                         </section>
                     </Popup>
@@ -137,7 +141,7 @@ const HintEscape = ({type}) => {
                         <section>
                             <Popup trigger={<button className='hint-button-buyhint' onMouseDown={() => buyHint()}> koop hint</button>} position='bottom center' nested>
                                 <section className='hint-container-content'>
-                                    <p className='hint-container-content-hint'>{hint3}</p>
+                                    <p className='hint-container-content-hint' id="hint-container-content-hint">{hint3}</p>
                                     {!dragDrop ? '' : <img className="testImageDragDrop" src={SolutionDragAndDrop} alt="solution drag and drop"></img>}
                                 </section>
                             </Popup>
