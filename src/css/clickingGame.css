@@ -16,22 +16,51 @@
     padding-top: 12.5vh;
 }
 
-.rotating_right{
-    width:60px;
-    height: 60px;
-    animation: rotationRight 15s infinite linear;
+.garbage_1{
+    grid-column: 4;
+    grid-row: 3;
+    height: 10rem;
+    animation: rotationRight 6s infinite linear;
 }
 
-.rotating_left{
+.garbage_2{
+    grid-column: 1;
+    grid-row: 1;
+    height: 10rem;
     animation: rotationLeft 15s infinite linear;
 }
 
+.garbage_3{
+    grid-column: 3;
+    grid-row: 1;
+    width: 10px;
+    height: 10px;
+    animation: leftToRightDiagonal 3s infinite linear;
+}
+
+.garbage_4{
+    grid-column: 2;
+    grid-row: 2;
+    height: 10rem;
+    animation: orbit 4s infinite linear;
+}
+
+.garbage_5{
+    grid-column: 5;
+    grid-row: 1;
+    height: 10rem;
+    animation: upToDown 3s infinite linear;
+}
+
 @keyframes rotationRight{
-    from{
-        transform:rotate(0deg);
+    0%{
+        transform:rotate(0deg) translate(0);
     }
-    to{
-        transform:rotate(359deg);
+    50%{
+        transform:rotate(180deg) translate(20rem,0);
+    }
+    100%{
+        transform: rotate(359deg) translate(0);
     }
 }
 
@@ -41,5 +70,32 @@
     }
     to{
         transform:rotate(-359deg);
+    }
+}
+
+@keyframes leftToRightDiagonal{
+    0%{
+        transform: translate(0);
+    }
+    50%{
+        transform:translate(10rem, 10rem)
+    }
+}
+
+@keyframes upToDown{
+    0%{
+        transform: translate(0);
+    }
+    50%{
+        transform: translate(0,50vh);
+    }
+}
+
+@keyframes orbit {
+    from { 
+        transform: rotate(0deg) translateX(150px) rotate(0deg); 
+    }
+    to   { 
+        transform: rotate(360deg) translateX(150px) rotate(360deg); 
     }
 }
