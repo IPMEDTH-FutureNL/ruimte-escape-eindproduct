@@ -2,7 +2,10 @@ body{
   padding: 0;
   margin: 0;
   overflow-y: hidden;
+  user-select: none;
 }
+
+button:focus {outline:0;}
 
 .mapPuzzle{
   background-image: url("./img/planeten/background.png");
