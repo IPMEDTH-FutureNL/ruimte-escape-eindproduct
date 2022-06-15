@@ -43,7 +43,7 @@ const Outro = ({pause}) => {
                             <img src={TextCloud} alt="tekst balloon" className="textcloud__image" draggable="false"></img>
                             <div className="textcloud__field" id="textcloud__field">
                                 <p className="textcloud__text">{text}</p>
-                                <button className="continue" onClick={() => story(1)}>Verder</button>
+                                <button className="continue" onClick={() => {story(1); pause();}}>Verder</button>
                             </div>
                         </div>
                         <div className="astronaut__twee">
