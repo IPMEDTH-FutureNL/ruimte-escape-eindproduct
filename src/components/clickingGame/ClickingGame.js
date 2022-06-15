@@ -30,27 +30,27 @@ const ClickingGame = () =>{
                 <HintEscape type='clickHints'/>
                 <section className='clickingGame__garbage__container'>
 
-                        <figure className='garbage' onClick={() =>countItems()}>
+                        <figure className='garbage' id='garbage1' onClick={() =>{countItems(); document.getElementById("garbage1").style.display = "none";}}>
                                 <Garbage />
                         </figure>
 
-                        <figure className='garbage' onClick={() =>countItems()}>
+                        <figure className='garbage'  id='garbage2' onClick={() =>{countItems(); document.getElementById("garbage2").style.display = "none";}}>
                                 <Garbage />
                         </figure>
 
-                        <figure className='garbage' onClick={() =>countItems()}>
+                        <figure className='garbage' id='garbage3' onClick={() =>{countItems(); document.getElementById("garbage3").style.display = "none";}}>
                                 <Garbage />
                         </figure>
 
-                        <figure className='garbage' onClick={() =>countItems()}>
+                        <figure className='garbage' id='garbage4' onClick={() =>{countItems(); document.getElementById("garbage4").style.display = "none";}}>
                                 <Garbage />
                         </figure>
 
-                        <figure className='garbage' onClick={() =>countItems()}>
+                        <figure className='garbage' id='garbage5' onClick={() =>{countItems(); document.getElementById("garbage5").style.display = "none";}}>
                                 <Garbage />
                         </figure>
 
-                        <figure className='garbage' onClick={() =>countItems()}>
+                        <figure className='garbage' id='garbage6' onClick={() =>{countItems(); document.getElementById("garbage6").style.display = "none";}}>
                                 <Garbage />
                         </figure> 
                 </section>

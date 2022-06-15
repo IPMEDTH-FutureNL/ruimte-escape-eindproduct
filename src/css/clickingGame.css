@@ -43,8 +43,8 @@
 .garbage:nth-of-type(4){
     grid-column: 2;
     grid-row: 2;
-    width:3;
-    height: 3rem;
+    width:4rem;
+    height: 4rem;
     animation: orbit 4s infinite linear;
 }
 
