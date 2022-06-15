@@ -3,29 +3,71 @@
     z-index: 99;
     right:3vw;
     top: 3vh;
+    background-color: #edc305;
+    border: none;
+    cursor: pointer;
+    border: none;
+    padding: 10px 25px 10px 25px;
+    border-radius: 10px;
+    font-size: 1.4rem;
+}
+
+.hint-button:hover{
+    color: white;
+    background-color: #FF6600;
+}
+
+.hint-button-tab{
+    background-color: #edc305;
+    border: none;
+    cursor: pointer;
+    border: none;
+    padding: 10px 25px 10px 25px;
+    border-radius: 10px;
+    font-size: 1.4rem;
+}
+
+.hint-button-tab:hover{
+    color: white;
+    background-color: #FF6600;
+}
+
+.hint-button-buyhint{
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    border: none;
+    padding: 10px 25px 10px 25px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    margin-left: -55px;
+}
+.hint-button-buyhint:hover{
+    color: white;
+    background-color: #FF6600;
 }
 
 .hint-container{
   width: 50vw;
   height: 50vh;
-  border: 2px solid cyan;
-  background-color: black;
-  opacity: .8;
+  background-color: #080742;
+  border-radius: 25px;
   font-size: 18px;
   text-align: center;
   padding: 5px;
 }
 
 .hint-header{
-    font-size: 20px;
+    font-size: 35px;
+    margin-top: 5vh;
     color: #fff;
-    margin:0;
 }
 
 .hint-container-content-hint{
-    width: 48vw;
+    width: 50vw;
     color:white;
     text-align: center;
+    font-size: 1.23rem;
 }
 
 .testImageDragDrop{

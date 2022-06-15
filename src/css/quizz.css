@@ -54,6 +54,7 @@ body{
 }
 
 .planeten{
+    width: 110px;
     box-sizing: border-box;
 }
 

@@ -65,8 +65,46 @@ const DragAndDrop = () => {
           setTimeout(() => {
             let currentPoints = localStorage.getItem("punten");
             let pointsToInt = parseInt(currentPoints);
-            pointsToInt = pointsToInt + 30;
-            localStorage.setItem("punten", pointsToInt);
+
+            switch(wrong){
+              case 0:
+                pointsToInt = pointsToInt + 40;
+                localStorage.setItem("punten", pointsToInt);
+                break;
+              case 1:
+                pointsToInt = pointsToInt + 35;
+                localStorage.setItem("punten", pointsToInt);
+                break;
+              case 2:
+                pointsToInt = pointsToInt + 30;
+                localStorage.setItem("punten", pointsToInt);
+                break;
+              case 3:
+                pointsToInt = pointsToInt + 25;
+                localStorage.setItem("punten", pointsToInt);
+                break;
+              case 4:
+                pointsToInt = pointsToInt + 20;
+                localStorage.setItem("punten", pointsToInt);
+                break;
+              case 5:
+                pointsToInt = pointsToInt + 15;
+                localStorage.setItem("punten", pointsToInt);
+                break;
+              case 6:
+                pointsToInt = pointsToInt + 10;
+                localStorage.setItem("punten", pointsToInt);
+                break;
+              case 7:
+                pointsToInt = pointsToInt + 5;
+                localStorage.setItem("punten", pointsToInt);
+                break;
+              case 8:
+                pointsToInt = pointsToInt + 0;
+                localStorage.setItem("punten", pointsToInt);
+                break;
+            }
+          
             goToPuzzle();
             console.log("how many wrong " + wrong );
           }, 200)
@@ -75,8 +113,11 @@ const DragAndDrop = () => {
     else{
        setWrong(wrong + 1);
        setText("Dat was helaas niet goed");
-       let openpopup = document.getElementById("popup");
-       openpopup.style.display = "block";
+       let changeColor = document.getElementById(e.target.id);
+       changeColor.style.backgroundColor = "red";
+       changeColor.style.opacity = "1";
+      //  let openpopup = document.getElementById("popup");
+      //  openpopup.style.display = "block";
        console.log("bad tries " + wrong);
     }
   }
@@ -88,35 +129,35 @@ const DragAndDrop = () => {
           <div className="board">
             <div className="board__piece">
                 <div className="board__piece-square" id="div1" onDrop={(event) => drop(event)} onDragOver={(event) => allowDrop(event)} ></div>
-                <img alt="planeten naam drag and drop" className="board__piece-name" src={mercurius__line} />
+                <img alt="planeten naam drag and drop" className="board__piece-name" src={mercurius__line}  draggable="false"/>
             </div>
             <div className="board__piece">
                 <div className="board__piece-square" id="div2" onDrop={(event) => drop(event)} onDragOver={(event) => allowDrop(event)} ></div>
-                <img alt="planeten naam drag and drop" className="board__piece-name" src={venus__line} />
+                <img alt="planeten naam drag and drop" className="board__piece-name" src={venus__line}  draggable="false"/>
             </div>
             <div className="board__piece">
                 <div className="board__piece-square" id="div3" onDrop={(event) => drop(event)} onDragOver={(event) => allowDrop(event)} ></div>
-                <img alt="planeten naam drag and drop" className="board__piece-name" src={aarde__line} />
+                <img alt="planeten naam drag and drop" className="board__piece-name" src={aarde__line}  draggable="false"/>
             </div>
             <div className="board__piece">
                 <div className="board__piece-square" id="div4" onDrop={(event) => drop(event)} onDragOver={(event) => allowDrop(event)} ></div>
-                <img alt="planeten naam drag and drop" className="board__piece-name" src={mars__line}/>
+                <img alt="planeten naam drag and drop" className="board__piece-name" src={mars__line}  draggable="false"/>
             </div>
             <div className="board__piece">
                 <div className="board__piece-square" id="div5" onDrop={(event) => drop(event)} onDragOver={(event) => allowDrop(event)} ></div>
-                <img alt="planeten naam drag and drop" className="board__piece-name" src={jupiter__line} />
+                <img alt="planeten naam drag and drop" className="board__piece-name" src={jupiter__line}  draggable="false"/>
             </div>
             <div className="board__piece">
                 <div className="board__piece-square" id="div6" onDrop={(event) => drop(event)} onDragOver={(event) => allowDrop(event)} ></div>
-                <img alt="planeten naam drag and drop" className="board__piece-name" src={saturnus__line} />
+                <img alt="planeten naam drag and drop" className="board__piece-name" src={saturnus__line}  draggable="false"/>
             </div>
             <div className="board__piece">
                 <div className="board__piece-square" id="div7" onDrop={(event) => drop(event)} onDragOver={(event) => allowDrop(event)} ></div>
-                <img alt="planeten naam drag and drop" className="board__piece-name" src={uranus__line} /> 
+                <img alt="planeten naam drag and drop" className="board__piece-name" src={uranus__line}   draggable="false"/> 
             </div>
             <div className="board__piece">
                 <div className="board__piece-square" id="div8" onDrop={(event) => drop(event)} onDragOver={(event) => allowDrop(event)} ></div>
-                <img alt="planeten naam drag and drop" className="board__piece-name" src={neptunes__line} />
+                <img alt="planeten naam drag and drop" className="board__piece-name" src={neptunes__line} draggable="false" />
             </div>
           </div>
 

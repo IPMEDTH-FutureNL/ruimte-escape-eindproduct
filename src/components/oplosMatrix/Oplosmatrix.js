@@ -12,8 +12,8 @@ import Unlock from '../../sound/unlock.wav';
 import Lock from '../../sound/Lock.mp3';
 
 const Oplosmatrix = () => {
-    const [fout, setFout] = useState(0);
     const [text, setText] = useState("");
+    const [wrong, setWrong] = useState(0);
 
     const navigate = useNavigate();
 
@@ -34,20 +34,53 @@ const Oplosmatrix = () => {
             setText("Je hebt de code gekraakt");
             let openpopup = document.getElementById("popup");
             openpopup.style.display = "block";
-            let currentPoints = localStorage.getItem("punten");
-            let pointsToInt = parseInt(currentPoints);
-            pointsToInt = pointsToInt + 30;
-            localStorage.setItem("punten", pointsToInt);
-            navigate('/oplosmatrixSucces');
-            console.log("aantal foute pogingen " + fout);
+            setPoints();
         }else{
             const audio = new Audio(Lock);
             audio.play();
             setText("Dat was helaas niet goed");
             let openpopup = document.getElementById("popup");
             openpopup.style.display = "block";
-            setFout(fout + 1);
+            setWrong(wrong + 1);
         }
+    }
+
+    const setPoints = () => {
+        let currentPoints = localStorage.getItem("punten");
+        let pointsToInt = parseInt(currentPoints);
+        switch(wrong){
+            case 0:
+              pointsToInt = pointsToInt + 30;
+              localStorage.setItem("punten", pointsToInt);
+              break;
+            case 1:
+              pointsToInt = pointsToInt + 25;
+              localStorage.setItem("punten", pointsToInt);
+              break;
+            case 2:
+              pointsToInt = pointsToInt + 20;
+              localStorage.setItem("punten", pointsToInt);
+              break;
+            case 3:
+              pointsToInt = pointsToInt + 15;
+              localStorage.setItem("punten", pointsToInt);
+              break;
+            case 4:
+              pointsToInt = pointsToInt + 10;
+              localStorage.setItem("punten", pointsToInt);
+              break;
+            case 5:
+              pointsToInt = pointsToInt + 5;
+              localStorage.setItem("punten", pointsToInt);
+              break;
+            case 6:
+              pointsToInt = pointsToInt + 0;
+              localStorage.setItem("punten", pointsToInt);
+              break;
+          }
+
+        navigate('/oplosmatrixSucces');
+        console.log("aantal foute pogingen " + wrong);
     }
 
     const checkInput = () => {
@@ -71,13 +104,13 @@ const Oplosmatrix = () => {
                 <div className='oplosmatrix-grid'>
                     <div className='grid-item-blank'></div>
                     <div className='grid-item-img'>
-                        <img className='icon' alt="earth" src={earth}></img>
+                        <img className='icon' alt="earth" src={earth} draggable="false"></img>
                     </div>
                     <div className='grid-item-img'>
-                        <img className='icon' alt="moon" src={moon}></img>
+                        <img className='icon' alt="moon" src={moon} draggable="false"></img>
                     </div>
                     <div className='grid-item-img'>
-                        <img className='icon' alt="astronaut" src={astronaut}></img>
+                        <img className='icon astronautMatrix' alt="astronaut" src={astronaut} draggable="false"></img>
                     </div>
                     <div className='grid-item-color-red'/>
                     <div className='grid-item-number'>1</div>
@@ -94,7 +127,7 @@ const Oplosmatrix = () => {
                 </div>
             </section>
             <section className="oplosmatrix__lock">
-            <img className="oplosmatrix__lock-image" src={lock} alt="oplosmatrix slot" />
+            <img className="oplosmatrix__lock-image" src={lock} alt="oplosmatrix slot" draggable="false"/>
                 <form className="oplosmatrix__form" onSubmit={(e) => solveLock(e)}>
                     <input className="oplosmatrix__lock-input" placeholder='*'></input>
                     <input className="oplosmatrix__lock-input" placeholder='*'></input>
@@ -103,14 +136,14 @@ const Oplosmatrix = () => {
                 </form>
             </section>
             <section className="container__postit">
-                <img src={PostIt} alt="postIt" className="postIt__image"></img>
+                <img src={PostIt} alt="postIt" className="postIt__image" draggable="false"></img>
                 <p className="postIt__text">
-                        We hebben <span className="postIt__red">8 planeten </span>
+                        We hebben verschillende<span className="postIt__red"> planeten </span>
                         in ons zonnestelsel, 
                         op aarde zien wij bijna
-                        iedere avond <span className="postIt__blue">1 maan</span>. 
-                        Daarbij zijn wij met
-                        <span className="postIt__yellow"> 4 astronauten </span> op het schip
+                        iedere avond de <span className="postIt__blue">maan</span>. 
+                        Daarbij zijn wij met een aantal
+                        <span className="postIt__yellow"> astronauten </span> op het schip
                 </p>
             </section>
 

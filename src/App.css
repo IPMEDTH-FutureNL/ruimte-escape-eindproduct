@@ -67,7 +67,6 @@ body{
   left: 1vw;
   top: 10vh;
   background-color: #050530;
-  color: white;
   margin-bottom: 2.5vh;
   width: 130px;
   text-align: center;
@@ -96,6 +95,10 @@ body{
 .primary{
   background-color: #4490be;
   color: white;
+}
+
+.primary:hover{
+  background-color: #338dcf;
 }
 
 .hint{
@@ -210,6 +213,8 @@ body{
 }
 .planet{
   z-index: 10;
+  width: 125px;
+  cursor: grab;
 }
 
 .board__piece{
@@ -274,10 +279,11 @@ body{
 
 /* planeten gehuseld */
 .planet{
-  cursor: pointer;
+  cursor: grab;
   padding: 15px;
   z-index: 10;
 }
+
 
 .planet:hover{
   transform: scale(1.1);
@@ -317,7 +323,7 @@ body{
 }
 
 .icon:nth-child(3){
-  padding-left: 2vw;
+  margin-left: 2vw;
 }
 
 .grid-item-color-red{
@@ -341,7 +347,7 @@ body{
 
 .grid-item-number{
   align-self:center;
-  margin-left: 4.5vh;
+  margin-left: 2.5vh;
   color: white;
   /* background-color: #050530; */
 }

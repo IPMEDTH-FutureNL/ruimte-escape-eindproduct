@@ -13,6 +13,10 @@ export class PopUp extends Component {
     if(this.props.navigate === "true"){
       window.location.href = "/";
     }
+
+    if(this.props.print === "true"){
+      this.printCertificate("elem");
+    }
   }
 
   render() {

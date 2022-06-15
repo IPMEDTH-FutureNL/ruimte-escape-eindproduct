@@ -1,0 +1,113 @@
+#launchVideo{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+#landingVideo{
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.content {
+    position: fixed;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 50px;
+  }
+
+  .video__heading{
+    width: 90%;
+    text-align: center;
+    letter-spacing: .2rem;
+    line-height: 3.75rem;
+    font-size: 2.0rem;
+  }
+
+  .video__buttonGroup{
+    margin-top: 2.5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Style the button used to pause/play the video */
+  #myBtn {
+    width: 200px;
+    font-size: 1.75rem;
+    padding: 10px;
+    border-radius: 25px;
+    margin-right: 55px;
+    border: none;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  #myBtn:hover {
+    background: #ddd;
+    color: black;
+  }
+
+  .landing_ended{
+    position: absolute;
+    top: 45vh;
+    left: 35vw;
+    display: none;
+  }
+
+  .button_landing{
+    padding: 20px 15px 20px 15px;
+    background-color: #03afef;
+    color: white;
+    font-size: 1.2rem;
+    letter-spacing: .1rem;
+    border: none;
+    font-weight: 600;
+    border-radius: 25px;
+    cursor: pointer;
+    width: 25vw;
+    text-transform: uppercase;
+  }
+  
+  .button_landing:hover{
+    background-color: #338dcf;
+  }
+
+  .welcome{
+    position: absolute;
+    color: white;
+    font-size: 3.7rem;
+    top: 40vh;
+    left: 2.5vw;
+    font-family: 'Andika', sans-serif;
+  }
+
+  .button_welcome{
+    padding: 20px 15px 20px 15px;
+    background-color: #03afef;
+    color: white;
+    font-size: 1.2rem;
+    letter-spacing: .1rem;
+    border: none;
+    font-weight: 600;
+    border-radius: 25px;
+    cursor: pointer;
+    width: 20vw;
+    text-transform: uppercase;
+    position: absolute;
+    top: 58vh;
+    left: 37.5vw;
+  }
+
+  .button_welcome:hover{
+    background-color: #338dcf;
+  }

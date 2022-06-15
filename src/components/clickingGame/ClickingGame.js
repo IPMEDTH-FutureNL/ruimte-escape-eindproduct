@@ -26,7 +26,7 @@ const ClickingGame = () =>{
         if(count === 6){
             outro.play();
             console.log('picked up all the garbage')
-            navigate('/outro');
+            navigate('/landing');
         }
     });
     
@@ -37,11 +37,11 @@ const ClickingGame = () =>{
                 <HintEscape type='clickHints'/>
                 <section className='clickingGame__garbage__container'>
                     <figure className='rotating_left'>
-                        <div onClick={() => countItems()}><Garbage /></div>
+                        <div onClick={() => countItems()}><Garbage className="garbage" /></div>
                     </figure>
 
                     <figure className='rotating_right'>
-                        <div onClick={() => countItems()}><Garbage /></div>
+                        <div onClick={() => countItems()} className="garbage"><Garbage /></div>
                     </figure>
 
                     <figure>

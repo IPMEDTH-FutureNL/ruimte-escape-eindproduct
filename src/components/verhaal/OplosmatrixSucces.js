@@ -52,7 +52,7 @@ const DragAndDropSucces = () => {
                             <img src={TextCloud} alt="tekst balloon" className="textcloud__image"></img>
                             <div className="textcloud__field">
                                 <p className="textcloud__text">{text}</p>
-                                <FaAngleRight className="continue" onClick={() => story(1)}/>
+                                <button className="continue" onClick={() => story(1)}>Verder</button>
                             </div>
                         </div>
                         <div className="astronaut__drie">

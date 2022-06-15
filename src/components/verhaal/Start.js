@@ -59,16 +59,10 @@ const Start = ({start}) => {
             case 1:
                 setText("We zijn bijna klaar om koers te zetten naar Mars!")
                 break;
-            case 2:
-                setText("We hebben nog een aantal voorbereidingen die we moeten uitvoeren voordat we koers kunnen zetten naar Mars");
+            case 2: 
+                setText("We hebben alleen nog een probleem, de kaart klopt niet. Ik heb jullie hulp nodig!");
                 break;
-            case 3: 
-                setText("We hebben alleen nog een probleem, de kaart klopt niet, ik heb hier jullie hulp voor nodig!");
-                break;
-            case 4:
-                setText("De kaart kunnen jullie terug vinden op het besturings scherm, succes!");
-                break;
-            case 5:
+            case 3:
                 navigate('/introPuzzle');
                 break;
         }
@@ -78,31 +72,29 @@ const Start = ({start}) => {
         <section className="container">
             <section className="containter__start">
                 <section className="container__introduction" id="container__introduction">
-                    <img src={Note} alt="note with rules" className="escaperoom__rules-note"></img>
+                    <img src={Note} alt="note with rules" className="escaperoom__rules-note" draggable="false"></img>
                     <div className="escaperoom__rules">
-                        <h2>Welkom bij de ruimte-escape</h2>
+                        <h2>Welkom bij de missie naar Mars!</h2>
                         <p>Voordat we beginnen nog een paar korte tips!</p>
                         <div className="rule">
-                            <FaInfoCircle className="rule-hint" />
-                            De hint icoon, hier kan je hints krijgen over de puzzels!
-                        </div>
-                        <div className="rule">
-                            <FaAngleRight className="rule-text" />
-                            Wanneer de pijl in een tekst balloon is geplaatst kan je hiermee verder in het verhaal!
+                            <button className='rule-hint'> Tips</button>
+                            <p className="hint-text">De tip knop, hier kan je tips krijgen over de puzzels de kosten alleen 10 punten!</p>
                         </div>
                         <div className="rule">
                             <div className="rule-clickable" />
-                            De groene rondjes in binnen de escaperoom, betekenen dat je erop kan klikken!
+                            De groene rondjes in de escaperoom, betekenen dat je erop kan klikken!
                         </div>
-                        
+                        <div className="rule">
+                            Vul snel jullie namen in dan kunnen we beginnen!
+                        </div>
                     </div>
                     <form className="player__form" onSubmit={(e) => players(e)}>
                         <div className="inputdiv">
-                            <label className="player__form-label">Speler 1</label>
+                            <label className="player__form-label">Naam</label>
                             <input className="player__form-name"></input>
                         </div>
                         <div className="inputdiv">
-                            <label className="player__form-label">Speler 2</label>
+                            <label className="player__form-label">Naam</label>
                             <input className="player__form-name"></input>
                         </div>
                         <div className="inputdiv">
@@ -114,13 +106,13 @@ const Start = ({start}) => {
                 <section className="container__gameplay" id="container__gameplay">
                     <div className="container__astronaut">
                         <div className="astronaut">
-                            <img src={Astronaut} alt="astronaut" className="astronaut__image"></img>
+                            <img src={Astronaut} alt="astronaut" className="astronaut__image" draggable="false"></img>
                         </div>
                         <div className="textcloud">
-                            <img src={TextCloud} alt="tekst balloon" className="textcloud__image"></img>
+                            <img src={TextCloud} alt="tekst balloon" className="textcloud__image" draggable="false"></img>
                             <div className="textcloud__field">
                                 <p className="textcloud__text">{text}</p>
-                                <FaAngleRight className="continue" onClick={() => story(1)}/>
+                                <button className="continue" onClick={() => story(1)}>Verder</button>
                             </div>
                         </div>
                     </div>

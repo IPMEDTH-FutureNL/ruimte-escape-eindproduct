@@ -37,10 +37,12 @@
     font-size: 17px;
     margin-bottom: 15px;
     margin-top: 30px;
+    line-height: 1.4;
 }
 
 p{
     font-size: 17px;
+    line-height: 1.5;
 }
 
 .rule-clickable{
@@ -52,10 +54,20 @@ p{
     margin-right: 10px;
 }
 
+.hint-text{
+    margin-top: -15px;
+}
+
 .rule-hint{
-    font-size: 30px;
+    font-size: 17px;
     margin-top: -5px;
     margin-right: 10px;
+    background-color: #edc305;
+    border: none;
+    border: none;
+    height: 45px;
+    padding: 10px 25px 10px 25px;
+    border-radius: 10px;
 }
 
 .rule-text{
@@ -78,24 +90,29 @@ p{
     border-radius: 10px;
     margin-top: 10px;
     border: 1px solid grey;
-    width: 90%;
+    width: 80%;
+    font-size: 17px;
 }
 
 .player__form-label{
-    font-size: 1.5rem;
+    font-size: 22px;
 }
 
 .player__form-submit{
     margin-top: 20px;
     padding: 10px;
     width: 50%;
-    font-size: 1.2rem;
-    margin-left: 80%;
-    background-color: #4490be;
+    font-size: 1.4rem;
+    margin-left: 75%;
+    background-color: #03afef;
     color: white;
     cursor: pointer;
     border: none;
     border-radius: 10px;
+}
+
+.player__form-submit:hover{
+    background-color: #338dcf;
 }
 
 .inputdiv{
@@ -164,17 +181,24 @@ p{
 
 .textcloud__text{
     font-size: 1.23rem;
+    margin-left: 1vw;
+
 }
 
 .continue{
+    left: 1vw;
     position: absolute;
-    left: 14vw;
-    font-size: 35px;
+    font-size: 25px;
+    background-color: #03afef;
     cursor: pointer;
+    border: none;
+    padding: 10px 20px 10px 20px;
+    border-radius: 10px;
+    color: white;
 }
 
 .continue:hover{
-    transform: scale(1.1);
+    background-color: #338dcf;
 }
 
 @media screen and (min-width: 1900px) {
@@ -189,6 +213,6 @@ p{
     }
 
     .textcloud__image{
-        width: 18vw;
+        width: 20vw;
     }
   }
