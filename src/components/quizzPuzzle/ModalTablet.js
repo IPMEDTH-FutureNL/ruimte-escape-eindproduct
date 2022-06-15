@@ -42,7 +42,7 @@ const ModalTablet = () => {
   return (
     <section className="tablet-section">
 
-      <img className="tablet" src={Tablet}/>
+      <img className="tablet" src={Tablet} draggable='false'/>
       <section class="tablet-notes-text">
         <h3 class="text-black tablet-title">Tip: De antwoorden op deze vragen <br></br>zijn allemaal in deze kamer te vinden!</h3>
 

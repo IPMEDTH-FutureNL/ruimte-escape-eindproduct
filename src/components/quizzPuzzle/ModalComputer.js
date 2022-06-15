@@ -70,7 +70,7 @@ const ModalComputer = () => {
   return (
     <section>
 
-      <img className="computer" src={Computer}/>
+      <img className="computer" src={Computer} draggable='false'/>
       <section class="computer-notes-text">
         <h2 class="">Oei! Er is een driecijferige code nodig om in te loggen. <br></br>De code moet wel ergens in de kamer te vinden zijn, denk je niet?</h2>
         <p id="invisible" className="quizz-error">Onjuiste code! Probeer opnieuw of neem een hint</p>
