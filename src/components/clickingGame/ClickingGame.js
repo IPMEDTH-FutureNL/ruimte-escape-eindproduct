@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import '../../css/clickingGame.css';
-import Garbage from './garbage'
+import Garbage from './garbage';
 import HintEscape from '../HintsEscape';
 import LaserGun from '../../sound/LaserGun.mp3';
 import OutroSound from '../../sound/Outro.mp3';
@@ -19,7 +19,6 @@ const ClickingGame = () =>{
         audio.play();
         setCount(count + 1);
         console.log(count)
-
     }
 
     React.useEffect(()=>{
@@ -36,29 +35,30 @@ const ClickingGame = () =>{
             <section className='clickingGame__container'>
                 <HintEscape type='clickHints'/>
                 <section className='clickingGame__garbage__container'>
-                    <figure className='rotating_left'>
-                        <div onClick={() => countItems()}><Garbage className="garbage" /></div>
-                    </figure>
 
-                    <figure className='rotating_right'>
-                        <div onClick={() => countItems()} className="garbage"><Garbage /></div>
-                    </figure>
+                        <figure className='garbage' id="garbage1" onClick={() =>{countItems(); document.getElementById("garbage1").style.display = "none";}}>
+                                <Garbage />
+                        </figure>
 
-                    <figure>
-                        <div onClick={() => countItems()}><Garbage /></div>
-                    </figure>
+                        <figure className='garbage' id="garbage2" onClick={() =>{countItems(); document.getElementById("garbage2").style.display = "none";}}>
+                                <Garbage />
+                        </figure>
 
-                    <figure>
-                        <div onClick={ () => countItems()}><Garbage /></div>
-                    </figure>
+                        <figure className='garbage' id="garbage3" onClick={() =>{countItems(); document.getElementById("garbage3").style.display = "none";}}>
+                                <Garbage />
+                        </figure>
 
-                    <figure>
-                        <div onClick={() => countItems()}><Garbage /></div>
-                    </figure>
+                        <figure className='garbage' id="garbage4" onClick={() =>{countItems(); document.getElementById("garbage4").style.display = "none";}}>
+                                <Garbage />
+                        </figure>
 
-                    <figure>
-                        <div onClick={() => countItems()}><Garbage /></div>
-                    </figure>  
+                        <figure className='garbage' id="garbage5" onClick={() =>{countItems(); document.getElementById("garbage5").style.display = "none";}}>
+                                <Garbage />
+                        </figure>
+
+                        <figure className='garbage' id="garbage6" onClick={() =>{countItems(); document.getElementById("garbage6").style.display = "none";}}>
+                                <Garbage />
+                        </figure> 
                 </section>
                 
             </section>

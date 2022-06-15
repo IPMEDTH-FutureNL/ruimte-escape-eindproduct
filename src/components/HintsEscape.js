@@ -7,14 +7,12 @@ import '../css/hint.css'
 import Pop from '../sound/pop.wav';
 
 const HintEscape = ({type}) => {
-  const [show, setShow] = useState(false);
-  const [showButton, setShowButton] = useState(true);
-  const [punten, setPunten] = useState(localStorage.getItem("punten"));
+  const [punten, setPunten] = useState(30); //localStorage.getItem("punten")
   const [dragDrop, setDragDrop] = useState(false);
   const [hint1, setHint1] = useState("");
   const [hint2, setHint2] = useState("");
   const [hint3, setHint3] = useState("");
-  const [currentHint, setCurrentHint] = useState();
+  const [hintUnlocked, setHintUnlocked] = useState(0);
   const hintArray = {
       //click game hints
       clickHint1: 'Ruim het afval op met de muis',
@@ -86,6 +84,88 @@ const HintEscape = ({type}) => {
         }   
     }
 
+    const showHint = (number) =>{
+        // console.log('showhints')
+        switch (number){
+            case 0:
+                // console.log('bimpsert 1') 
+                return <Popup trigger ={<button className='hint-button-tab'> 1 </button>} position='bottom' nested>
+                <section >
+                    <Popup trigger={<button className='hint-button-buyhint' onMouseDown={() => buyHint()}>koop hint</button>} position='bottom center' nested>
+                        <p className='hint-container-content-hint'>{hint1}</p>
+                    </Popup>
+                </section>
+            </Popup>
+            case 1:
+                // console.log('bimpsert 2') 
+                
+                return  <section>
+                        <Popup trigger ={<button className='hint-button-tab'> 1 </button>}position='bottom' open='true' nested>
+                            <section >
+                                <p className='hint-container-content-hint'>{hint1}</p>
+                            </section>
+                        </Popup>
+
+                        <Popup trigger ={<button className='hint-button-tab' > 2 </button>} position='bottom' nested>
+                            <section>
+                                <Popup trigger={<button className='hint-button-buyhint' onMouseDown={() => buyHint()}> koop hint</button>} position='bottom center' nested>
+                                    <p className='hint-container-content-hint'>{hint2}</p>
+                                </Popup>
+                            </section>
+                        </Popup>
+                    </section>
+            case 2:
+                // console.log('bimpsert 3')
+                return <section>
+                        <Popup trigger ={<button className='hint-button-tab'> 1 </button>} position='bottom' nested>
+                            <section >
+                                <p className='hint-container-content-hint'>{hint1}</p>
+                            </section>
+                        </Popup>
+
+                        <Popup trigger ={<button className='hint-button-tab' > 2 </button>} position='bottom' nested>
+                            <section>        
+                                    <p className='hint-container-content-hint'>{hint2}</p>
+                            </section>
+                        </Popup>
+
+                        <Popup trigger ={<button className='hint-button-tab' > 3 </button>} position='bottom right' nested>
+                            <section>
+                                <Popup trigger={<button className='hint-button-buyhint' onMouseDown={() => buyHint()}> koop hint</button>} position='bottom center' nested>
+                                    <section className='hint-container-content'>
+                                        <p className='hint-container-content-hint'>{hint3}</p>
+                                        {!dragDrop ? '' : <img className="testImageDragDrop" src={SolutionDragAndDrop} alt="solution drag and drop"></img>}
+                                    </section>
+                                </Popup>
+                            </section>
+                        </Popup>
+                    </section>
+            case 3:
+                return <section>
+                <Popup trigger ={<button className='hint-button-tab'> 1 </button>} position='bottom' nested>
+                    <section className='hint-container-content'>
+                        <p className='hint-container-content-hint'>{hint1}</p>
+                    </section>
+                </Popup>
+
+                <Popup trigger ={<button className='hint-button-tab' > 2 </button>} position='bottom' nested>
+                    <section className='hint-container-content'>        
+                            <p className='hint-container-content-hint hint2'>{hint2}</p>
+                    </section>
+                </Popup>
+
+                <Popup trigger ={<button className='hint-button-tab' > 3 </button>} position='bottom' open='true' nested>
+                    <section>
+                            <section className='hint-container-content'>
+                                <p className='hint-container-content-hint'>{hint3}</p>
+                                {!dragDrop ? '' : <img className="testImageDragDrop" src={SolutionDragAndDrop} alt="solution drag and drop"></img>}
+                            </section>
+                    </section>
+                </Popup>
+            </section>
+        }
+    }
+
     const buyHint = () =>{
         console.log("buyHint");
         if(punten >= 10){
@@ -94,6 +174,8 @@ const HintEscape = ({type}) => {
             let newPoints = punten - 10;
             setPunten(newPoints);
             localStorage.setItem("punten", newPoints);
+            setHintUnlocked(hintUnlocked + 1);
+
         }else{
             let newPoints = 0;
             setPunten(newPoints);
@@ -108,12 +190,13 @@ const HintEscape = ({type}) => {
         updatePoints();
     }
 
+    
+
     const updatePoints = () => {
         return localStorage.getItem("punten");
     }
 
     React.useEffect( () =>{
-
         getType();
 
     }, [])
@@ -125,31 +208,9 @@ const HintEscape = ({type}) => {
             <section className='hint-container'>
                 <h1 className='hint-header'>Tips</h1>
                 <section className='hint-container-content'>
-                    <Popup trigger ={<button className='hint-button-tab'> 1 </button>} position='bottom left' nested>
-                        <section >
-                            <Popup trigger={<button className='hint-button-buyhint' onMouseDown={() => buyHint()}> koop tip</button>} position='bottom center' nested>
-                                <p className='hint-container-content-hint' id="hint-container-content-hint">{hint1}</p>
-                            </Popup>
-                        </section>
-                        
-                    </Popup>
-                    <Popup trigger ={<button className='hint-button-tab' > 2 </button>} position='bottom center' nested>
-                        <section>
-                        <Popup trigger={<button className='hint-button-buyhint' onMouseDown={() => buyHint()}> koop tip</button>} position='bottom center' nested>
-                                <p className='hint-container-content-hint' id="hint-container-content-hint">{hint2}</p>
-                            </Popup>
-                        </section>
-                    </Popup>
-                    <Popup trigger ={<button className='hint-button-tab' > 3 </button>} position='bottom right' nested>
-                        <section>
-                            <Popup trigger={<button className='hint-button-buyhint' onMouseDown={() => buyHint()}> koop tip</button>} position='bottom center' nested>
-                                <section className='hint-container-content'>
-                                    <p className='hint-container-content-hint' id="hint-container-content-hint">{hint3}</p>
-                                    {!dragDrop ? '' : <img className="testImageDragDrop" src={SolutionDragAndDrop} alt="solution drag and drop"></img>}
-                                </section>
-                            </Popup>
-                        </section>
-                    </Popup>
+                    
+                    { showHint(hintUnlocked) }
+               
                 </section>
             </section>
         </Popup>

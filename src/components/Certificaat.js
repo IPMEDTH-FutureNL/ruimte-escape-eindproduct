@@ -15,13 +15,13 @@ export class Certificaat extends Component {
     mywindow.document.write(`<body>
                               <style> 
                                 .elem{rotate(180deg)} 
-                                .certificaat__punten { color: black; font-size: 50px; position: absolute; top: 50vh; left: 45.5vw;   font-family: 'Andika', sans-serif;} 
+                                .certificaat__punten { color: black; font-size: 50px; position: absolute; top: 51vh; left: 45.5vw;   font-family: 'Andika', sans-serif;} 
                                 .certificaat { width: 1123px; height: 794px; border-radius: 25px;} @media print{@page {size: landscape}}
                                 .certificaat__playerOne{
                                   color: black;
                                   font-size: 45px;
                                   position: absolute;
-                                  top: 76vh;
+                                  top: 77vh;
                                   left: 30vh;
                                   font-family: 'Andika', sans-serif;
                                 }
@@ -30,7 +30,7 @@ export class Certificaat extends Component {
                                   color: black;
                                   font-size: 45px;
                                   position: absolute;
-                                  top: 76vh;
+                                  top: 77vh;
                                   left: 88vh;
                                   font-family: 'Andika', sans-serif;
                                 }

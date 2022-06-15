@@ -16,26 +16,67 @@
     padding-top: 12.5vh;
 }
 
-.rotating_right{
-    width:60px;
-    height: 60px;
-    animation: rotationRight 15s infinite linear;
+.garbage:nth-of-type(1){
+    grid-column: 4;
+    grid-row: 3;
+    width: 4rem;
+    height: 4rem;
+    animation: rotationRight 6s infinite linear;
 }
 
-.rotating_left{
+.garbage:nth-of-type(2){
+    grid-column: 1;
+    grid-row: 1;
+    width:10rem;
+    height: 10rem;
     animation: rotationLeft 15s infinite linear;
 }
 
-.rotating_left{
-    width: 85px;
+.garbage:nth-of-type(3){
+    grid-column: 3;
+    grid-row: 1;
+    width: 2rem;
+    height: 2rem;
+    animation: leftToRightDiagonal 4s infinite linear;
+}
+
+.garbage:nth-of-type(4){
+    grid-column: 2;
+    grid-row: 2;
+    width:4rem;
+    height: 4rem;
+    animation: orbit 4s infinite linear;
+}
+
+.garbage:nth-of-type(5){
+    grid-column: 5;
+    grid-row: 1;
+    width: 5rem;
+    height: 5rem;
+    animation: upToDown 3s infinite linear;
+}
+
+.garbage:nth-of-type(6){
+    grid-column: 1;
+    grid-row: 4;
+    width:8rem;
+    height: 8rem;
+    animation: leftToRight 3s infinite linear;
+}
+
+.garbage-collected{
+    display:none;
 }
 
 @keyframes rotationRight{
-    from{
-        transform:rotate(0deg);
+    0%{
+        transform:rotate(0deg) translate(0);
     }
-    to{
-        transform:rotate(359deg);
+    50%{
+        transform:rotate(180deg) translate(20rem,0);
+    }
+    100%{
+        transform: rotate(359deg) translate(0);
     }
 }
 
@@ -45,5 +86,41 @@
     }
     to{
         transform:rotate(-359deg);
+    }
+}
+
+@keyframes leftToRightDiagonal{
+    0%{
+        transform: translate(0);
+    }
+    50%{
+        transform:translate(5rem, 10rem)
+    }
+}
+
+@keyframes upToDown{
+    0%{
+        transform: translate(0);
+    }
+    50%{
+        transform: translate(0,50vh);
+    }
+}
+
+@keyframes leftToRight{
+    0%{
+        transform: translate(0);
+    }
+    50%{
+        transform: translate(30vw,0);
+    }
+}
+
+@keyframes orbit {
+    from { 
+        transform: rotate(0deg) translateX(150px) rotate(0deg); 
+    }
+    to   { 
+        transform: rotate(360deg) translateX(150px) rotate(360deg); 
     }
 }
