@@ -38,10 +38,10 @@ const DragAndDropSucces = () => {
                 <section className="container__gameplay-succes" id="container__gameplay">
                     <div className="container__astronaut">
                         <div className="astronaut">
-                            <img src={AstronautDrie} alt="astronaut" className="astronaut__image"></img>
+                            <img src={AstronautDrie} alt="astronaut" className="astronaut__image" draggable="false"></img>
                         </div>
                         <div className="textcloud">
-                            <img src={TextCloud} alt="tekst balloon" className="textcloud__image"></img>
+                            <img src={TextCloud} alt="tekst balloon" className="textcloud__image" draggable="false"></img>
                             <div className="textcloud__field">
                                 <p className="textcloud__text">{text}</p>
                                 <button className="continue" onClick={() => story(1)}>Verder</button>
@@ -49,7 +49,7 @@ const DragAndDropSucces = () => {
                         </div>
                         <div className="astronaut__drie">
                             <div className="astronaut">
-                                <img src={AstronautVier} alt="astronaut" className="astronaut__image"></img>
+                                <img src={AstronautVier} alt="astronaut" className="astronaut__image"draggable="false"></img>
                             </div>
                         </div>
                     </div>

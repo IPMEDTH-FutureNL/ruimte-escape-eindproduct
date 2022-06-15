@@ -213,7 +213,7 @@ body{
 }
 .planet{
   z-index: 10;
-  width: 125px;
+  width: 100px;
   cursor: grab;
 }
 

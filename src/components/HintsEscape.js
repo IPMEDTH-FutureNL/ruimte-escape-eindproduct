@@ -27,8 +27,8 @@ const HintEscape = ({type}) => {
       dragAndDropHint2: 'De planeet die het dichts bij de zon staat is Mercurius.',
       dragAndDropHint3: 'De oplossing voor de puzzel is: zie afbeelding.',
       //oplosmatrix hints
-      oplosMatrixHint1: 'De kleuren op de post it komen wel heel erg bekend voor.',
-      oplosMatrixHint2: 'zouden de afbeeldingen op de post it iets betekenen?',
+      oplosMatrixHint1: 'De kleuren op het blaadje komen wel heel erg bekend voor.',
+      oplosMatrixHint2: 'Zouden de plaatjes van de aarde, maan en de astronaut iets betekenen? De plaatjes komen namelijk in de tekst terug op het blaadje!',
       oplosMatrixHint3: 'de oplossing is 674',
       // Quizz hints
       quizzHint1: 'Heb je de vragen kunnen beantwoorden met de weetjes op de kaart? De antwoorden op de drie vragen vormen een lettercode!',

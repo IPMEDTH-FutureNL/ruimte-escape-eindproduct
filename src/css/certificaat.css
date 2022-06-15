@@ -31,18 +31,18 @@
 
   .certificaat__playerOne{
     color: black;
-    font-size: 45px;
+    font-size: 35px;
     position: absolute;
-    top: 55vh;
-    left: 25vh;
+    top: 58vh;
+    left: 23vh;
   }
 
   .certificaat__playerTwo{
     color: black;
-    font-size: 45px;
+    font-size: 35px;
     position: absolute;
-    top: 55vh;
-    left: 70vh;
+    top: 58vh;
+    left: 68vh;
   }
 
   .button__print{
