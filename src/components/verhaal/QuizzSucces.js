@@ -49,7 +49,7 @@ const DragAndDropSucces = () => {
                         </div>
                         <div className="astronaut__drie">
                             <div className="astronaut">
-                                <img src={AstronautVier} alt="astronaut" className="astronaut__image"draggable="false"></img>
+                                <img src={AstronautVier} alt="astronaut" className="astronaut__image" draggable="false"></img>
                             </div>
                         </div>
                     </div>
