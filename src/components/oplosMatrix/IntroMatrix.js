@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 import "../../css/start.css"
 import Astronaut from "../../img/gameplayImages/characters/character1_standard_mouthclosed.svg"
 
-import { FaAngleRight } from "react-icons/fa";
 import TextCloud from '../../img/gameplayImages/snippets/textcloud.png'
 
 const IntroMatrix = () => {
