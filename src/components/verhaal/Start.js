@@ -56,13 +56,13 @@ const Start = ({start}) => {
         setCount(count + newText);
 
         switch(count){
-            case 1:
+            case 0:
                 setText("We zijn bijna klaar om koers te zetten naar Mars!")
                 break;
-            case 2: 
+            case 1: 
                 setText("We hebben alleen nog een probleem, de kaart klopt niet. Ik heb jullie hulp nodig!");
                 break;
-            case 3:
+            case 2:
                 navigate('/introPuzzle');
                 break;
         }

@@ -18,14 +18,14 @@ const DragAndDropSucces = () => {
         setCount(count + newText);
 
         switch(count){
-            case 1:
+            case 0:
                 setText("De bemanning is compleet! Dit zijn Tim, Kasper en Lotte.")
                 break;
-            case 2:
+            case 1:
                 audio.play();
                 setText("Laten we naar Mars gaan!");
                 break;
-            case 3:
+            case 2:
                 navigate('/launch');
                 break;
         }

@@ -20,13 +20,13 @@ const IntroMatrix = () => {
         setCount(count + newText);
 
         switch(count){
-            case 1:
+            case 0:
                 setText("Ik krijg de code niet opgelost om de deur te openen!")
                 break;
-            case 2:
+            case 1:
                 setText("De code staat op een blaadje");
                 break;
-            case 3:
+            case 2:
                 let matrixSection = document.getElementById('container__gameplay-matrix');
                 let circleMatrix = document.getElementById("circle-matrix");
 
