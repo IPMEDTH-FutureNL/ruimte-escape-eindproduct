@@ -13,17 +13,13 @@ export class PopUp extends Component {
     if(this.props.navigate === "true"){
       window.location.href = "/";
     }
-
-    if(this.props.print === "true"){
-      this.printCertificate("elem");
-    }
   }
 
   render() {
     return (
         <div className="pop-up" id="popup">
             <p className="pop-up-text"> {this.props.text} </p>
-            <button className="button primary" onClick={(e) => this.closePopUp(e)}>Verder!</button>
+            <button className="button primary" data-testid="button-popup" onClick={(e) => this.closePopUp(e)}>Verder!</button>
         </div>
     )
   }

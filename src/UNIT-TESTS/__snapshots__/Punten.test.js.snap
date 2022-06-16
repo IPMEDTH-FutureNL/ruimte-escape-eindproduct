@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`on initial render of punten component, check if component is loaded with the correct prop value 1`] = `
+<DocumentFragment>
+  <div
+    class="punten"
+  >
+    Punten: 150
+  </div>
+</DocumentFragment>
+`;

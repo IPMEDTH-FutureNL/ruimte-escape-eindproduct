@@ -88,7 +88,7 @@ const Start = ({start}) => {
                             Vul snel jullie namen in dan kunnen we beginnen!
                         </div>
                     </div>
-                    <form className="player__form" onSubmit={(e) => players(e)}>
+                    <form className="player__form" data-testid="onsubmit" onSubmit={(e) => players(e)}>
                         <div className="inputdiv">
                             <label className="player__form-label">Naam</label>
                             <input className="player__form-name"></input>
@@ -112,7 +112,7 @@ const Start = ({start}) => {
                             <img src={TextCloud} alt="tekst balloon" className="textcloud__image" draggable="false"></img>
                             <div className="textcloud__field">
                                 <p className="textcloud__text">{text}</p>
-                                <button className="continue" onClick={() => story(1)}>Verder</button>
+                                <button className="continue" data-testid="story" onClick={() => story(1)}>Verder</button>
                             </div>
                         </div>
                     </div>

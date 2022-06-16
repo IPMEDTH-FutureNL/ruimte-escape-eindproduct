@@ -129,9 +129,9 @@ const Oplosmatrix = () => {
             <section className="oplosmatrix__lock">
             <img className="oplosmatrix__lock-image" src={lock} alt="oplosmatrix slot" draggable="false"/>
                 <form className="oplosmatrix__form" onSubmit={(e) => solveLock(e)}>
-                    <input className="oplosmatrix__lock-input" placeholder='*'></input>
-                    <input className="oplosmatrix__lock-input" placeholder='*'></input>
-                    <input className="oplosmatrix__lock-input" placeholder='*'></input>
+                    <input className="oplosmatrix__lock-input first" placeholder='*'></input>
+                    <input className="oplosmatrix__lock-input second" placeholder='*'></input>
+                    <input className="oplosmatrix__lock-input third" placeholder='*'></input>
                     <input className="oplosmatrix__lock-button" type="submit" value="Open" />
                 </form>
             </section>

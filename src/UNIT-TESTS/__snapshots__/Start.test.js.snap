@@ -1,0 +1,146 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`if change story could be clicked 1`] = `true`;
+
+exports[`if on submit for player name works 1`] = `true`;
+
+exports[`on initial render of start, check if component is loaded 1`] = `
+<DocumentFragment>
+  <section
+    class="container"
+  >
+    <section
+      class="containter__start"
+    >
+      <section
+        class="container__introduction"
+        id="container__introduction"
+      >
+        <img
+          alt="note with rules"
+          class="escaperoom__rules-note"
+          draggable="false"
+          src="note.png"
+        />
+        <div
+          class="escaperoom__rules"
+        >
+          <h2>
+            Welkom bij de missie naar Mars!
+          </h2>
+          <p>
+            Voordat we beginnen nog een paar korte tips!
+          </p>
+          <div
+            class="rule"
+          >
+            <button
+              class="rule-hint"
+            >
+               Tips
+            </button>
+            <p
+              class="hint-text"
+            >
+              De tip knop, hier kan je tips krijgen over de puzzels de kosten alleen 10 punten!
+            </p>
+          </div>
+          <div
+            class="rule"
+          >
+            <div
+              class="rule-clickable"
+            />
+            De groene rondjes in de escaperoom, betekenen dat je erop kan klikken!
+          </div>
+          <div
+            class="rule"
+          >
+            Vul snel jullie namen in dan kunnen we beginnen!
+          </div>
+        </div>
+        <form
+          class="player__form"
+          data-testid="onsubmit"
+        >
+          <div
+            class="inputdiv"
+          >
+            <label
+              class="player__form-label"
+            >
+              Naam
+            </label>
+            <input
+              class="player__form-name"
+            />
+          </div>
+          <div
+            class="inputdiv"
+          >
+            <label
+              class="player__form-label"
+            >
+              Naam
+            </label>
+            <input
+              class="player__form-name"
+            />
+          </div>
+          <div
+            class="inputdiv"
+          >
+            <input
+              class="player__form-submit"
+              type="submit"
+              value="Verder"
+            />
+          </div>
+        </form>
+      </section>
+      <section
+        class="container__gameplay"
+        id="container__gameplay"
+      >
+        <div
+          class="container__astronaut"
+        >
+          <div
+            class="astronaut"
+          >
+            <img
+              alt="astronaut"
+              class="astronaut__image"
+              draggable="false"
+              src="character2_standard_schuin_mouthopen.svg"
+            />
+          </div>
+          <div
+            class="textcloud"
+          >
+            <img
+              alt="tekst balloon"
+              class="textcloud__image"
+              draggable="false"
+              src="textcloud.png"
+            />
+            <div
+              class="textcloud__field"
+            >
+              <p
+                class="textcloud__text"
+              />
+              <button
+                class="continue"
+                data-testid="story"
+              >
+                Verder
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+  </section>
+</DocumentFragment>
+`;

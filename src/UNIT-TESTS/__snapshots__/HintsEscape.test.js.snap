@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`check if hints escape get rendered for clickinggame 1`] = `
+<DocumentFragment>
+  <button
+    aria-describedby="popup-2"
+    class="hint-button"
+  >
+     Tips
+  </button>
+  <div
+    class="punten"
+  >
+    Punten: 
+  </div>
+</DocumentFragment>
+`;
+
+exports[`check if hints escape get rendered for drag and drop 1`] = `
+<DocumentFragment>
+  <button
+    aria-describedby="popup-4"
+    class="hint-button"
+  >
+     Tips
+  </button>
+  <div
+    class="punten"
+  >
+    Punten: 
+  </div>
+</DocumentFragment>
+`;
+
+exports[`check if hints escape get rendered for oplosmatrix 1`] = `
+<DocumentFragment>
+  <button
+    aria-describedby="popup-6"
+    class="hint-button"
+  >
+     Tips
+  </button>
+  <div
+    class="punten"
+  >
+    Punten: 
+  </div>
+</DocumentFragment>
+`;
+
+exports[`check if hints escape get rendered for quiz 1`] = `
+<DocumentFragment>
+  <button
+    aria-describedby="popup-10"
+    class="hint-button"
+  >
+     Tips
+  </button>
+  <div
+    class="punten"
+  >
+    Punten: 
+  </div>
+</DocumentFragment>
+`;
+
+exports[`check if hints escape get rendered for rebus 1`] = `
+<DocumentFragment>
+  <button
+    aria-describedby="popup-8"
+    class="hint-button"
+  >
+     Tips
+  </button>
+  <div
+    class="punten"
+  >
+    Punten: 
+  </div>
+</DocumentFragment>
+`;
+
+exports[`check if hints escape get rendered on start up 1`] = `
+<DocumentFragment>
+  <button
+    aria-describedby="popup-1"
+    class="hint-button"
+  >
+     Tips
+  </button>
+  <div
+    class="punten"
+  >
+    Punten: 
+  </div>
+</DocumentFragment>
+`;

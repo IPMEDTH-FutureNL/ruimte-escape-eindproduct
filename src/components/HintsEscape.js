@@ -203,7 +203,7 @@ const HintEscape = ({type}) => {
 
   return(
     <>
-        <Popup trigger={<button className='hint-button'> Tips</button>} position=" center" modal nested>
+        <Popup trigger={<button className='hint-button' data-testid="hintBtn"> Tips</button>} position=" center" modal nested>
             
             <section className='hint-container'>
                 <h1 className='hint-header'>Tips</h1>
