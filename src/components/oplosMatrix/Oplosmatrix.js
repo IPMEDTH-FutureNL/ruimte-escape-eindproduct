@@ -16,7 +16,7 @@ const Oplosmatrix = () => {
     const navigate = useNavigate();
 
     const navigation = () => {
-        navigate("/puzzelDrie");
+        navigate("/oplosmatrixSucces");
     }
 
     const solveLock = (e) => {
@@ -34,7 +34,7 @@ const Oplosmatrix = () => {
             let pointsToInt = parseInt(currentPoints);
             pointsToInt = pointsToInt + 30;
             localStorage.setItem("punten", pointsToInt);
-            navigate('/puzzelDrie');
+            navigate('/oplosmatrixSucces');
             console.log("aantal foute pogingen " + fout);
         }else{
             setText("Dat was helaas niet goed");

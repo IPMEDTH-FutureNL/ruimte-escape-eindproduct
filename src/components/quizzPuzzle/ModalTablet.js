@@ -71,6 +71,7 @@ const ModalTablet = () => {
           <p id="one">-</p>
           <p id="two">-</p>
           <p id="three">-</p>
+          <p id="four"><em>Vul deze code in op de computer.</em></p>
         </section>
       </section>
     </section>
