@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`check if hints escape get rendered on start up 1`] = `
+<DocumentFragment>
+  <section
+    class="certificaat__container"
+  >
+    <div
+      class="elem"
+      id="elem"
+    >
+      <div>
+        <p
+          class="certificaat__punten"
+        >
+          Punten: 
+        </p>
+        <p
+          class="certificaat__playerOne"
+        />
+        <p
+          class="certificaat__playerTwo"
+        />
+        <img
+          class="certificaat"
+          src="certificaat.png"
+        />
+      </div>
+    </div>
+    <button
+      class="button__print"
+    >
+      Print certificaat
+    </button>
+    <button
+      class="button__start"
+    >
+      Naar start
+    </button>
+  </section>
+</DocumentFragment>
+`;

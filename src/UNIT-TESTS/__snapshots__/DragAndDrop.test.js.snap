@@ -1,0 +1,222 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`check if hints escape get rendered on start up 1`] = `
+<DocumentFragment>
+  <section
+    class="mapPuzzle"
+  >
+    <button
+      aria-describedby="popup-1"
+      class="hint-button"
+      data-testid="hintBtn"
+    >
+       Tips
+    </button>
+    <div
+      class="punten"
+    >
+      Punten: 
+    </div>
+    <div
+      class="board"
+    >
+      <div
+        class="board__piece"
+      >
+        <div
+          class="board__piece-square"
+          id="div1"
+        />
+        <img
+          alt="planeten naam drag and drop"
+          class="board__piece-name"
+          draggable="false"
+          src="mercurius__line.png"
+        />
+      </div>
+      <div
+        class="board__piece"
+      >
+        <div
+          class="board__piece-square"
+          id="div2"
+        />
+        <img
+          alt="planeten naam drag and drop"
+          class="board__piece-name"
+          draggable="false"
+          src="venus__line.png"
+        />
+      </div>
+      <div
+        class="board__piece"
+      >
+        <div
+          class="board__piece-square"
+          id="div3"
+        />
+        <img
+          alt="planeten naam drag and drop"
+          class="board__piece-name"
+          draggable="false"
+          src="aarde__line.png"
+        />
+      </div>
+      <div
+        class="board__piece"
+      >
+        <div
+          class="board__piece-square"
+          id="div4"
+        />
+        <img
+          alt="planeten naam drag and drop"
+          class="board__piece-name"
+          draggable="false"
+          src="mars__line.png"
+        />
+      </div>
+      <div
+        class="board__piece"
+      >
+        <div
+          class="board__piece-square"
+          id="div5"
+        />
+        <img
+          alt="planeten naam drag and drop"
+          class="board__piece-name"
+          draggable="false"
+          src="jupiter__line.png"
+        />
+      </div>
+      <div
+        class="board__piece"
+      >
+        <div
+          class="board__piece-square"
+          id="div6"
+        />
+        <img
+          alt="planeten naam drag and drop"
+          class="board__piece-name"
+          draggable="false"
+          src="saturnus__line.png"
+        />
+      </div>
+      <div
+        class="board__piece"
+      >
+        <div
+          class="board__piece-square"
+          id="div7"
+        />
+        <img
+          alt="planeten naam drag and drop"
+          class="board__piece-name"
+          draggable="false"
+          src="uranus__line.png"
+        />
+      </div>
+      <div
+        class="board__piece"
+      >
+        <div
+          class="board__piece-square"
+          id="div8"
+        />
+        <img
+          alt="planeten naam drag and drop"
+          class="board__piece-name"
+          draggable="false"
+          src="neptunes__line.png"
+        />
+      </div>
+    </div>
+    <div
+      class="puzzelstukjes"
+    >
+      <img
+        alt="planeten drag and drop"
+        class="planet"
+        data-div="div3"
+        draggable="true"
+        id="drag3"
+        src="aarde.png"
+      />
+      <img
+        alt="planeten drag and drop"
+        class="planet"
+        data-div="div5"
+        draggable="true"
+        id="drag5"
+        src="jupiter.png"
+      />
+      <img
+        alt="planeten drag and drop"
+        class="planet"
+        data-div="div4"
+        draggable="true"
+        id="drag4"
+        src="mars.png"
+      />
+      <img
+        alt="planeten drag and drop"
+        class="planet"
+        data-div="div1"
+        draggable="true"
+        id="drag1"
+        src="mercurius.png"
+      />
+      <img
+        alt="planeten drag and drop"
+        class="planet"
+        data-div="div8"
+        draggable="true"
+        id="drag8"
+        src="neptunes.png"
+      />
+      <img
+        alt="planeten drag and drop"
+        class="planet"
+        data-div="div6"
+        draggable="true"
+        id="drag6"
+        src="saturnus.png"
+      />
+      <img
+        alt="planeten drag and drop"
+        class="planet"
+        data-div="div7"
+        draggable="true"
+        id="drag7"
+        src="uranus.png"
+      />
+      <img
+        alt="planeten drag and drop"
+        class="planet"
+        data-div="div2"
+        draggable="true"
+        id="drag2"
+        src="venus.png"
+      />
+    </div>
+    <div
+      class="pop-up"
+      id="popup"
+    >
+      <p
+        class="pop-up-text"
+      >
+          
+      </p>
+      <button
+        class="button primary"
+        data-testid="button-popup"
+      >
+        Verder!
+      </button>
+    </div>
+  </section>
+</DocumentFragment>
+`;
