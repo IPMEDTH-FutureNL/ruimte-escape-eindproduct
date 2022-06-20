@@ -12,8 +12,10 @@ import OplosmatrixSucces from './components/verhaal/OplosmatrixSucces';
 import QuizzPuzzle from './components/quizzPuzzle/QuizzPuzzle';
 import QuizzSucces from './components/verhaal/QuizzSucces';
 import RebusPuzzle from './components/rebus/RebusPuzzle';
+import ClickingGameIntro from './components/verhaal/ClickingGameIntro';
 import ClickingGame from './components/clickingGame/ClickingGame'
 import Outro from './components/verhaal/Outro.js';
+
 
 function App() {
   return (
@@ -31,6 +33,7 @@ function App() {
             <Route path="/puzzelDrie" element={ <QuizzPuzzle/>}></Route>
             <Route path="/quizzSucces" element={<QuizzSucces/>}></Route>
             <Route path="/puzzelVier" element={ <RebusPuzzle/>}></Route>
+            <Route path="/puzzelVijfIntro" element={ <ClickingGameIntro/>}></Route>
             <Route path="/puzzelVijf" element={ <ClickingGame/>}></Route>
             <Route path="/outro" element={<Outro />}></Route>
         </Routes>

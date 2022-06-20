@@ -20,7 +20,7 @@ const ModalRebus = () => {
             localStorage.setItem("punten", pointsToInt);
             console.log('Code gekraakt!!!');
             DoorAudio.play();
-            navigate('/puzzelVijf');
+            navigate('/puzzelVijfIntro');
         } else {
             document.getElementById('invisible').id = "visible";
             audio.play()
