@@ -14,6 +14,7 @@ import OplosmatrixSucces from './components/verhaal/OplosmatrixSucces';
 import QuizzPuzzle from './components/quizzPuzzle/QuizzPuzzle';
 import QuizzSucces from './components/verhaal/QuizzSucces';
 import RebusPuzzle from './components/rebus/RebusPuzzle';
+import ClickingGameIntro from './components/verhaal/ClickingGameIntro';
 import ClickingGame from './components/clickingGame/ClickingGame'
 import LandingOnMars from './components/verhaal/video/LandingOnMars';
 import Outro from './components/verhaal/Outro.js';
@@ -47,6 +48,7 @@ function App(expiryTimestamp) {
             <Route path="/puzzelDrie" element={ <QuizzPuzzle/>}></Route>
             <Route path="/quizzSucces" element={<QuizzSucces/>}></Route>
             <Route path="/puzzelVier" element={ <RebusPuzzle/>}></Route>
+            <Route path="/puzzelVijfIntro" element={ <ClickingGameIntro/>}></Route>
             <Route path="/puzzelVijf" element={ <ClickingGame/>}></Route>
             <Route path="/landing" element={< LandingOnMars /> }></Route>
             <Route path="/outro" element={<Outro pause={pause}/>}></Route>

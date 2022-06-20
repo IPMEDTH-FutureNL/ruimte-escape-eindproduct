@@ -57,7 +57,7 @@ const ModalRebus = () => {
           }
 
         DoorAudio.play();
-        navigate('/puzzelVijf');
+        navigate('/puzzelVijfIntro');
         console.log("aantal foute pogingen " + wrong);
     }
 

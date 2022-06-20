@@ -7,7 +7,7 @@ import '../css/hint.css'
 import Pop from '../sound/pop.wav';
 
 const HintEscape = ({type}) => {
-  const [punten, setPunten] = useState(30); //localStorage.getItem("punten")
+  const [punten, setPunten] = useState(localStorage.getItem("punten"));
   const [dragDrop, setDragDrop] = useState(false);
   const [hint1, setHint1] = useState("");
   const [hint2, setHint2] = useState("");
