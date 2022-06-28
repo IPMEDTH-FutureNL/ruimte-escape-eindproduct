@@ -2,11 +2,19 @@ import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import welcomeToMars from '../../../video/welcomeToMars.mp4'
 import "../../../css/video.css"
+import IntroSound from '../../../sound/Intro.mp3';
 
 const WelcomeVideo = () => {
     const navigate = useNavigate();
+    const audio = new Audio(IntroSound);
+    audio.volume = 0.0;
+
+    localStorage.setItem("playerOne", "");
+    localStorage.setItem("playerTwo", "");
+
     
     const start = () => {
+        audio.play();
         navigate('/start');
     }
 

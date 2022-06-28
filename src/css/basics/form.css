@@ -1,0 +1,126 @@
+.rule{
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    margin-bottom: 15px;
+    margin-top: 30px;
+    line-height: 1.4;
+}
+
+p{
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.rule-clickable{
+    height: 25px;
+    width: 35px;
+    background-color: #00FF2B;
+    border-radius: 50%;
+    opacity: .58;
+    margin-right: 10px;
+}
+
+.rule-hint{
+    font-size: 20px;
+    margin-top: -5px;
+    margin-right: 10px;
+    background-color: #edc305;
+    border: none;
+    border: none;
+    padding: 10px 25px 10px 25px;
+    border-radius: 10px;
+}
+
+.rule-text{
+    font-size: 30px;
+    margin-top: -5px;
+    margin-right: 10px;
+}
+
+.container__eenSpeler{
+    display: none;
+    
+}
+
+.container__tweeSpelers{
+    display: none;
+}
+
+
+.player__form{
+    position: absolute;
+    left: 37vw;
+    top: 70vh;
+}
+
+.first{
+    display: flex;
+    flex-direction: row;
+}
+
+.second{
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap;
+}
+
+.player__form-name{
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+    border: 1px solid grey;
+    width: 80%;
+    font-size: 20px;
+}
+
+.player__form-name-speler{
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+    border: 1px solid grey;
+    width: 80%;
+    font-size: 20px;
+}
+
+.player__form-label{
+    font-size: 1.5rem;
+}
+
+
+.inputdiv{
+    margin-right: 20px;
+    width: 40%;
+}
+
+.escaperoom__rules-note{
+    height: 90vh;
+    width: 35vw;
+    position: absolute;
+    top: 5vh;
+    left: 32.5vw;
+}
+
+@media screen and (min-width: 1900px) {
+    
+    .player__form{
+      position: absolute;
+      left: 39vw;
+      top: 60vh;
+    }
+
+    .textcloud__image{
+        width: 20vw;
+    }
+
+    .first{
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .second{
+        display: flex;
+        flex-direction: row; 
+        flex-wrap: wrap;
+    }
+  }

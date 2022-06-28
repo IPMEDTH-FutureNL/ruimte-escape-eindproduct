@@ -1,3 +1,5 @@
+@import "./basics/button.css";
+@import "./basics/form.css";
 .containter__start{
     background-image: url("../img/gameplayImages/backgrounds/besturingskamer.png");
     background-repeat: no-repeat;
@@ -31,99 +33,6 @@
     top: 15vh;
 }
 
-.rule{
-    display: flex;
-    flex-direction: row;
-    font-size: 20px;
-    margin-bottom: 15px;
-    margin-top: 30px;
-    line-height: 1.4;
-}
-
-p{
-    font-size: 20px;
-    line-height: 1.5;
-}
-
-.rule-clickable{
-    height: 25px;
-    width: 35px;
-    background-color: #00FF2B;
-    border-radius: 50%;
-    opacity: .58;
-    margin-right: 10px;
-}
-
-.rule-hint{
-    font-size: 20px;
-    margin-top: -5px;
-    margin-right: 10px;
-    background-color: #edc305;
-    border: none;
-    border: none;
-    padding: 10px 25px 10px 25px;
-    border-radius: 10px;
-}
-
-.rule-text{
-    font-size: 30px;
-    margin-top: -5px;
-    margin-right: 10px;
-}
-
-.player__form{
-    position: absolute;
-    display: flex;
-    flex-direction: row;
-    left: 37vw;
-    top: 65vh;
-    flex-wrap: wrap;
-}
-
-.player__form-name{
-    padding: 10px;
-    border-radius: 10px;
-    margin-top: 10px;
-    border: 1px solid grey;
-    width: 80%;
-    font-size: 20px;
-}
-
-.player__form-label{
-    font-size: 1.5rem;
-}
-
-.player__form-submit{
-    margin-top: 20px;
-    padding: 10px;
-    width: 50%;
-    font-size: 1.4rem;
-    margin-left: 80%;
-    background-color: #03afef;
-    color: white;
-    cursor: pointer;
-    border: none;
-    border-radius: 10px;
-}
-
-.player__form-submit:hover{
-    background-color: #338dcf;
-}
-
-.inputdiv{
-    margin-right: 20px;
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-}
-
-.escaperoom__rules-note{
-    height: 90vh;
-    width: 35vw;
-    position: absolute;
-    top: 5vh;
-    left: 32.5vw;
-}
 
 .astronaut{
     position: absolute;
@@ -195,19 +104,3 @@ p{
 .continue:hover{
     background-color: #338dcf;
 }
-
-@media screen and (min-width: 1900px) {
-    
-    .player__form{
-      position: absolute;
-      display: flex;
-      flex-direction: row;
-      left: 39vw;
-      top: 55vh;
-      flex-wrap: wrap;
-    }
-
-    .textcloud__image{
-        width: 20vw;
-    }
-  }
