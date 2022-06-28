@@ -10,10 +10,11 @@ import TextCloud from '../../img/gameplayImages/snippets/textcloud.png'
 import Spacecraft from '../../sound/Spacecraft.mp3';
 
 const DragAndDropSucces = () => {
-    const [text, setText] = useState("Dankje " + localStorage.getItem("playerOne") +  " en " + localStorage.getItem("playerTwo") + " nu zijn we helemaal klaar om naar Mars te vertrekken.");
+    const [text, setText] = useState(localStorage.getItem("playerTwo") ? "Dankje " + localStorage.getItem("playerOne") +  " en " + localStorage.getItem("playerTwo") + " nu zijn we helemaal klaar om naar Mars te vertrekken." : "Dankje " + localStorage.getItem("playerOne") + " nu zijn we helemaal klaar om naar Mars te vertrekken.");
     const [count, setCount] = useState(0);
     const navigate = useNavigate();
     const audio = new Audio(Spacecraft);
+
     const story = (newText) => {
         setCount(count + newText);
 

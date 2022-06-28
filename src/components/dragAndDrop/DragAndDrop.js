@@ -14,6 +14,7 @@ import neptunes  from "../../img/planeten/neptunes.png"
 import saturnus  from "../../img/planeten/saturnus.png"
 import uranus  from "../../img/planeten/uranus.png"
 import venus  from "../../img/planeten/venus.png"
+import sun from "../../img/planeten/sun.png"
 
 //planeten benaming met lijntje
 import aarde__line from "../../img/planeten/aarde__line.png"
@@ -126,6 +127,7 @@ const DragAndDrop = () => {
     return (
       <section className="mapPuzzle">
         <HintEscape type='dragAndDropHints'/>
+        <img className="sun" alt="sun" src={sun}></img>
           <div className="board">
             <div className="board__piece">
                 <div className="board__piece-square" id="div1" onDrop={(event) => drop(event)} onDragOver={(event) => allowDrop(event)} ></div>

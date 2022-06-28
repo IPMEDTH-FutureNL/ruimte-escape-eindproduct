@@ -1,11 +1,10 @@
+
+
 body{
   padding: 0;
   margin: 0;
   overflow-y: hidden;
-  user-select: none;
 }
-
-button:focus {outline:0;}
 
 .mapPuzzle{
   background-image: url("./img/planeten/background.png");
@@ -68,7 +67,7 @@ button:focus {outline:0;}
   color: white;
   font-size: 1.4rem;
   left: 1vw;
-  top: 13vh;
+  top: 10vh;
   background-color: #050530;
   margin-bottom: 2.5vh;
   width: 130px;
@@ -79,44 +78,6 @@ button:focus {outline:0;}
   padding-bottom: 10px;
   border-radius: 10px;
   z-index: 10;
-}
-
-/* buttons */
-.button{
-  position: absolute;
-  left: 15vw;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  font-size: 1.8rem;
-  border: none;
-  cursor: pointer;
-  border-radius: 10px;
-}
-
-.primary{
-  background-color: #4490be;
-  color: white;
-}
-
-.primary:hover{
-  background-color: #338dcf;
-}
-
-.hint{
-  background-color: #4490be;
-  position: absolute;
-  left: 2.5vw;
-  color: white;
-  font-size: 1.4rem;
-  padding-left: 35px;
-  padding-right: 35px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border: none;
-  cursor: pointer;
-  border-radius: 10px;
 }
 
 /* intro eerste puzzel */
@@ -210,19 +171,26 @@ button:focus {outline:0;}
 
 .puzzelstukjes{
   position: absolute;
-  left: 20vw;
+  left: 15vw;
   top: 15vh;
   width: 90vw;
 }
 .planet{
   z-index: 10;
-  width: 100px;
+  width: 105px;
   cursor: grab;
 }
 
 .board__piece{
   margin-left: 2.5vw;
   position: absolute;
+}
+
+.sun{
+  width: 250px;
+  position: absolute;
+  left: -8vw;
+  top: 45vh;
 }
 
 .board__piece-square{
@@ -241,12 +209,12 @@ button:focus {outline:0;}
 
 /*position of all board pieces */
 .board__piece:nth-child(1){
-  left: 0vw;
+  left: 4vw;
   top: 25vh;
 }
 
 .board__piece:nth-child(2){
-  left: 10vw;
+  left: 12vw;
   top: 20vh;
 }
 

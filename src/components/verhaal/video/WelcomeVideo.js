@@ -8,6 +8,10 @@ const WelcomeVideo = () => {
     const navigate = useNavigate();
     const audio = new Audio(IntroSound);
     audio.volume = 0.3;
+
+    localStorage.setItem("playerOne", "");
+    localStorage.setItem("playerTwo", "");
+
     
     const start = () => {
         audio.play();
@@ -22,6 +26,7 @@ const WelcomeVideo = () => {
             </video>
   
                 <h1 className="video__heading welcome">Welkom bij de missie naar Mars!</h1>
+                <h2 className="video__heading doel">Het doel van de missie is het veilig aankomen op Mars!</h2>
                 <button className="button_welcome" onClick={() => start()}>Start de missie</button>
 
         </section>

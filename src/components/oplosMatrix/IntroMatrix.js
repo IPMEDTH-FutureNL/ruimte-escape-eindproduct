@@ -7,7 +7,7 @@ import Astronaut from "../../img/gameplayImages/characters/character1_standard_m
 import TextCloud from '../../img/gameplayImages/snippets/textcloud.png'
 
 const IntroMatrix = () => {
-    const [text, setText] = useState("We zijn opgestegen " + localStorage.getItem("playerOne") +  " en " + localStorage.getItem("playerTwo") + "! Wat goed dat ik jullie hier tegen kom!");
+    const [text, setText] = useState(localStorage.getItem("playerTwo") ? "We zijn opgestegen " + localStorage.getItem("playerOne") +  " en " + localStorage.getItem("playerTwo") + "! Wat goed dat ik jullie hier tegen kom!" : "We zijn opgestegen " + localStorage.getItem("playerOne") + "! Wat goed dat ik jullie hier tegen kom!");
     const [count, setCount] = useState(0);
     const navigate = useNavigate();
 
@@ -24,7 +24,7 @@ const IntroMatrix = () => {
                 setText("Het lukt mij niet om de deur te openen. Hiervoor moet ik een code invullen.")
                 break;
             case 1:
-                setText("Kunnen jullie mij hierbij helpen?");
+                setText(localStorage.getItem("playerTwo") ? "Kunnen jullie mij hierbij helpen?" : "Kan jij mij helpen?");
                 break;
             case 2:
                 let matrixSection = document.getElementById('container__gameplay-matrix');

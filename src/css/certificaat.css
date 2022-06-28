@@ -11,6 +11,10 @@
   .certificaat{
     width: 55vw;
     border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .certificaat__container{
@@ -25,24 +29,34 @@
     color: black;
     font-size: 50px;
     position: absolute;
-    top: 35vh;
-    left: 19vw;
+    top: 38vh;
+    left: 15vw;
+    border-bottom: 2px solid #338dcf;
+    padding-left: 5vw;
+    padding-right: 5vw;
   }
+
 
   .certificaat__playerOne{
     color: black;
     font-size: 35px;
     position: absolute;
-    top: 58vh;
-    left: 23vh;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    top: 55vh;
+    left: 22.5vw;
   }
 
-  .certificaat__playerTwo{
+  .certificaat__playersTwo{
     color: black;
     font-size: 35px;
     position: absolute;
-    top: 58vh;
-    left: 68vh;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    top: 55vh;
+    left: 20vw;
   }
 
   .button__print{

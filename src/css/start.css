@@ -1,3 +1,5 @@
+@import "./basics/button.css";
+@import "./basics/form.css";
 .containter__start{
     background-image: url("../img/gameplayImages/backgrounds/besturingskamer.png");
     background-repeat: no-repeat;
@@ -15,143 +17,32 @@
 }
 
 
-.container__introduction{
-    position: absolute;
-    width: 70%;
-}
-
 .container__gameplay{
     display: none;
 }
 
-.escaperoom__rules{
-    position: absolute;
-    left: 39vw;
-    width: 25vw;
-    top: 12vh;
-}
-
-.rule{
-    display: flex;
-    flex-direction: row;
-    font-size: 17px;
-    margin-bottom: 15px;
-    margin-top: 30px;
-    line-height: 1.4;
-}
-
-p{
-    font-size: 17px;
-    line-height: 1.5;
-}
-
-.rule-clickable{
-    height: 25px;
-    width: 35px;
-    background-color: #00FF2B;
-    border-radius: 50%;
-    opacity: .58;
-    margin-right: 10px;
-}
-
-.hint-text{
-    margin-top: -15px;
-}
-
-.rule-hint{
-    font-size: 17px;
-    margin-top: -5px;
-    margin-right: 10px;
-    background-color: #edc305;
-    border: none;
-    border: none;
-    height: 45px;
-    padding: 10px 25px 10px 25px;
-    border-radius: 10px;
-}
-
-.rule-text{
-    font-size: 30px;
-    margin-top: -5px;
-    margin-right: 10px;
-}
-
-.player__form{
-    position: absolute;
-    display: flex;
-    flex-direction: row;
-    left: 37vw;
-    top: 66vh;
-    flex-wrap: wrap;
-}
-
-.player__form-name{
-    padding: 10px;
-    border-radius: 10px;
-    margin-top: 10px;
-    border: 1px solid grey;
-    width: 80%;
-    font-size: 17px;
-}
-
-.player__form-label{
-    font-size: 22px;
-}
-
-.player__form-submit{
-    margin-top: 20px;
-    padding: 10px;
-    width: 50%;
-    font-size: 1.4rem;
-    margin-left: 75%;
-    background-color: #03afef;
-    color: white;
-    cursor: pointer;
-    border: none;
-    border-radius: 10px;
-}
-
-.player__form-submit:hover{
-    background-color: #338dcf;
-}
-
-.inputdiv{
-    margin-right: 20px;
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-}
-
-.escaperoom__rules-note{
-    height: 90vh;
-    width: 35vw;
-    position: absolute;
-    top: 5vh;
-    left: 32.5vw;
-}
 
 .astronaut{
     position: absolute;
     left: 30vw;
-    top: 15vh;
-    width: 5vw;
+    bottom: 0vh;
 }
 
 .astronaut__twee{
     position: absolute;
     left: -15vw;
-    top: 5vh;
+    bottom: 0vh;
 }
 
 .astronaut__drie{
     position: absolute;
     left: 25vw;
-    top: 5vh;
+    bottom: 0vh;
 }
 .astronaut__vier{
     position: absolute;
     left: 40vw;
-    top: 3vh;
+    bottom: 0vh;
 }
 
 .spaceshuttle__image{
@@ -201,19 +92,3 @@ p{
 .continue:hover{
     background-color: #338dcf;
 }
-
-@media screen and (min-width: 1900px) {
-    
-    .player__form{
-      position: absolute;
-      display: flex;
-      flex-direction: row;
-      left: 39vw;
-      top: 55vh;
-      flex-wrap: wrap;
-    }
-
-    .textcloud__image{
-        width: 20vw;
-    }
-  }

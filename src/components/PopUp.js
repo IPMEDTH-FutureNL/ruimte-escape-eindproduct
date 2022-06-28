@@ -23,7 +23,7 @@ export class PopUp extends Component {
     return (
         <div className="pop-up" id="popup">
             <p className="pop-up-text"> {this.props.text} </p>
-            <button className="button primary" onClick={(e) => this.closePopUp(e)}>Verder!</button>
+            <button className="button primary center" onClick={(e) => this.closePopUp(e)}>Verder!</button>
         </div>
     )
   }

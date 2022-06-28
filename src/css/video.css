@@ -86,7 +86,16 @@
     position: absolute;
     color: white;
     font-size: 3.7rem;
-    top: 40vh;
+    top: 30vh;
+    left: 2.5vw;
+    font-family: 'Andika', sans-serif;
+  }
+
+  .doel{
+    position: absolute;
+    color: white;
+    font-size: 1.7rem;
+    top: 43vh;
     left: 2.5vw;
     font-family: 'Andika', sans-serif;
   }

@@ -3,26 +3,34 @@ import { useNavigate } from "react-router-dom";
 import '../../css/start.css';
 import Note from "../../img/gameplayImages/snippets/note.png"
 import Astronaut from "../../img/gameplayImages/characters/character2_standard_schuin_mouthopen.svg"
-import { FaInfoCircle } from "react-icons/fa";
-import { FaAngleRight } from "react-icons/fa";
 import TextCloud from '../../img/gameplayImages/snippets/textcloud.png'
-import IntroSound from '../../sound/Intro.mp3';
-
 
 const Start = ({start}) => {
-    // const audio = new Audio(IntroSound);
-    // audio.volume = 0.3;
     const [text, setText] = useState("");
+    const [playerState, setPlayerState] = useState("false");
     const [count, setCount] = useState(0);
     const navigate = useNavigate();
-    
+
+    const showPlayerForm = (number) => {
+        let formOne = document.getElementById("container__eenSpeler");
+        let formTwo = document.getElementById("container__tweeSpelers");
+        if(number === 1){
+            setPlayerState("false");
+            formOne.style.display = "block";
+            formTwo.style.display = "none";
+        }else{
+            setPlayerState("true");
+            formOne.style.display = "none";
+            formTwo.style.display = "block";
+        }
+
+    }
     
     const players = (e) => {
         e.preventDefault();
         let players = getPlayerNames();
         let introduction = document.getElementById("container__introduction");
         let gameplay = document.getElementById("container__gameplay");
-        // audio.play();
 
         let playerOne = "";
         let playerTwo = "";
@@ -35,11 +43,25 @@ const Start = ({start}) => {
         introduction.style.display = "none";
         gameplay.style.display = "block";
         localStorage.setItem('punten', 30);
-        setText("Welkom " + localStorage.getItem("playerOne") + " en " + localStorage.getItem("playerTwo") + " op het ruimteschip! Ik ben Max een van de astronauten op dit schip.")
+  
+        if(localStorage.getItem("playerTwo") === "undefined"){
+            localStorage.setItem("playerTwo", "");
+            setText("Welkom " + localStorage.getItem("playerOne") + " op het ruimteschip! Ik ben Max een van de astronauten op dit schip.")
+        }else{
+            setText("Welkom " + localStorage.getItem("playerOne") + " en " + localStorage.getItem("playerTwo") + " op het ruimteschip! Ik ben Max een van de astronauten op dit schip.")
+        }
+       
     }
 
     const getPlayerNames = () => {
-        let input = document.getElementsByClassName("player__form-name");
+
+        let input = "";
+
+        if(playerState === "false"){
+            input = document.getElementsByClassName("player__form-name-speler");
+        }else{
+            input = document.getElementsByClassName("player__form-name");
+        }
         let players = [];
         let currentPlayer = ""
        
@@ -59,8 +81,8 @@ const Start = ({start}) => {
             case 0:
                 setText("We zijn bijna klaar om koers te zetten naar Mars!")
                 break;
-            case 1: 
-                setText("We hebben alleen nog een probleem: de kaart klopt niet! Ik heb jullie hulp nodig!");
+            case 1:
+                setText(localStorage.getItem("playerTwo") ? "We hebben alleen nog een probleem, de kaart klopt niet. Ik heb jullie hulp nodig!" : "We hebben alleen nog een probleem, de kaart klopt niet. Ik heb je hulp nodig!");
                 break;
             case 2:
                 navigate('/introPuzzle');
@@ -85,22 +107,40 @@ const Start = ({start}) => {
                             De groene rondjes in de escaperoom, betekenen dat je erop kan klikken!
                         </div>
                         <div className="rule">
-                            Vul snel jullie namen in dan kunnen we beginnen!
+                            Met hoeveel personen zijn jullie?
+                        </div>
+                        <div className="button__group">
+                            <button className="button primary" onClick={() => showPlayerForm(1)}>1</button>
+                            <button className="button primary" onClick={() => showPlayerForm(2)}>2</button>
                         </div>
                     </div>
-                    <form className="player__form" onSubmit={(e) => players(e)}>
-                        <div className="inputdiv">
-                            <label className="player__form-label">Naam</label>
-                            <input className="player__form-name"></input>
-                        </div>
-                        <div className="inputdiv">
-                            <label className="player__form-label">Naam</label>
-                            <input className="player__form-name"></input>
-                        </div>
-                        <div className="inputdiv">
-                            <input type="submit" value="Verder" className='player__form-submit' onClick={start}/>
-                        </div>
-                    </form>
+
+
+                    <div className="container__eenSpeler" id="container__eenSpeler">
+                        <form className="player__form first" onSubmit={(e) => players(e)}>
+                            <div className="inputdiv">
+                                <label className="player__form-label">Naam</label>
+                                <input className="player__form-name-speler"></input>
+                            </div>
+                            <input type="submit" value="Verder" className='button primary submit'/>
+                        </form>
+                    </div>
+
+                    <div className="container__tweeSpelers" id="container__tweeSpelers">
+                        <form className="player__form second" onSubmit={(e) => players(e)}>
+                            <div className="inputdiv">
+                                <label className="player__form-label">Naam</label>
+                                <input className="player__form-name"></input>
+                            </div>
+                            <div className="inputdiv">
+                                <label className="player__form-label">Naam</label>
+                                <input className="player__form-name"></input>
+                            </div>
+                            <div className="inputdiv">
+                                <input type="submit" value="Verder" className='button primary submitSecond'/>
+                            </div>
+                        </form>
+                    </div>
                 </section>
 
                 <section className="container__gameplay" id="container__gameplay">

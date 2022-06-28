@@ -25,8 +25,8 @@ const OvergangPuzzel = () => {
                 <p className="intro__container-paragraph">
                 We willen graag vertrekken naar Mars. Maar de planeten staan verkeerd op de kaart. Kun jij elke planeet naar de juiste plek op de kaart slepen?
                 </p>
-                <button className="button primary" onClick={() => goToPuzzle()}>Toon kaart!</button>
             </div>
+            <button className="button primary center" onClick={() => goToPuzzle()}>Toon kaart!</button>
         </section>
     )
 }

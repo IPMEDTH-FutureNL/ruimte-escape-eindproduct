@@ -24,7 +24,7 @@ const LandingOnMars = () => {
                 <source src={landing} type="video/mp4"></source>
             </video>
             <div className="content" id="content">
-                <h1 className="video__heading">Goed zo! Je hebt al het afval opgeruimd. Houd je goed vast, want we gaan nu op Mars landen.</h1>
+                <h1 className="video__heading">Goed zo! Al het afval is opgeruimd. Houd je goed vast, want we gaan nu op Mars landen.</h1>
             </div>
             <div className="landing_ended" id="landing_ended">
                 <button className="button_landing" onClick={() => outro()}>Ga naar de astronauten!</button>

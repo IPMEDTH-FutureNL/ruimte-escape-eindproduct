@@ -11,7 +11,7 @@ import TextCloud from '../../img/gameplayImages/snippets/textcloud.png'
 
 
 const Outro = ({pause}) => {
-    const [text, setText] = useState("Welkom op Mars " + localStorage.getItem("playerOne") +  " en " + localStorage.getItem("playerTwo") + " we zijn veilig aangekomen dankzij jullie hulp!");
+    const [text, setText] = useState(localStorage.getItem("playerTwo") ? "Welkom op Mars " + localStorage.getItem("playerOne") +  " en " + localStorage.getItem("playerTwo") + ". We zijn veilig aangekomen dankzij jullie hulp!" : "Welkom op Mars " + localStorage.getItem("playerOne") + ". We zijn veilig aangekomen dankzij jouw hulp!");
     const [count, setCount] = useState(0);
     const navigate = useNavigate();
 
@@ -20,7 +20,7 @@ const Outro = ({pause}) => {
 
         switch(count){
             case 0:
-                setText("Jullie kunnen jezelf nu echte ruimtevaarders noemen.")
+                setText(localStorage.getItem("playerTwo") ? "Jullie kunnen jezelf nu echte ruimtevaarders noemen." : "Je kan jezelf nu echte ruimtevaarders noemen."  )
                 break;
             case 1:
                 navigate("/certificaat")

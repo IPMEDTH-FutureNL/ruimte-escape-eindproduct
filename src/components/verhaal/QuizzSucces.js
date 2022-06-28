@@ -9,7 +9,7 @@ import TextCloud from '../../img/gameplayImages/snippets/textcloud.png'
 import RebusBackground  from '../../img/rebus/rebus-background.jpg';
 
 const DragAndDropSucces = () => {
-    const [text, setText] = useState("Goedzo " + localStorage.getItem("playerOne") +  " en " + localStorage.getItem("playerTwo") + ", Jullie hebben de code gekraakt!");
+    const [text, setText] = useState(localStorage.getItem("playerTwo") ? "Goedzo " + localStorage.getItem("playerOne") +  ". Jullie hebben de code gekraakt!" : "Goedzo " + localStorage.getItem("playerOne") +  ". Je hebt de code gekraakt!");
     const [count, setCount] = useState(0);
     const navigate = useNavigate();
 

@@ -11,7 +11,7 @@ import QuizzBackground from '../../img/quizz/quiz-background.jpg';
 const DragAndDropSucces = () => {
        
      
-    const [text, setText] = useState("Goed gedaan " + localStorage.getItem("playerOne") +  " en " + localStorage.getItem("playerTwo") + ". Jullie zijn in de computerkamer.");
+    const [text, setText] = useState(localStorage.getItem("playerTwo") ? "Goed gedaan " + localStorage.getItem("playerOne") +  " en " + localStorage.getItem("playerTwo") + ". Jullie zijn in de computerkamer." : "Goed gedaan " + localStorage.getItem("playerOne") + ". Je bent in de computerkamer.");
     const [count, setCount] = useState(0);
     const navigate = useNavigate();
 
@@ -29,10 +29,10 @@ const DragAndDropSucces = () => {
                 setText("Om het ruimte-afval op te kunnen ruimen, heb je een computercode nodig. Deze code kun je in deze kamer vinden.");
                 break;
             case 3:
-                setText("Kunnen jullie op zoek gaan naar deze code?");
+                setText(localStorage.getItem("playerTwo") ? "Kunnen jullie op zoek gaan naar deze code?" : "Kan jij op zoek gaan naar deze code?");
                 break;
             case 4:
-                setText("Nog één klein ding. Vergeten jullie niet de muis te wisselen. Met samenwerken kom je veel verder!");
+                setText(localStorage.getItem("playerTwo") ? "Nog één klein ding. Vergeten jullie niet de muis te wisselen. Met samenwerken kom je veel verder!" : "Succes!");
                 break;
             case 5:
             navigate('/puzzelDrie');

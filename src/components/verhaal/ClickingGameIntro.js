@@ -17,10 +17,10 @@ const ClickingGameIntro = () => {
         setCount(count + newText);
 
         switch(count){
-            case 1:
+            case 0:
                 setText("Ruimte-afval bestaat uit: kapotte satellieten en lege brandstoftanks. Laten we dit samen opruimen!");
                 break;
-            case 2:
+            case 1:
                 navigate('/puzzelVijf');
                 break;
         }
