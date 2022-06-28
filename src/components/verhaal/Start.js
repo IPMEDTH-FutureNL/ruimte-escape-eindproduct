@@ -111,7 +111,7 @@ const Start = () => {
                         <p>Voordat we beginnen nog een paar korte tips!</p>
                         <div className="rule">
                             <button className='rule-hint'> Tips</button>
-                            De tip knop, hier kan je tips krijgen over de puzzels!
+                            <p className="hint-text">De tip knop, hier kan je tips krijgen over de puzzels de kosten alleen 10 punten!</p>
                         </div>
                         <div className="rule">
                             <div className="rule-clickable" />

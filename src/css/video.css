@@ -28,7 +28,7 @@
     text-align: center;
     letter-spacing: .2rem;
     line-height: 3.75rem;
-    font-size: 2.5rem;
+    font-size: 2.0rem;
   }
 
   .video__buttonGroup{
@@ -42,7 +42,7 @@
   /* Style the button used to pause/play the video */
   #myBtn {
     width: 200px;
-    font-size: 2rem;
+    font-size: 1.75rem;
     padding: 10px;
     border-radius: 25px;
     margin-right: 55px;
@@ -104,7 +104,7 @@
     width: 20vw;
     text-transform: uppercase;
     position: absolute;
-    top: 55vh;
+    top: 58vh;
     left: 37.5vw;
   }
 
