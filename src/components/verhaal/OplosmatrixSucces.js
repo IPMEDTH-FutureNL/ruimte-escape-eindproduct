@@ -20,13 +20,13 @@ const DragAndDropSucces = () => {
 
         switch(count){
             case 0:
-                setText("Onze taak is om straks het vuilnis in de ruimte op te ruimen.")
+                setText("Onze taak is om straks het afval in de ruimte op te ruimen.")
                 break;
             case 1:
                 setText("Het is niet alleen onze taak om naar mars te gaan, maar ook om de ruimte schoon te houden!");
                 break;
             case 2:
-                setText("Om het vuilnis op te kunnen ruimen, heb je een computercode nodig. Deze code kun je in deze kamer vinden.");
+                setText("Om het ruimte-afval op te kunnen ruimen, heb je een computercode nodig. Deze code kun je in deze kamer vinden.");
                 break;
             case 3:
                 setText("Kunnen jullie op zoek gaan naar deze code?");

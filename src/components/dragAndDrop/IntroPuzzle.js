@@ -13,11 +13,11 @@ const IntroPuzzle = () => {
 
     const feitjes = (feit) => {
         if(feit === 1){
-            setFact("Wist je dat Mercurius de kleinste planeet is!");
+            setFact("De eerste mens op de maan was Neil Armstrong!");
             let openpopup = document.getElementById("popup");
             openpopup.style.display = "block";
         }else if(feit === 2){
-            setFact("De eerste mens op de maan was Neil Armstrong!");
+            setFact("Wist je dat mars ongeveer 54.6 miljoen kilometer van de aarde af staat?");
             let openpopup = document.getElementById("popup");
             openpopup.style.display = "block";
         }else{

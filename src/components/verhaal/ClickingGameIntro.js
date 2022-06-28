@@ -9,7 +9,7 @@ import TextCloud from '../../img/gameplayImages/snippets/textcloud.png'
 const ClickingGameIntro = () => {
        
      
-    const [text, setText] = useState("Het afval zorgt ervoor dat we niet kunnen landen!");
+    const [text, setText] = useState("Het zwevende ruimte-afval is niet veilig. Het zorgt ervoor dat we niet kunnen landen!");
     const [count, setCount] = useState(0);
     const navigate = useNavigate();
 
@@ -18,7 +18,7 @@ const ClickingGameIntro = () => {
 
         switch(count){
             case 1:
-                setText("Laten we samen het vuil opruimen!");
+                setText("Ruimte-afval bestaat uit: kapotte satellieten en lege brandstoftanks. Laten we dit samen opruimen!");
                 break;
             case 2:
                 navigate('/puzzelVijf');
