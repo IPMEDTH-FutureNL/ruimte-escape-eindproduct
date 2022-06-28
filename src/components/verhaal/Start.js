@@ -60,7 +60,7 @@ const Start = ({start}) => {
                 setText("We zijn bijna klaar om koers te zetten naar Mars!")
                 break;
             case 1: 
-                setText("We hebben alleen nog een probleem, de kaart klopt niet. Ik heb jullie hulp nodig!");
+                setText("We hebben alleen nog een probleem: de kaart klopt niet! Ik heb jullie hulp nodig!");
                 break;
             case 2:
                 navigate('/introPuzzle');
@@ -75,7 +75,7 @@ const Start = ({start}) => {
                     <img src={Note} alt="note with rules" className="escaperoom__rules-note" draggable="false"></img>
                     <div className="escaperoom__rules">
                         <h2>Welkom bij de missie naar Mars!</h2>
-                        <p>Voordat we beginnen nog een paar korte tips!</p>
+                        <p>Voordat jullie beginnen nog een paar korte tips!</p>
                         <div className="rule">
                             <button className='rule-hint'> Tips</button>
                             <p className="hint-text">De tip knop, hier kan je tips krijgen over de puzzels de kosten alleen 10 punten!</p>

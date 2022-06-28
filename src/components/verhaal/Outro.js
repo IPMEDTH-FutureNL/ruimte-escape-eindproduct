@@ -20,13 +20,9 @@ const Outro = ({pause}) => {
 
         switch(count){
             case 0:
-                setText("Jullie kunnen jullie zelf nu echte ruimtevaarders noemen!")
+                setText("Jullie kunnen jezelf nu echte ruimtevaarders noemen.")
                 break;
             case 1:
-                // let openpopup = document.getElementById("popup");
-                // openpopup.style.display = "block";
-                // let textCloud = document.getElementById("textcloud");
-                // textCloud.style.display = "none";
                 navigate("/certificaat")
                 break;
         }

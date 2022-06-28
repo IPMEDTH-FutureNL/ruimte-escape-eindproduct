@@ -22,7 +22,7 @@ const ModalZonnestelsel = () => {
         </div>
         <div className="tooltip">
             <img src={aarde} alt="" className="planeten aarde" draggable='false'/>
-            <span className="tooltiptext">Dit is ons prachtige planeet waar we met zijn allen op wonen!</span>
+            <span className="tooltiptext">Dit is onze prachtige planeet de aarde, waarop we met zijn allen wonen.</span>
         </div>
         <div className="tooltip">
             <img src={mars} alt="" className="planeten mars" draggable='false'/>

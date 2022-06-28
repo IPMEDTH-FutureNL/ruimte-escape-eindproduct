@@ -26,7 +26,7 @@ const DragAndDropSucces = () => {
                 setText("Het is niet alleen onze taak om naar mars te gaan, maar ook om de ruimte schoon te houden!");
                 break;
             case 2:
-                setText("Om straks het vuilnis op te kunnen ruimen heb je een code nodig die ergens op de computer te vinden is in de kamer.");
+                setText("Om het vuilnis op te kunnen ruimen, heb je een computercode nodig. Deze code kun je in deze kamer vinden.");
                 break;
             case 3:
                 setText("Kunnen jullie op zoek gaan naar deze code?");

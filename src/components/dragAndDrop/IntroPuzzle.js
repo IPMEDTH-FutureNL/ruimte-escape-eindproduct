@@ -17,7 +17,7 @@ const IntroPuzzle = () => {
             let openpopup = document.getElementById("popup");
             openpopup.style.display = "block";
         }else if(feit === 2){
-            setFact("De eerste mens op de maan is Neil Armstrong!");
+            setFact("De eerste mens op de maan was Neil Armstrong!");
             let openpopup = document.getElementById("popup");
             openpopup.style.display = "block";
         }else{

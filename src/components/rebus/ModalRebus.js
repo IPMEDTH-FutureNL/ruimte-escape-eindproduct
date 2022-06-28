@@ -11,7 +11,7 @@ const ModalRebus = () => {
 
     const checkValue = () => {
         const inputValue = document.getElementById("text").value;
-        if(inputValue == "we zijn onderweg naar mars"){
+        if(inputValue.toLowerCase() == "we zijn onderweg naar mars" || inputValue.toLowerCase() == "we zijn onderweg naar mars."){
             console.log('Code gekraakt!!!')
             setPoints();
         } else {

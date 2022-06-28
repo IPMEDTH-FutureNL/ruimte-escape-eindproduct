@@ -21,10 +21,10 @@ const IntroMatrix = () => {
 
         switch(count){
             case 0:
-                setText("Ik krijg de code niet opgelost om de deur te openen!")
+                setText("Het lukt mij niet om de deur te openen. Hiervoor moet ik een code invullen.")
                 break;
             case 1:
-                setText("De code staat op een blaadje");
+                setText("Kunnen jullie mij hierbij helpen?");
                 break;
             case 2:
                 let matrixSection = document.getElementById('container__gameplay-matrix');

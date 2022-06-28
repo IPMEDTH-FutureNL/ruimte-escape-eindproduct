@@ -18,13 +18,13 @@ const DragAndDropSucces = () => {
 
         switch(count){
             case 0:
-                setText("Ga nu naar de cockpit om het vuilnis op te kunnen ruimen!")
+                setText("Ga naar de cockpit om het ruimte-afval op te ruimen.")
                 break;
             case 1:
                 setText("Samen met alle andere ruimtebedrijven hebben wij afgesproken om een gedeelte van ons geld in een pot te doen.");
                 break;
             case 2:
-                setText("Met dit geld kunnen wij met zijn allen het afval opruimen en de ruimte schoonhouden!");
+                setText("Met dit geld kunnen wij met zijn allen het ruimte-afval opruimen en de ruimte schoonhouden!");
                 break;
             case 3:
                 navigate('/puzzelVier');
