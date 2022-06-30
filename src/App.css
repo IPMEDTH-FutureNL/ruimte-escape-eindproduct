@@ -58,10 +58,6 @@ body{
   margin-top: 5vh;
 }
 
-.container__hint-punten{
-
-}
-
 .punten{
   position: absolute;
   color: white;
@@ -224,27 +220,27 @@ body{
 }
 
 .board__piece:nth-child(4){
-  left: 30vw;
+  left: 27vw;
   top: 18vh;
 }
 
 .board__piece:nth-child(5){
-  left: 40vw;
+  left: 37vw;
   top: 23vh;
 }
 
 .board__piece:nth-child(6){
-  left: 50vw;
+  left: 47vw;
   top: 23vh;
 }
 
 .board__piece:nth-child(7){
-  left: 60vw;
+  left: 55vw;
   top: 15vh;
 }
 
 .board__piece:nth-child(8){
-  left: 70vw;
+  left: 64vw;
   top: 25vh;
 }
 

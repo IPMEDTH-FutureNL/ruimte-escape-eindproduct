@@ -7,7 +7,7 @@ import Astronaut from "../../img/gameplayImages/characters/character1_standard_m
 import TextCloud from '../../img/gameplayImages/snippets/textcloud.png'
 
 const IntroMatrix = () => {
-    const [text, setText] = useState(localStorage.getItem("playerTwo") ? "We zijn opgestegen " + localStorage.getItem("playerOne") +  " en " + localStorage.getItem("playerTwo") + "! Wat goed dat ik jullie hier tegen kom!" : "We zijn opgestegen " + localStorage.getItem("playerOne") + "! Wat goed dat ik jullie hier tegen kom!");
+    const [text, setText] = useState(localStorage.getItem("playerTwo") ? "We zijn opgestegen " + localStorage.getItem("playerOne") +  " en " + localStorage.getItem("playerTwo") + "! Wat goed dat ik jullie hier tegen kom!" : "We zijn opgestegen " + localStorage.getItem("playerOne") + "! Wat goed dat ik je hier tegen kom!");
     const [count, setCount] = useState(0);
     const navigate = useNavigate();
 

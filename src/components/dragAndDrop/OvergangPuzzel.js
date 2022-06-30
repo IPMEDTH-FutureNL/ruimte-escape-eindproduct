@@ -12,13 +12,6 @@ const OvergangPuzzel = () => {
         navigate("/puzzelEen");
     }
 
-    const video = () => {
-        let videoPlaceholder = document.getElementById("video");
-        let textPlaceholder = document.getElementById("text");
-        videoPlaceholder.style.display = "block";
-        textPlaceholder.style.display = "none";
-    }
-
     return(
         <section className="container__intro-puzzelEen">
             <div className="intro__container-text" id="text">
