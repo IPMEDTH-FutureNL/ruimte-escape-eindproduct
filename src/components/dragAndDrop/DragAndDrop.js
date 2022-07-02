@@ -60,7 +60,6 @@ const DragAndDrop = () => {
         changeOpacity.style.opacity = "1";
         changeOpacity.style.backgroundColor = "transparent";
         setCount(count + 1);
-        console.log("good tries " + count);
 
         if(count === 7){
           setTimeout(() => {
@@ -107,7 +106,6 @@ const DragAndDrop = () => {
             }
           
             goToPuzzle();
-            console.log("how many wrong " + wrong );
           }, 200)
         }
     }
@@ -117,9 +115,6 @@ const DragAndDrop = () => {
        let changeColor = document.getElementById(e.target.id);
        changeColor.style.backgroundColor = "red";
        changeColor.style.opacity = "1";
-      //  let openpopup = document.getElementById("popup");
-      //  openpopup.style.display = "block";
-       console.log("bad tries " + wrong);
     }
   }
 
@@ -130,7 +125,7 @@ const DragAndDrop = () => {
         <img className="sun" alt="sun" src={sun}></img>
           <div className="board">
             <div className="board__piece">
-                <div className="board__piece-square" id="div1" onDrop={(event) => drop(event)} onDragOver={(event) => allowDrop(event)} ></div>
+                <div className="board__piece-square" id="div1" onDrop={(event) => drop(event)} onDragOver={(event) => allowDrop(event)}></div>
                 <img alt="planeten naam drag and drop" className="board__piece-name" src={mercurius__line}  draggable="false"/>
             </div>
             <div className="board__piece">

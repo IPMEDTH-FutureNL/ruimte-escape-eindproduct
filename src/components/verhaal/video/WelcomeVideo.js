@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useNavigate } from "react-router-dom";
 import welcomeToMars from '../../../video/welcomeToMars.mp4'
 import "../../../css/video.css"
@@ -26,7 +26,7 @@ const WelcomeVideo = () => {
             </video>
   
                 <h1 className="video__heading welcome">Welkom bij de missie naar Mars!</h1>
-                <h2 className="video__heading doel">Het doel van de missie is het veilig aankomen op Mars!</h2>
+                <h2 className="video__heading doel">Breng jij de astronauten veilig naar Mars?</h2>
                 <button className="button_welcome" onClick={() => start()}>Start de missie</button>
 
         </section>

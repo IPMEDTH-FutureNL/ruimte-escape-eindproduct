@@ -20,7 +20,7 @@ const Outro = ({pause}) => {
 
         switch(count){
             case 0:
-                setText(localStorage.getItem("playerTwo") ? "Jullie kunnen jezelf nu echte ruimtevaarders noemen." : "Je kan jezelf nu echte ruimtevaarders noemen."  )
+                setText(localStorage.getItem("playerTwo") ? "Jullie kunnen jezelf nu echte ruimtevaarders noemen." : "Je kan jezelf nu een echte ruimtevaarder noemen."  )
                 break;
             case 1:
                 navigate("/certificaat")

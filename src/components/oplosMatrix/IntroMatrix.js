@@ -21,12 +21,18 @@ const IntroMatrix = () => {
 
         switch(count){
             case 0:
-                setText("Het lukt mij niet om de deur te openen. Hiervoor moet ik een code invullen.")
+                setText("We zijn onderweg naar Mars voor onderzoek!");
                 break;
             case 1:
-                setText(localStorage.getItem("playerTwo") ? "Kunnen jullie mij hierbij helpen?" : "Kan jij mij helpen?");
+                setText("Onderzoek in de ruimte is belangrijk. Door onderzoek in de ruimte hebben wij schoon drinkwater op aarde.");
                 break;
             case 2:
+                setText("Ik heb alleen mijn spullen nodig om verder te gaan. Het probleem is dat ik de deur niet open krijg.");
+                break;
+            case 3:
+                setText(localStorage.getItem("playerTwo") ? "Kunnen jullie mij helpen?" : "Kan jij mij helpen?");
+                break;
+            case 4:
                 let matrixSection = document.getElementById('container__gameplay-matrix');
                 let circleMatrix = document.getElementById("circle-matrix");
 

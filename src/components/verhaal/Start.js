@@ -79,7 +79,7 @@ const Start = ({start}) => {
 
         switch(count){
             case 0:
-                setText("We zijn bijna klaar om koers te zetten naar Mars!")
+                setText("We zijn bijna klaar om koers te zetten naar Mars! We gaan naar Mars voor onderzoek. We willen weten of leven op Mars mogelijk is.")
                 break;
             case 1:
                 setText(localStorage.getItem("playerTwo") ? "We hebben alleen nog een probleem, de kaart klopt niet. Ik heb jullie hulp nodig!" : "We hebben alleen nog een probleem, de kaart klopt niet. Ik heb je hulp nodig!");
@@ -100,7 +100,7 @@ const Start = ({start}) => {
                         <p>Voordat jullie beginnen nog een paar korte tips!</p>
                         <div className="rule">
                             <button className='rule-hint'> Tips</button>
-                            <p className="hint-text">De tip knop, hier kan je tips krijgen over de puzzels de kosten alleen 10 punten!</p>
+                            <p className="hint-text">De tip knop, hier kan je tips krijgen over de puzzels deze kosten alleen 10 punten!</p>
                         </div>
                         <div className="rule">
                             <div className="rule-clickable" />

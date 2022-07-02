@@ -1,0 +1,45 @@
+.slider-group{
+    display: none;
+    margin-top: 0.5%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#rangeValue{
+    text-align: center;
+    font-size: 1.8rem;
+    margin-left: -3.5%;
+    margin-bottom: 2%;
+    -webkit-appearance: none;
+}
+
+#range{
+    width: 30%;
+    height: 19px;
+    border-radius: 8px;
+}
+
+input[type="range"]::-webkit-slider-thumb{
+    transform:scale(2.15);
+    cursor: ew-resize;
+}
+
+.slider{
+    margin-top: 0.5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: -10%;
+    font-size: 1.8rem
+}
+
+.slider-label{
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.bottom{
+    margin-left: 45%;
+}

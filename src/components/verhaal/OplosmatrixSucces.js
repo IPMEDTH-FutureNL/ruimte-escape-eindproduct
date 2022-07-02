@@ -4,7 +4,6 @@ import "../../css/start.css"
 import Astronaut from "../../img/gameplayImages/characters/character2_standard_schuin_mouthopen.svg"
 import AstronautTwee from "../../img/gameplayImages/characters/character4_standard_schuin_mouthclosed.svg"
 
-import { FaAngleRight } from "react-icons/fa";
 import TextCloud from '../../img/gameplayImages/snippets/textcloud.png'
 import QuizzBackground from '../../img/quizz/quiz-background.jpg';
 

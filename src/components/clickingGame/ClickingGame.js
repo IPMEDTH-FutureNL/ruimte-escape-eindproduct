@@ -18,13 +18,11 @@ const ClickingGame = () =>{
     const countItems = () =>{
         audio.play();
         setCount(count + 1);
-        console.log(count)
     }
 
     React.useEffect(()=>{
         if(count === 6){
             outro.play();
-            console.log('picked up all the garbage')
             navigate('/landing');
         }
     });

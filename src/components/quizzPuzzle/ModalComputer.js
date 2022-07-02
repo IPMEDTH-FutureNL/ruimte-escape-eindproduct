@@ -13,7 +13,6 @@ const ModalComputer = () => {
         if(inputValue == "BAC"){
             const audio = new Audio(Unlock);
             audio.play();
-            console.log('Code gekraakt!!!');
             setPoints();
         } else if(inputValue == "bac") {
             const audio = new Audio(Lock);
@@ -65,7 +64,6 @@ const ModalComputer = () => {
         }
 
         navigate('/quizzSucces');
-        console.log("aantal foute pogingen " + wrong);
       }
   return (
     <section>

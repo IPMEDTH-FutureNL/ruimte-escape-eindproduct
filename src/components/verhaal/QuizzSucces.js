@@ -4,7 +4,6 @@ import "../../css/start.css"
 import AstronautDrie from "../../img/gameplayImages/characters/character1_standard_mouthclosed.svg"
 import AstronautVier from "../../img/gameplayImages/characters/character3_standard_mouthopen.svg"
 
-import { FaAngleRight } from "react-icons/fa";
 import TextCloud from '../../img/gameplayImages/snippets/textcloud.png'
 import RebusBackground  from '../../img/rebus/rebus-background.jpg';
 

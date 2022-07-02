@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types'; 
 import Popup from 'reactjs-popup'; //npm install reactjs-popup --save
 import Punten from './Punten';
 import SolutionDragAndDrop from '../img/planeten/hintFoto.png'
@@ -167,7 +166,6 @@ const HintEscape = ({type}) => {
     }
 
     const buyHint = () =>{
-        console.log("buyHint");
         if(punten >= 10){
             const audio = new Audio(Pop);
             audio.play();

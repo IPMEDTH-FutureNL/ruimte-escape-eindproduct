@@ -80,7 +80,6 @@ const Oplosmatrix = () => {
           }
 
         navigate('/oplosmatrixSucces');
-        console.log("aantal foute pogingen " + wrong);
     }
 
     const checkInput = () => {

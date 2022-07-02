@@ -15,13 +15,11 @@
     flex-direction: row;
     font-size: 20px;
     margin-bottom: 15px;
-    margin-top: 30px;
-    line-height: 1.4;
 }
 
 p{
     font-size: 20px;
-    line-height: 1.5;
+    line-height: 1.4;
 }
 
 .rule-clickable{
@@ -47,7 +45,6 @@ p{
 
 .rule-text{
     font-size: 30px;
-    margin-top: -5px;
     margin-right: 10px;
 }
 
@@ -64,7 +61,7 @@ p{
 .player__form{
     position: absolute;
     left: 35vw;
-    top: 72vh;
+    top: 60vh;
     width: 35vw;
 }
 
@@ -121,7 +118,7 @@ p{
     .player__form{
       position: absolute;
       left: 35vw;
-      top: 65vh;
+      top: 60vh;
     }
 
     .textcloud__image{

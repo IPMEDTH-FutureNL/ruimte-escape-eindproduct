@@ -6,7 +6,7 @@ const Garbage = () => {
   const [show, setShow] = useState(true);
   return(
     <>
-         {show && <img className='img-garbage' src={garbage} alt='garbage' onClick={() => setShow(prev => !prev)}/>}
+         {show && <img className='img-garbage' src={garbage} alt='garbage' draggable="false" onClick={() => setShow(prev => !prev)}/>}
     </>
   );
 }
