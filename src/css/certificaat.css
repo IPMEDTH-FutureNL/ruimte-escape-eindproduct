@@ -4,10 +4,6 @@
   left: 25vw;
 }
 
-  .button__print{
-    position: fixed;
-  }
-
   .certificaat{
     width: 55vw;
     border-radius: 25px;
@@ -59,46 +55,29 @@
     left: 20vw;
   }
 
-  .button__print{
-    position: absolute;
-    top: 13vh;
-    left: 1vw;
-    padding: 20px 15px 20px 15px;
-    background-color: #EDC305;
-    color: black;
-    font-size: 1.0rem;
-    border: none;
-    font-weight: 600;
-    border-radius: 25px;
-    letter-spacing: .1rem;
-    cursor: pointer;
-    width: 15vw;
-    text-transform: uppercase;
-  }
+
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1181px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+    .elem {
+      top: 15vh;
+      left: 20vw;
+    }
   
-  .button__print:hover{
-    background-color: #FF6600;
-    color: white;
-  }
+      .certificaat{
+        width: 75vw;
+      }
 
-  .button__start{
-    position: absolute;
-    top: 25vh;
-    left: 1vw;
-    padding: 20px 15px 20px 15px;
-    background-color: #03afef;
-    color: white;
-    font-size: 1.0rem;
-    letter-spacing: .1rem;
-    border: none;
-    font-weight: 600;
-    border-radius: 25px;
-    cursor: pointer;
-    width: 15vw;
-    text-transform: uppercase;
-  }
-
-  .button__start:hover{
-    background-color: #338dcf;
-  }
-
+      .certificaat__punten{
+        top: 32vh;
+        left: 19vw;
+      }
+    
+      .certificaat__playerOne{
+        top: 45vh;
+        left: 30.5vw;
+      }
+    
+      .certificaat__playersTwo{
+        top: 45vh;
+        left: 25vw;
+      }
+}

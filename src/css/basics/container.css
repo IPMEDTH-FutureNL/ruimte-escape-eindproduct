@@ -1,0 +1,101 @@
+.mapPuzzle{
+    background-image: url("../../img/planeten/background.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    height: 100vh;
+  }
+  
+  .container__intro-puzzelEen{
+    background-image: url("../../img/oplosmatrix/background.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    height: 100vh;
+    position: relative;
+  }
+  
+  .container__intro-startpuzzel{
+    background-image: url("../../img/gameplayImages/backgrounds/besturingskamer.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    height: 100vh;
+  }
+  
+  .container__intro-oplosMatrix{
+    background-image: url("../../img/gameplayImages/backgrounds/tech-kamer.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    height: 100vh;
+  }
+
+  /* instructie */
+.intro__container-text{
+    position: absolute;
+    top: 35vh;
+    left: 30vw;
+    width: 40vw;
+  }
+  
+  .intro__container-videoPlaceholder{
+    height: 45vh;
+    width: 40vw;
+    background-color: grey;
+    margin-bottom: 2rem;
+  }
+  
+  .intro__container-paragraph{
+    color: white;
+    font-size: 2rem;
+  }
+  
+  .intro__container-video{
+    display: none;
+    position: absolute;
+    top: 25vh;
+    left: 30vw;
+    width: 40vw;
+  }
+  
+  .placeHolder{
+    color: black;
+    font-size: 1.5rem;
+  }
+
+  .containter__start{
+    background-image: url("../../img/gameplayImages/backgrounds/besturingskamer.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    height: 100vh;
+}
+
+.container__draganddropsucces{
+    background-image: url("../../img/gameplayImages/backgrounds/besturingskamer.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    height: 100vh;
+}
+
+
+.container__gameplay{
+    display: none;
+}
+
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1181px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+  .intro__container-text{
+    position: absolute;
+    top: 30vh;
+    left: 27.5vw;
+    width: 50vw;
+  }
+
+  .container__intro-startpuzzel{
+    height: 110vh;
+  }
+  
+}

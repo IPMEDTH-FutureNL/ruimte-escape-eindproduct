@@ -19,7 +19,7 @@ const OvergangPuzzel = () => {
                 We willen graag vertrekken naar Mars. Maar de planeten staan verkeerd op de kaart.
                 </p>
             </div>
-            <button className="button primary center" onClick={() => goToPuzzle()}>Toon kaart!</button>
+            <button className="button primary centerSecond" onClick={() => goToPuzzle()}>Toon kaart!</button>
         </section>
     )
 }

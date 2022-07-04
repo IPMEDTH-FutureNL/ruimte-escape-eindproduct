@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import HintEscape from '../HintsEscape';
-import "../../css/oplosMatrix.css"
 import astronaut from'../../img/oplosmatrix/astronaut.png';
 import earth from'../../img/oplosmatrix/earth.png';
 import moon from'../../img/oplosmatrix/moon.png';
@@ -77,6 +76,8 @@ const Oplosmatrix = () => {
               pointsToInt = pointsToInt + 0;
               localStorage.setItem("punten", pointsToInt);
               break;
+            default:
+                break;
           }
 
         navigate('/oplosmatrixSucces');

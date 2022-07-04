@@ -1,0 +1,163 @@
+/* Drag and drop board */
+.board{
+    display: flex;
+    flex-direction: row;
+    top: 25vh;
+    position: absolute;
+  }
+  
+  .puzzelstukjes{
+    position: absolute;
+    left: 15vw;
+    top: 15vh;
+    width: 90vw;
+  }
+  .planet{
+    z-index: 10;
+    width: 105px;
+    cursor: grab;
+  }
+  
+  .board__piece{
+    margin-left: 2.5vw;
+    position: absolute;
+  }
+  
+  .sun{
+    width: 250px;
+    position: absolute;
+    left: -8vw;
+    top: 45vh;
+  }
+  
+  .board__piece-square{
+    background-color: greenyellow;
+    height: 90px;
+    width: 90px;
+    opacity: .25;
+    border-radius: 50%;
+  }
+  
+  .board__piece-name{
+    margin-top: 5px;
+    margin-left: 42.5px;
+    z-index: 1;
+  }
+  
+  /*position of all board pieces */
+  .board__piece:nth-child(1){
+    left: 4vw;
+    top: 25vh;
+  }
+  
+  .board__piece:nth-child(2){
+    left: 12vw;
+    top: 20vh;
+  }
+  
+  .board__piece:nth-child(3){
+    left: 20vw;
+    top: 22vh;
+  }
+  
+  .board__piece:nth-child(4){
+    left: 27vw;
+    top: 18vh;
+  }
+  
+  .board__piece:nth-child(5){
+    left: 37vw;
+    top: 23vh;
+  }
+  
+  .board__piece:nth-child(6){
+    left: 47vw;
+    top: 23vh;
+  }
+  
+  .board__piece:nth-child(7){
+    left: 55vw;
+    top: 15vh;
+  }
+  
+  .board__piece:nth-child(8){
+    left: 64vw;
+    top: 25vh;
+  }
+  
+  /* planeten gehuseld */
+  .planet{
+    cursor: grab;
+    padding: 15px;
+    z-index: 10;
+  }
+  
+  
+  .planet:hover{
+    transform: scale(1.1);
+    z-index: 10;
+  }
+
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1181px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+    .sun{
+      left: -17vw;
+    }
+
+    .planet{
+      width: 75px;
+    }
+
+    .puzzelstukjes{
+      left: 10vw;
+      top: 20vh;
+    }
+
+      /*position of all board pieces */
+  .board__piece:nth-child(1){
+    left: 6vw;
+    top: 25vh;
+  }
+  
+  .board__piece:nth-child(2){
+    left: 16vw;
+    top: 20vh;
+  }
+  
+  .board__piece:nth-child(3){
+    left: 26vw;
+    top: 22vh;
+  }
+  
+  .board__piece:nth-child(4){
+    left: 36vw;
+    top: 18vh;
+  }
+  
+  .board__piece:nth-child(5){
+    left: 45vw;
+    top: 23vh;
+  }
+  
+  .board__piece:nth-child(6){
+    left: 56vw;
+    top: 23vh;
+  }
+  
+  .board__piece:nth-child(7){
+    left: 67.5vw;
+    top: 19vh;
+  }
+  
+  .board__piece:nth-child(8){
+    left: 80vw;
+    top: 25vh;
+  }
+
+  .board__piece-square{
+    background-color: greenyellow;
+    height: 70px;
+    width: 70px;
+    opacity: .25;
+    border-radius: 50%;
+  }
+}

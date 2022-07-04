@@ -1,0 +1,46 @@
+.circle{
+    height: 150px;
+    width: 150px;
+    background-color: #00FF2B;
+    border-radius: 50%;
+    opacity: .58;
+    position: absolute;
+    cursor: pointer;
+  }
+  
+  .circle:hover{
+    transform: scale(1.1);
+  }
+  
+  .circle:nth-child(1){
+    top: 60vh;
+    left: 45vw;
+  }
+  
+  .circle:nth-child(2){
+    top: 45vh;
+    left: 30vw;
+  }
+  
+  .circle:nth-child(3){
+    top: 35vh;
+    left: 90vw;
+  }
+  
+  .circle-matrix{
+    height: 150px;
+    width: 150px;
+    background-color: #00FF2B;
+    border-radius: 50%;
+    opacity: .58;
+    position: absolute;
+    cursor: pointer;
+    display: none;
+    top: 45vh;
+    left: 47.5vw;
+  }
+  
+  .circle-matrix:hover{
+    transform: scale(1.1);
+  }
+  

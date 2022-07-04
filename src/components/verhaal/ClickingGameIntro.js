@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
-import "../../css/start.css"
 import Astronaut from "../../img/gameplayImages/characters/character3_standard_mouthopen.svg"
-
 import TextCloud from '../../img/gameplayImages/snippets/textcloud.png'
 
 const ClickingGameIntro = () => {
@@ -22,6 +20,8 @@ const ClickingGameIntro = () => {
             case 1:
                 navigate('/puzzelVijf');
                 break;
+            default:
+                break;
         }
     }
 
@@ -36,7 +36,7 @@ const ClickingGameIntro = () => {
                             <img src={TextCloud} alt="tekst balloon" className="textcloud__image"></img>
                             <div className="textcloud__field">
                                 <p className="textcloud__text">{text}</p>
-                                <button className="continue" onClick={() => story(1)}>Verder</button>
+                                <button className="button primary left" onClick={() => story(1)}>Verder</button>
                             </div>
                         </div>
                     </div>

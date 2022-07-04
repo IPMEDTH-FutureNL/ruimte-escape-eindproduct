@@ -25,6 +25,8 @@ const Outro = ({pause}) => {
             case 1:
                 navigate("/certificaat")
                 break;
+            default: 
+                break;
         }
     }
 
@@ -39,7 +41,7 @@ const Outro = ({pause}) => {
                             <img src={TextCloud} alt="tekst balloon" className="textcloud__image" draggable="false"></img>
                             <div className="textcloud__field" id="textcloud__field">
                                 <p className="textcloud__text">{text}</p>
-                                <button className="continue" onClick={() => {story(1); pause();}}>Verder</button>
+                                <button className="button primary left" onClick={() => {story(1); pause();}}>Verder</button>
                             </div>
                         </div>
                         <div className="astronaut__twee">

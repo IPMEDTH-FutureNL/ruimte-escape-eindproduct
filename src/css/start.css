@@ -1,27 +1,3 @@
-@import "./basics/button.css";
-@import "./basics/form.css";
-.containter__start{
-    background-image: url("../img/gameplayImages/backgrounds/besturingskamer.png");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 100% 100%;
-    height: 100vh;
-}
-
-.container__draganddropsucces{
-    background-image: url("../img/gameplayImages/backgrounds/besturingskamer.png");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 100% 100%;
-    height: 100vh;
-}
-
-
-.container__gameplay{
-    display: none;
-}
-
-
 .astronaut{
     position: absolute;
     left: 30vw;
@@ -45,9 +21,6 @@
     bottom: 0vh;
 }
 
-.spaceshuttle__image{
-    width: 450px;
-}
 
 .astronaut__image{
     width: 12.5vw;
@@ -76,19 +49,47 @@
     line-height: 1.8;
 }
 
-.continue{
-    left: 1vw;
-    position: absolute;
-    font-size: 25px;
-    background-color: #03afef;
-    cursor: pointer;
-    border: none;
-    padding: 10px 20px 10px 20px;
-    border-radius: 10px;
-    color: white;
-    margin-top: -10px;
-}
 
-.continue:hover{
-    background-color: #338dcf;
+@media only screen and (min-device-width: 768px) and (max-device-width: 1181px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+    .astronaut__image{
+        width: 18.5vw;
+    }
+
+    .astronaut{
+        position: absolute;
+        left: 22vw;
+        bottom: 0vh;
+    }
+    
+    .astronaut__twee{
+        position: absolute;
+        left: -15vw;
+        bottom: 0vh;
+    }
+    
+    .astronaut__drie{
+        position: absolute;
+        left: 35vw;
+        bottom: 0vh;
+    }
+    .astronaut__vier{
+        position: absolute;
+        left: 55vw;
+        bottom: 0vh;
+    }
+
+    .textcloud__image{
+        width: 40vw;
+    }
+
+    .textcloud__text{
+        font-size: 1.13rem;
+        line-height: 1.5;
+    }
+
+    .textcloud{
+
+        left: 35vw;
+        top: 1.5vh;
+    }
 }

@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import Modal from 'react-modal';
-import '../../css/quizz.css';
 import HintEscape from '../HintsEscape';
 import ModalZonnestelsel from './ModalZonnestelsel';
 import ModalComputer from './ModalComputer';
@@ -57,15 +56,15 @@ const QuizzPuzzle = () => {
             <img src={Zonnestelsel} alt="" draggable="false" onClick={setZModalIsOpenToTrue} className="quiz-zonnestelsel"/>
             <img src={Computer} alt="" draggable="false" onClick={setCModalIsOpenToTrue} className="quiz-computer" />
             
-            <Modal className="modal-zonnestelsel" isOpen={ZmodalIsOpen}>
+            <Modal ariaHideApp={false} className="modal-zonnestelsel" isOpen={ZmodalIsOpen}>
                 <button onClick={setZModalIsOpenToFalse}>x</button>
                 <ModalZonnestelsel/>
             </Modal>
-            <Modal className="modal-computer" isOpen={CmodalIsOpen}>
+            <Modal ariaHideApp={false} className="modal-computer" isOpen={CmodalIsOpen}>
                 <button onClick={setCModalIsOpenToFalse}>x</button>
                 <ModalComputer/>
             </Modal>
-            <Modal className="modal-tablet" isOpen={TmodalIsOpen}>
+            <Modal ariaHideApp={false} className="modal-tablet" isOpen={TmodalIsOpen}>
                 <button onClick={setTModalIsOpenToFalse}>x</button>
                 <ModalTablet/>
             </Modal>

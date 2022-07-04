@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
-import '../../css/clickingGame.css';
 import Garbage from './garbage';
 import HintEscape from '../HintsEscape';
 import LaserGun from '../../sound/LaserGun.mp3';

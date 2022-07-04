@@ -2,8 +2,9 @@
     position: absolute;
     z-index: 99;
     right:3vw;
-    top: 3vh;
+    top: 2vh;
     background-color: #edc305;
+    color: black;
     border: none;
     cursor: pointer;
     border: none;

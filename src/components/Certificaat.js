@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import  certificaat  from '../img/certificaat/certificaat.png';
-import "../css/certificaat.css"
+
 
 export class Certificaat extends Component {
   constructor(props){
@@ -70,11 +70,11 @@ export class Certificaat extends Component {
                 <div>
                     <p className="certificaat__punten">Punten: {localStorage.getItem('punten')}</p>
                     <p id="names">{this.state.certificaatText}</p>
-                    <img src={certificaat} className="certificaat"/>
+                    <img src={certificaat} alt="certificaat escaperoom" className="certificaat"/>
                 </div>
             </div>
-            <button onClick={() => this.printCertificate('elem')} className="button__print">Print certificaat</button>
-            <button onClick={() => this.toStart()} className="button__start">Naar start</button>
+            <button onClick={() => this.printCertificate('elem')} className="button secondary left middle fixedwidth">Print certificaat</button>
+            <button onClick={() => this.toStart()} className="button primary left top fixedwidth">Naar start</button>
         </section>
     )
   }

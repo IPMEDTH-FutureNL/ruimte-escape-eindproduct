@@ -31,20 +31,149 @@
     left: 67vw;  
 }
 
-.oplosmatrix__lock-button{
-    width: 60px;
-    height: 60px;
-    text-align: center;
-    font-size: 1.2rem;
-    background-color: #4490be;
-    color: white;
-    border: none;
-    position: absolute;
-    margin-top: 1.5rem;
-    cursor: pointer;
-}
 
 .astronautMatrix{
     margin-left: .5vw;
 }
 
+
+/*oplos matrix */
+
+.note{
+    background-image: url("../img/oplosmatrix/background.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    height: 100vh;
+    font-size: xx-large;
+  }
+  
+  .note-center{
+    display: block;
+    margin: auto;
+    padding-top: 1vh;
+    width: 30rem;
+  }
+  
+  .grid-item-blank{
+    align-self: stretch center;
+  
+  }
+  
+  .grid-item-img{
+    align-self:  center;
+  }
+  
+  .icon{
+    height: 4rem;
+  }
+  
+  .icon:nth-child(3){
+    margin-left: 2vw;
+  }
+  
+  .grid-item-color-red{
+    align-self: stretch center;
+    background-color: #5AA0CB;
+    
+  }
+  
+  .grid-item-color-blue{
+    align-self: stretch center;
+    background-color: #CB5A5A;
+    
+  }
+  
+  .grid-item-color-yellow{
+    align-self: stretch center;
+    background-color: #CBCB5A;
+    
+  }
+  
+  
+  .grid-item-number{
+    align-self:center;
+    margin-left: 2.5vh;
+    color: white;
+    /* background-color: #050530; */
+  }
+  
+  .oplosmatrix-grid{
+    display: grid;
+    background-color: #080742;
+    width: 25rem;
+    padding: 30px;
+    border-radius: 50px;
+    gap: 5px;
+    grid-template-columns: repeat(4, 6rem);
+    grid-template-rows: repeat(4, 6rem);   
+  }
+  
+  .oplosmatrix__lock{
+    display: flex;
+    flex-direction: row;
+    background-color: #080742;
+    width: 28rem;
+    height: 100px;
+    padding: 10px;
+    margin: auto;
+    border-radius: 20px;
+    margin-top: 2rem;
+    justify-content: center;
+  }
+  
+  
+  .oplosmatrix__lock-input{
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    font-size: 4rem;
+    background-color: #050530;
+    color: white;
+    border: none;
+    margin-right: 1rem;
+    margin-top: 1.5rem;
+  }
+  
+  .oplosmatrix__lock-image{
+    height: 80px;
+    margin-right: 2rem;
+    margin-left: -5rem;
+    margin-top: .5rem;
+  }
+  
+  ::placeholder{
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+  }
+  
+  
+  @media screen and (min-width: 1900px) {
+    .note-center{
+      padding-top: 10vh;
+    }
+    
+  }
+
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1181px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+    .note-center{
+      padding-top: 10vh;
+      padding-left: 10vh;
+    }
+
+    .oplosmatrix-grid{
+      display: grid;
+      background-color: #080742;
+      width: 18rem;
+      padding: 30px;
+      border-radius: 50px;
+      gap: 5px;
+      grid-template-columns: repeat(4, 4.5rem);
+      grid-template-rows: repeat(4, 4.5rem);   
+    }
+
+    .postIt__image{
+      width: 320px;
+  }
+}

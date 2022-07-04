@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
-import "../../css/start.css"
 import AstronautDrie from "../../img/gameplayImages/characters/character1_standard_mouthclosed.svg"
 import AstronautVier from "../../img/gameplayImages/characters/character3_standard_mouthopen.svg"
 
@@ -28,6 +27,8 @@ const DragAndDropSucces = () => {
             case 3:
                 navigate('/puzzelVier');
                 break;
+            default:
+                break;
         }
     }
 
@@ -43,7 +44,7 @@ const DragAndDropSucces = () => {
                             <img src={TextCloud} alt="tekst balloon" className="textcloud__image" draggable="false"></img>
                             <div className="textcloud__field">
                                 <p className="textcloud__text">{text}</p>
-                                <button className="continue" onClick={() => story(1)}>Verder</button>
+                                <button className="button primary left" onClick={() => story(1)}>Verder</button>
                             </div>
                         </div>
                         <div className="astronaut__drie">

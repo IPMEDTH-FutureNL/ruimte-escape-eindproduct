@@ -23,7 +23,6 @@ import { useStopwatch } from 'react-timer-hook';
 import Certificaat from './components/Certificaat';
 
 function App(expiryTimestamp) {
-  
   const {
     seconds,
     minutes,

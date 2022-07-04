@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import Popup from 'reactjs-popup'; //npm install reactjs-popup --save
 import Punten from './Punten';
 import SolutionDragAndDrop from '../img/planeten/hintFoto.png'
-import '../css/hint.css'
 import Pop from '../sound/pop.wav';
 
 const HintEscape = ({type}) => {
@@ -76,9 +75,7 @@ const HintEscape = ({type}) => {
             setHint2(Object.values(hintArray.rebusHint2))
             setHint3(Object.values(hintArray.rebusHint3))
             break;
-
         default:
-
             break;
         }   
     }

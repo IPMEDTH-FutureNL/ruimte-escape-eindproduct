@@ -42,26 +42,26 @@ const ModalTablet = () => {
   return (
     <section className="tablet-section">
 
-      <img className="tablet" src={Tablet} draggable='false'/>
-      <section class="tablet-notes-text">
-        <h3 class="text-black tablet-title">Tip: De antwoorden op deze vragen <br></br>zijn allemaal in deze kamer te vinden!</h3>
+      <img className="tablet" src={Tablet} alt="" draggable='false'/>
+      <section className="tablet-notes-text">
+        <h3 className="text-black tablet-title">Tip: De antwoorden op deze vragen <br></br>zijn allemaal in deze kamer te vinden!</h3>
 
-        <p class="text-black tablet-question">1. Hoeveel planeten heeft ons zonnestelsel?</p>
-        <ul class="text-black list">
+        <p className="text-black tablet-question">1. Hoeveel planeten heeft ons zonnestelsel?</p>
+        <ul className="text-black list">
           <li onClick={checkValue1}>A. 6 </li>
           <li onClick={checkValue2}>B. 8 </li>
           <li onClick={checkValue3}>C. 10</li>
         </ul>
 
-        <p class="text-black tablet-question">2. Welke planeet is het kleinste in ons zonnestelsel?</p>
-        <ul class="text-black list">
+        <p className="text-black tablet-question">2. Welke planeet is het kleinste in ons zonnestelsel?</p>
+        <ul className="text-black list">
           <li onClick={checkValue4}>A. Mercurius </li>
           <li onClick={checkValue5}>B. Venus </li>
           <li onClick={checkValue6}>C. Aarde </li>
         </ul>
 
-        <p class="text-black tablet-question">3. Welke planeet is het verst van de zon?</p>
-        <ul class="text-black list">
+        <p className="text-black tablet-question">3. Welke planeet is het verst van de zon?</p>
+        <ul className="text-black list">
           <li onClick={checkValue7}>A. Saturnus</li>
           <li onClick={checkValue8}>B. Jupiter</li>
           <li onClick={checkValue9}>C. Neptunus</li>

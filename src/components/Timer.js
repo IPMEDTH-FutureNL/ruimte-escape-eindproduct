@@ -1,5 +1,4 @@
 import React from 'react';
-import '../css/timer.css'
 
 const MyTimer = ({minute, second }) => {
 

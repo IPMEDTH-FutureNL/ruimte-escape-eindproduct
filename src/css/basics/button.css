@@ -15,6 +15,63 @@
     border-radius: 10px;
     margin-right: 20px;
   }
+
+  button{
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 1.5rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-right: 20px;
+    background-color: #4490be;
+    color: black;
+  }
+
+.left{
+  left: 1vw;
+  position: absolute;
+}
+
+.top{
+  margin-top: 30vh;
+}
+
+.middle{
+  margin-top: 18vh;
+}
+
+.secondary{
+  background-color: #EDC305;
+  color: black;
+}
+
+.secondary:hover{
+  background-color: #FF6600;
+  color: white;
+}
+
+.fixedwidth{
+  width: 15vw;
+}
+
+
+  .oplosmatrix__lock-button{
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    font-size: 1.2rem;
+    background-color: #4490be;
+    color: white;
+    border: none;
+    position: absolute;
+    margin-top: 1.5rem;
+    cursor: pointer;
+}
+
+
   
   .primary{
     background-color: #4490be;
@@ -34,24 +91,47 @@
     margin-top: 3vh;
     margin-left: 70%;
   }
-  
-  .hint{
-    background-color: #4490be;
-    position: absolute;
-    left: 2.5vw;
-    color: white;
-    font-size: 1.4rem;
-    padding-left: 35px;
-    padding-right: 35px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border: none;
-    cursor: pointer;
-    border-radius: 10px;
-  }
 
   .center{
+    position: absolute;
+    top: 60%; right: 47.5%;
+    transform: translate(50%,-50%);
+  }
+
+  .centerSecond{
     position: absolute;
     top: 60%; right: 50%;
     transform: translate(50%,-50%);
   }
+
+
+  #myBtn {
+    width: 200px;
+    font-size: 1.75rem;
+    padding: 10px;
+    border-radius: 25px;
+    margin-right: 55px;
+    border: none;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  #myBtn:hover {
+    background: #ddd;
+    color: black;
+  }
+
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1181px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+    .submit{
+      margin-top: 6vh;
+      height: 50px;
+    }
+
+    .center{
+      position: absolute;
+      top: 60%; right: 45%;
+      transform: translate(50%,-50%);
+    }
+  
+}

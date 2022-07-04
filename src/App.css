@@ -1,3 +1,53 @@
+@import "./css/basics/button.css";
+@import "./css/basics/circle.css";
+@import "./css/basics/container.css";
+@import "./css/basics/form.css";
+@import "./css/basics/input.css";
+@import "./css/basics/popup.css";
+@import "./css/basics/punten.css";
+@import "./css/certificaat.css";
+@import "./css/clickingGame.css";
+@import "./css/draganddrop.css";
+@import "./css/garbage.css";
+@import "./css/hint.css";
+@import "./css/oplosMatrix.css";
+@import "./css/outro.css";
+@import "./css/quizz.css";
+@import "./css/rebus.css";
+@import "./css/start.css";
+@import "./css/timer.css";
+@import "./css/video.css";
+
+@media only screen and (orientation:portrait) {
+  .portrait-modus{
+    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 20vh;
+    left: 2.5vh;
+  }
+
+  .potrait{
+    font-size: 2.0rem;
+  }
+  
+  .landscape-modus{
+    display: none;
+  }
+}
+
+@media only screen and (orientation:landscape) {
+  .portrait-modus{
+    display: none;
+  }
+
+  .landscape-modus{
+    display: block;
+  }
+}
 
 
 body{
@@ -6,376 +56,17 @@ body{
   overflow-y: hidden;
 }
 
-.mapPuzzle{
-  background-image: url("./img/planeten/background.png");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: 100% 100%;
-  height: 100vh;
-}
-
-.container__intro-puzzelEen{
-  background-image: url("./img/oplosmatrix/background.png");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: 100% 100%;
-  height: 100vh;
-  position: relative;
-}
-
-.container__intro-startpuzzel{
-  background-image: url("./img/gameplayImages/backgrounds/besturingskamer.png");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: 100% 100%;
-  height: 100vh;
-}
-
-.container__intro-oplosMatrix{
-  background-image: url("./img/gameplayImages/backgrounds/tech-kamer.png");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: 100% 100%;
-  height: 100vh;
-}
-
-/*pop up*/
-.pop-up{
-  width: 40vw;
-  min-height: 17.5vw;
-  background-color: #080742;
-  position: absolute;
-  top: 35%;
-  transform: translateX(30vw);
-  border-radius: 20px;
-  display: none;
-}
-
-.pop-up-text{
-  font-size: 1.5rem;
-  color: white;
-  text-align: center;
-  margin-top: 5vh;
-}
-
-.punten{
-  position: absolute;
-  color: white;
-  font-size: 1.4rem;
-  left: 1vw;
-  top: 10vh;
-  background-color: #050530;
-  margin-bottom: 2.5vh;
-  width: 130px;
-  text-align: center;
-  padding-left: 25px;
-  padding-right: 25px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-radius: 10px;
-  z-index: 10;
-}
-
-/* intro eerste puzzel */
-
-.circle{
-  height: 150px;
-  width: 150px;
-  background-color: #00FF2B;
-  border-radius: 50%;
-  opacity: .58;
-  position: absolute;
-  cursor: pointer;
-}
-
-.circle:hover{
-  transform: scale(1.1);
-}
-
-.circle:nth-child(1){
-  top: 60vh;
-  left: 45vw;
-}
-
-.circle:nth-child(2){
-  top: 45vh;
-  left: 30vw;
-}
-
-.circle:nth-child(3){
-  top: 35vh;
-  left: 90vw;
-}
-
-.circle-matrix{
-  height: 150px;
-  width: 150px;
-  background-color: #00FF2B;
-  border-radius: 50%;
-  opacity: .58;
-  position: absolute;
-  cursor: pointer;
-  display: none;
-  top: 45vh;
-  left: 47.5vw;
-}
-
-.circle-matrix:hover{
-  transform: scale(1.1);
-}
-
-/* instructie */
-.intro__container-text{
-  position: absolute;
-  top: 35vh;
-  left: 30vw;
-  width: 40vw;
-}
-
-.intro__container-videoPlaceholder{
-  height: 45vh;
-  width: 40vw;
-  background-color: grey;
-  margin-bottom: 2rem;
-}
-
-.intro__container-paragraph{
-  color: white;
-  font-size: 2rem;
-}
-
-.intro__container-video{
-  display: none;
-  position: absolute;
-  top: 25vh;
-  left: 30vw;
-  width: 40vw;
-}
-
-.placeHolder{
-  color: black;
-  font-size: 1.5rem;
-}
-
-/* Drag and drop board */
-.board{
-  display: flex;
-  flex-direction: row;
-  top: 25vh;
-  position: absolute;
-}
-
-.puzzelstukjes{
-  position: absolute;
-  left: 15vw;
-  top: 15vh;
-  width: 90vw;
-}
-.planet{
-  z-index: 10;
-  width: 105px;
-  cursor: grab;
-}
-
-.board__piece{
-  margin-left: 2.5vw;
-  position: absolute;
-}
-
-.sun{
-  width: 250px;
-  position: absolute;
-  left: -8vw;
-  top: 45vh;
-}
-
-.board__piece-square{
-  background-color: greenyellow;
-  height: 90px;
-  width: 90px;
-  opacity: .25;
-  border-radius: 50%;
-}
-
-.board__piece-name{
-  margin-top: 5px;
-  margin-left: 42.5px;
-  z-index: 1;
-}
-
-/*position of all board pieces */
-.board__piece:nth-child(1){
-  left: 4vw;
-  top: 25vh;
-}
-
-.board__piece:nth-child(2){
-  left: 12vw;
-  top: 20vh;
-}
-
-.board__piece:nth-child(3){
-  left: 20vw;
-  top: 22vh;
-}
-
-.board__piece:nth-child(4){
-  left: 27vw;
-  top: 18vh;
-}
-
-.board__piece:nth-child(5){
-  left: 37vw;
-  top: 23vh;
-}
-
-.board__piece:nth-child(6){
-  left: 47vw;
-  top: 23vh;
-}
-
-.board__piece:nth-child(7){
-  left: 55vw;
-  top: 15vh;
-}
-
-.board__piece:nth-child(8){
-  left: 64vw;
-  top: 25vh;
-}
-
-/* planeten gehuseld */
-.planet{
-  cursor: grab;
-  padding: 15px;
-  z-index: 10;
-}
 
 
-.planet:hover{
-  transform: scale(1.1);
-  z-index: 10;
-}
 
 
-/*oplos matrix */
-
-.note{
-  background-image: url("./img/oplosmatrix/background.png");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: 100% 100%;
-  height: 100vh;
-  font-size: xx-large;
-}
-
-.note-center{
-  display: block;
-  margin: auto;
-  padding-top: 1vh;
-  width: 30rem;
-}
-
-.grid-item-blank{
-  align-self: stretch center;
-
-}
-
-.grid-item-img{
-  align-self:  center;
-}
-
-.icon{
-  height: 4rem;
-}
-
-.icon:nth-child(3){
-  margin-left: 2vw;
-}
-
-.grid-item-color-red{
-  align-self: stretch center;
-  background-color: #5AA0CB;
-  
-}
-
-.grid-item-color-blue{
-  align-self: stretch center;
-  background-color: #CB5A5A;
-  
-}
-
-.grid-item-color-yellow{
-  align-self: stretch center;
-  background-color: #CBCB5A;
-  
-}
 
 
-.grid-item-number{
-  align-self:center;
-  margin-left: 2.5vh;
-  color: white;
-  /* background-color: #050530; */
-}
-
-.oplosmatrix-grid{
-  display: grid;
-  background-color: #080742;
-  width: 25rem;
-  padding: 30px;
-  border-radius: 50px;
-  gap: 5px;
-  grid-template-columns: repeat(4, 6rem);
-  grid-template-rows: repeat(4, 6rem);   
-}
-
-.oplosmatrix__lock{
-  display: flex;
-  flex-direction: row;
-  background-color: #080742;
-  width: 28rem;
-  height: 100px;
-  padding: 10px;
-  margin: auto;
-  border-radius: 20px;
-  margin-top: 2rem;
-  justify-content: center;
-}
 
 
-.oplosmatrix__lock-input{
-  width: 60px;
-  height: 60px;
-  text-align: center;
-  font-size: 4rem;
-  background-color: #050530;
-  color: white;
-  border: none;
-  margin-right: 1rem;
-  margin-top: 1.5rem;
-}
-
-.oplosmatrix__lock-image{
-  height: 80px;
-  margin-right: 2rem;
-  margin-left: -5rem;
-  margin-top: .5rem;
-}
-
-::placeholder{
-  color: white;
-  font-size: 2rem;
-  text-align: center;
-}
 
 
-@media screen and (min-width: 1900px) {
-  .note-center{
-    padding-top: 10vh;
-  }
-  
-}
+
 
 
 

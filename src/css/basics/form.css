@@ -36,11 +36,13 @@ p{
     margin-top: 4%;
     margin-right: 10px;
     background-color: #edc305;
+    color: black;
     border: none;
     border: none;
     height: 55px;
     padding: 10px 25px 10px 25px;
     border-radius: 10px;
+    user-select: none;
 }
 
 .rule-text{
@@ -136,3 +138,24 @@ p{
         flex-wrap: wrap;
     }
   }
+
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1181px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+    .escaperoom__rules{
+        width: 45vw;
+        top: 8vh;
+    }
+
+    .player__form{
+        top: 65vh;
+        width: 45vw;
+      }
+
+      .escaperoom__rules-note{
+        height: 95vh;
+        width: 57.5vw;
+        position: absolute;
+        top: 2.5vh;
+        left: 25.5vw;
+    }
+
+}

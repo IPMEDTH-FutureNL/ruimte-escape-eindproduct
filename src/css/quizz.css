@@ -147,6 +147,8 @@ body{
     font-size: 1.15rem;
     font-weight: bold;
     color: white;
+    height: 52vh;
+    width: 58vw;
 }
 
 .text-black{
@@ -159,28 +161,7 @@ body{
     margin-top: 50px;
     position: relative;
     border-radius: 10px;
-    left: 25%;
-}
-
-.quizz-btn{
-    position: relative;
-    left: 36.5%;
-    margin-top: 20px;
-    padding: 10px 5px 10px 5px;
-    background-color: #03afef;
-    color: white;
-    font-size: 1.0rem;
-    letter-spacing: .1rem;
-    border: none;
-    font-weight: 600;
-    border-radius: 25px;
-    cursor: pointer;
-    width: 15vw;
-    text-transform: uppercase;
-}
-
-.quizz-btn:hover{
-    background-color: #338dcf;
+    left: 22.5%;
 }
 
 .quizz-error{
@@ -283,3 +264,72 @@ li:hover{
         opacity: 0.8;
       }
 }
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1181px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+    .quiz-background{
+        height: 100vh;
+    }
+
+    .quiz-zonnestelsel{
+        width: 29vw;
+        top: 22.5vh;
+        left: 37vw;
+    }
+
+    .modal-zonnestelsel{
+        width: 75vw;
+        height: 60vh;
+        left: 50%;
+        transform: translate(15%, 35%);
+    }
+
+    .tooltip:focus .tooltiptext {
+        visibility: visible;
+    }
+    
+    .planeten{
+        width: 90px;
+        box-sizing: border-box;
+    }
+
+    .quiz-computer{
+        width: 20vw;
+        top: 42.5vh;
+        left: 70vw;
+    }
+    
+    .quiz-tablet{
+        width: 12vw;
+        bottom: -8vh;
+        left: 45vw;
+    }
+
+    .modal-tablet{
+        left: 25vw;
+        width: 50%;
+    }
+
+    .modal-computer{
+        left: 15vw;
+        width: 75%;
+        height: 75%;
+        bottom: 5vh;
+    }
+
+    .computer-notes-text{
+        font-size: 1.0rem;
+        height: 62vh;
+        width: 65vw;
+    }
+
+    .quizz-input{
+        width: 60%;
+        height: 30px;
+        left: 22.5%;
+    }
+
+    .tablet-notes-text{
+        left: 5vw;
+        top: 17vh;
+    }
+  }

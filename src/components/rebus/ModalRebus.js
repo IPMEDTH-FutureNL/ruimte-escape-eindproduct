@@ -53,6 +53,8 @@ const ModalRebus = () => {
               pointsToInt = pointsToInt + 0;
               localStorage.setItem("punten", pointsToInt);
               break;
+            default:
+              break;
           }
 
         DoorAudio.play();
@@ -67,7 +69,7 @@ const ModalRebus = () => {
             <h2>O! We hebben weer een code nodig, maar dit keer om in de cockpit te komen. Kun jij de rebus oplossen?</h2>
             <p><em>Let op spaties en spelfouten!</em></p>
             <input className="rebus-input input" type="text" id="text" name="text" autocomplete="off"/> <br/>          
-            <button className="rebus-btn btn" onClick={checkValue}> Kraak de code</button>
+            <button className="button primary center top" onClick={checkValue}> Kraak de code</button>
             <p id="invisible" className="rebus-error">Onjuiste code! Probeer opnieuw of neem een hint</p>
         </section>
     </section>

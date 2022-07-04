@@ -1,8 +1,6 @@
 import React, {useState} from 'react';
 import { useNavigate } from "react-router-dom";
 import RocketLaunchVideo from "../../../video/rocket_takeoff.mp4";
-import "../../../css/video.css";
-import "../../../css/basics/input.css"
 
 const LaunchVideo = () => {
     const navigate = useNavigate();

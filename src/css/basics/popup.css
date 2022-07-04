@@ -1,0 +1,27 @@
+/*pop up*/
+.pop-up{
+    width: 40vw;
+    min-height: 20.5vw;
+    background-color: #080742;
+    position: absolute;
+    top: 30%;
+    transform: translateX(30vw);
+    border-radius: 20px;
+    display: none;
+  }
+  
+  .pop-up-text{
+    font-size: 1.5rem;
+    color: white;
+    text-align: center;
+    margin-top: 5vh;
+  }
+
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1181px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+    .pop-up{
+      width: 45vw;
+      min-height: 27.5vw;
+      top: 30%;
+      transform: translateX(60%);
+    }
+}

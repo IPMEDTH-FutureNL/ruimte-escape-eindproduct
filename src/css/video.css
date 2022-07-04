@@ -39,48 +39,14 @@
     align-items: center;
   }
   
-  /* Style the button used to pause/play the video */
-  #myBtn {
-    width: 200px;
-    font-size: 1.75rem;
-    padding: 10px;
-    border-radius: 25px;
-    margin-right: 55px;
-    border: none;
-    background: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    cursor: pointer;
-  }
-  
-  #myBtn:hover {
-    background: #ddd;
-    color: black;
-  }
 
   .landing_ended{
     position: absolute;
     top: 45vh;
-    left: 35vw;
     display: none;
+    width: 100vw;
   }
 
-  .button_landing{
-    padding: 20px 15px 20px 15px;
-    background-color: #03afef;
-    color: white;
-    font-size: 1.2rem;
-    letter-spacing: .1rem;
-    border: none;
-    font-weight: 600;
-    border-radius: 25px;
-    cursor: pointer;
-    width: 25vw;
-    text-transform: uppercase;
-  }
-  
-  .button_landing:hover{
-    background-color: #338dcf;
-  }
 
   .welcome{
     position: absolute;
@@ -100,23 +66,14 @@
     font-family: 'Andika', sans-serif;
   }
 
-  .button_welcome{
-    padding: 20px 15px 20px 15px;
-    background-color: #03afef;
-    color: white;
-    font-size: 1.2rem;
-    letter-spacing: .1rem;
-    border: none;
-    font-weight: 600;
-    border-radius: 25px;
-    cursor: pointer;
-    width: 20vw;
-    text-transform: uppercase;
-    position: absolute;
-    top: 58vh;
-    left: 37.5vw;
-  }
 
-  .button_welcome:hover{
-    background-color: #338dcf;
-  }
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1181px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+    .welcome{
+      left: 4vw;
+      font-size: 3.2rem;
+    }
+
+    .landing_ended{
+      right: 4vw;
+    }
+}

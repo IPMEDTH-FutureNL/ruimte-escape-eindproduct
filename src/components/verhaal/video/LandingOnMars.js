@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { useNavigate } from "react-router-dom";
 import landing from '../../../video/landing.mp4'
-import "../../../css/video.css"
+
 
 const LandingOnMars = () => {
     const navigate = useNavigate();
@@ -17,6 +17,7 @@ const LandingOnMars = () => {
 
         content.style.display = "none";
         button.style.display = "block";
+        setText("");
     }
 
     return (
@@ -28,7 +29,7 @@ const LandingOnMars = () => {
                 <h1 className="video__heading">{text}</h1>
             </div>
             <div className="landing_ended" id="landing_ended">
-                <button className="button_landing" onClick={() => outro()}>Ga naar de astronauten!</button>
+                <button className="button primary centerSecond" onClick={() => outro()}>Ga naar de astronauten!</button>
             </div>
         </section>
 

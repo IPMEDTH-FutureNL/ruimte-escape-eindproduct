@@ -103,6 +103,8 @@ const DragAndDrop = () => {
                 pointsToInt = pointsToInt + 0;
                 localStorage.setItem("punten", pointsToInt);
                 break;
+              default:
+                break;
             }
           
             goToPuzzle();
