@@ -1,8 +1,8 @@
 .escaperoom__rules{
     position: absolute;
     left: 35vw;
-    width: 30vw;
-    top: 13vh;
+    width: 35vw;
+    top: 7vh;
 }
 
 .container__introduction{
@@ -63,7 +63,7 @@ p{
 .player__form{
     position: absolute;
     left: 35vw;
-    top: 60vh;
+    top: 67.5vh;
     width: 35vw;
 }
 
@@ -85,11 +85,11 @@ p{
     margin-top: 10px;
     border: 1px solid grey;
     width: 80%;
-    font-size: 20px;
+    font-size: 17px;
 }
 
 .player__form-name-speler{
-    padding: 10px;
+    padding: 8px;
     border-radius: 10px;
     margin-top: 10px;
     border: 1px solid grey;
@@ -108,11 +108,11 @@ p{
 }
 
 .escaperoom__rules-note{
-    height: 90vh;
-    width: 40vw;
+    height: 98vh;
+    width: 47vw;
     position: absolute;
-    top: 5vh;
-    left: 28.5vw;
+    top: 2vh;
+    left: 27vw;
 }
 
 @media screen and (min-width: 1900px) {

@@ -78,12 +78,15 @@ const Start = ({start}) => {
 
         switch(count){
             case 0:
-                setText("We zijn bijna klaar om koers te zetten naar Mars! We gaan naar Mars voor onderzoek. We willen weten of leven op Mars mogelijk is.")
+                setText("We zijn bijna klaar om koers te zetten naar Mars! We gaan naar Mars voor onderzoek.")
                 break;
             case 1:
-                setText(localStorage.getItem("playerTwo") ? "We hebben alleen nog een probleem, de kaart klopt niet. Ik heb jullie hulp nodig!" : "We hebben alleen nog een probleem, de kaart klopt niet. Ik heb je hulp nodig!");
+                setText("We gaan onderzoeken of we groente en fruit kunnen laten groeien.")
                 break;
             case 2:
+                setText(localStorage.getItem("playerTwo") ? "We hebben alleen nog een probleem, de kaart klopt niet. Ik heb jullie hulp nodig!" : "We hebben alleen nog een probleem, de kaart klopt niet. Ik heb je hulp nodig!");
+                break;
+            case 3:
                 navigate('/introPuzzle');
                 break;
             default:

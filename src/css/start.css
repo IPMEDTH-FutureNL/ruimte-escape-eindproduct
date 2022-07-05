@@ -1,23 +1,23 @@
 .astronaut{
     position: absolute;
-    left: 30vw;
+    left: 29vw;
     bottom: 0vh;
 }
 
 .astronaut__twee{
     position: absolute;
-    left: -15vw;
+    left: -16vw;
     bottom: 0vh;
 }
 
 .astronaut__drie{
     position: absolute;
-    left: 25vw;
+    left: 30vw;
     bottom: 0vh;
 }
 .astronaut__vier{
     position: absolute;
-    left: 40vw;
+    left: 44vw;
     bottom: 0vh;
 }
 
@@ -33,7 +33,7 @@
 }
 
 .textcloud__image{
-    width: 25vw;
+    width: 27.5vw;
 }
 
 .textcloud__field{
@@ -44,9 +44,9 @@
 }
 
 .textcloud__text{
-    font-size: 1.23rem;
+    font-size: 1.2rem;
     margin-left: 1vw;
-    line-height: 1.8;
+    line-height: 1.7;
 }
 
 

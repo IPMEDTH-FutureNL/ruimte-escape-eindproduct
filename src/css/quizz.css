@@ -106,7 +106,7 @@ body{
     border-radius: 20px;
     left: 31vw;
     width: 35%;
-    height: 90%;
+    height: 95%;
     position: absolute;
 }
 
@@ -120,7 +120,7 @@ body{
 .tablet-notes-text{
     position: absolute;
     left: 3vw;
-    top: 12vh;
+    top: 16vh;
     font-size: 0.8rem;
     font-weight: bold;
 }
@@ -130,7 +130,7 @@ body{
     border-radius: 20px;
     left: 17.5vw;
     width: 65%;
-    height: 95%;
+    height: 98%;
     position: absolute;
 }
 
@@ -147,7 +147,7 @@ body{
     font-size: 1.15rem;
     font-weight: bold;
     color: white;
-    height: 52vh;
+    height: 85%;
     width: 58vw;
 }
 
@@ -182,12 +182,12 @@ body{
 
 .list li{
     list-style: none;
-    font-size: 16px;
+    font-size: 15px;
     cursor: pointer;
 }
 
 .tablet-question{
-    font-size: 16px;
+    font-size: 15px;
 }
 
 li:hover{

@@ -14,7 +14,7 @@
   }
   .planet{
     z-index: 10;
-    width: 105px;
+    width: 100px;
     cursor: grab;
   }
   
@@ -26,16 +26,17 @@
   .sun{
     width: 250px;
     position: absolute;
-    left: -8vw;
+    left: -12.5vw;
     top: 45vh;
   }
   
   .board__piece-square{
     background-color: greenyellow;
-    height: 90px;
-    width: 90px;
+    height: 85px;
+    width: 85px;
     opacity: .25;
     border-radius: 50%;
+    z-index: 9;
   }
   
   .board__piece-name{
@@ -61,27 +62,27 @@
   }
   
   .board__piece:nth-child(4){
-    left: 27vw;
+    left: 29vw;
     top: 18vh;
   }
   
   .board__piece:nth-child(5){
-    left: 37vw;
+    left: 39vw;
     top: 23vh;
   }
   
   .board__piece:nth-child(6){
-    left: 47vw;
+    left: 49vw;
     top: 23vh;
   }
   
   .board__piece:nth-child(7){
-    left: 55vw;
+    left: 57vw;
     top: 15vh;
   }
   
   .board__piece:nth-child(8){
-    left: 64vw;
+    left: 66vw;
     top: 25vh;
   }
   

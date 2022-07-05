@@ -5,11 +5,11 @@
 
 /* buttons */
 .button{
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    font-size: 1.8rem;
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-size: 1.7rem;
     border: none;
     cursor: pointer;
     border-radius: 10px;
@@ -17,17 +17,15 @@
   }
 
   button{
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
     padding-bottom: 10px;
-    font-size: 1.5rem;
-    border: none;
-    cursor: pointer;
-    border-radius: 10px;
-    margin-right: 20px;
+    padding-top: 5px;
+    font-size: 0.9rem;
     background-color: #4490be;
     color: black;
+    border: none;
+    border-radius: 5px
   }
 
 .left{
@@ -54,7 +52,7 @@
 }
 
 .fixedwidth{
-  width: 15vw;
+  width: 18vw;
 }
 
 
@@ -83,7 +81,7 @@
   }
 
   .submit{
-    margin-top: 4.8vh;
+    margin-top: 6.5vh;
     height: 50px;
   }
 
@@ -100,7 +98,7 @@
 
   .centerSecond{
     position: absolute;
-    top: 60%; right: 50%;
+    top: 65%; right: 50%;
     transform: translate(50%,-50%);
   }
 
