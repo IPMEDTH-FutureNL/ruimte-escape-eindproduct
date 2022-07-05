@@ -123,7 +123,7 @@ const Start = ({start}) => {
                                 <label className="player__form-label">Naam</label>
                                 <input className="player__form-name-speler"></input>
                             </div>
-                            <input type="submit" value="Verder" className='button primary submit'/>
+                            <input  type="submit" value="Verder" className='button primary submit' onClick={start}/>
                         </form>
                     </div>
 
@@ -138,7 +138,7 @@ const Start = ({start}) => {
                                 <input className="player__form-name"></input>
                             </div>
                             <div className="inputdiv">
-                                <input type="submit" value="Verder" className='button primary submitSecond'/>
+                                <input type="submit" value="Verder" className='button primary submitSecond' onClick={start}/>
                             </div>
                         </form>
                     </div>

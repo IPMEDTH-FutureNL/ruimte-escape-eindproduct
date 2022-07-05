@@ -70,8 +70,8 @@ const ModalComputer = () => {
     <section>
 
       <img className="computer" src={Computer} draggable='false' alt=""/>
-      <section class="computer-notes-text">
-        <h2 class="">Oei! Er is een driecijferige code nodig om in te loggen. <br></br>De code moet wel ergens in de kamer te vinden zijn, denk je niet?</h2>
+      <section className="computer-notes-text">
+        <h2 className="">Oei! Er is een driecijferige code nodig om in te loggen. <br></br>De code moet wel ergens in de kamer te vinden zijn, denk je niet?</h2>
         <p id="invisible" className="quizz-error">Onjuiste code! Probeer opnieuw of neem een hint</p>
         <p id="invisibleH" className="quizz-error">Heb je de code met hoofdletters ingevoerd? Probeer opnieuw of neem een hint</p>
         <input className="quizz-input" type="text" id="number" name="number" autoComplete="off" /> <br/>
