@@ -4,7 +4,7 @@ import AstronautDrie from "../../img/gameplayImages/characters/character1_standa
 import AstronautVier from "../../img/gameplayImages/characters/character3_standard_mouthopen.svg"
 
 import TextCloud from '../../img/gameplayImages/snippets/textcloud.png'
-import RebusBackground  from '../../img/rebus/rebus-background.jpg';
+import RebusBackground  from '../../img/rebus/rebus-background.png';
 
 const DragAndDropSucces = () => {
     const [text, setText] = useState(localStorage.getItem("playerTwo") ? "Goedzo " + localStorage.getItem("playerOne") +  ". Jullie hebben de code gekraakt!" : "Goedzo " + localStorage.getItem("playerOne") +  ". Je hebt de code gekraakt!");

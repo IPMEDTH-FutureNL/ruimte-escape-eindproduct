@@ -120,6 +120,14 @@
     color: black;
   }
 
+
+  @media screen and (min-width: 1900px) {
+    .submit{
+      margin-top: 4.8vh;
+      height: 50px;
+    }
+  }
+
   @media only screen and (min-device-width: 768px) and (max-device-width: 1181px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
     .submit{
       margin-top: 6vh;

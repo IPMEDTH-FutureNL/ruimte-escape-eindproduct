@@ -116,7 +116,22 @@ p{
 }
 
 @media screen and (min-width: 1900px) {
+    .escaperoom__rules-note{
+        height: 80vh;
+        width: 40vw;
+        position: absolute;
+        top: 5vh;
+        left: 28vw;
+    }
+
+    .escaperoom__rules{
+        position: absolute;
+        left: 35vw;
+        width: 30vw;
+        top: 13vh;
+    }
     
+
     .player__form{
       position: absolute;
       left: 35vw;

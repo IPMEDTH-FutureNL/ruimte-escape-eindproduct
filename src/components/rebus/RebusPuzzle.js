@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import Modal from 'react-modal';
 import HintEscape from '../HintsEscape';
 import ModalRebus from './ModalRebus';
-import RebusBackground  from '../../img/rebus/rebus-background.jpg';
+import RebusBackground  from '../../img/rebus/rebus-background.png';
 import LockSound from '../../sound/Lock.mp3';
 
 const RebusPuzzle = () => {
